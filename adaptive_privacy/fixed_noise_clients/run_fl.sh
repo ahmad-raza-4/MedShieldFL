@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Start the server and log output
+nohup python server.py >> server.log 2>&1 &
+
+# Start the clients and log outputs
+nohup python client_1.py > output_1.log 2>&1 &
+nohup python client_2.py >> output_2.log 2>&1 &
+nohup python client_3.py >> output_3.log 2>&1 &
+nohup python client_4.py >> output_4.log 2>&1 &
+nohup python client_5.py >> output_5.log 2>&1 &
+nohup python client_6.py >> output_6.log 2>&1 &
+
+echo "Federated Learning processes started."

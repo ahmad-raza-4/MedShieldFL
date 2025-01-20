@@ -1,0 +1,966 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.0 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/raid/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/new_dynamic_noise_clients_20/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+01/12/2025 11:18:46:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/12/2025 11:18:46:DEBUG:ChannelConnectivity.IDLE
+01/12/2025 11:18:46:DEBUG:ChannelConnectivity.CONNECTING
+01/12/2025 11:18:46:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/12/2025 11:19:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 11:19:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 8a0fea60-320d-466e-8b9f-96b8f9abe768
+01/12/2025 11:19:37:INFO:Received: train message 8a0fea60-320d-466e-8b9f-96b8f9abe768
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 11:45:55:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 11:46:47:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 11:46:47:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 44c6282e-eb96-4684-9110-d5ef56625cff
+01/12/2025 11:46:47:INFO:Received: evaluate message 44c6282e-eb96-4684-9110-d5ef56625cff
+[92mINFO [0m:      Sent reply
+01/12/2025 11:52:54:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 11:55:10:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 11:55:10:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 715b106f-0da5-4357-9901-7ad9bb2500a8
+01/12/2025 11:55:10:INFO:Received: train message 715b106f-0da5-4357-9901-7ad9bb2500a8
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 12:32:57:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 12:33:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 12:33:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 5e134397-3a96-4ffc-8ce8-8ead7e08620b
+01/12/2025 12:33:35:INFO:Received: evaluate message 5e134397-3a96-4ffc-8ce8-8ead7e08620b
+[92mINFO [0m:      Sent reply
+01/12/2025 12:39:17:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 12:39:50:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 12:39:50:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 6408cb0d-286a-43b2-bfc5-0d313d54110b
+01/12/2025 12:39:50:INFO:Received: train message 6408cb0d-286a-43b2-bfc5-0d313d54110b
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 13:14:27:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 13:15:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 13:15:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 06d629f2-44ec-49d2-903b-4546f1e46c0b
+01/12/2025 13:15:05:INFO:Received: evaluate message 06d629f2-44ec-49d2-903b-4546f1e46c0b
+[92mINFO [0m:      Sent reply
+01/12/2025 13:19:34:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 13:19:58:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 13:19:58:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b97a0856-2028-4b2c-9ef8-58ca15b0e96e
+01/12/2025 13:19:58:INFO:Received: train message b97a0856-2028-4b2c-9ef8-58ca15b0e96e
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 13:56:18:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 13:56:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 13:56:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 72d60340-b3cc-4c1c-b939-a18608c0e8c8
+01/12/2025 13:56:35:INFO:Received: evaluate message 72d60340-b3cc-4c1c-b939-a18608c0e8c8
+[92mINFO [0m:      Sent reply
+01/12/2025 14:01:50:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 14:02:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 14:02:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 2c0151bb-25bd-453a-885d-b5fe93f4d280
+01/12/2025 14:02:53:INFO:Received: train message 2c0151bb-25bd-453a-885d-b5fe93f4d280
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 14:36:23:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 14:36:58:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 14:36:58:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 862516ef-e10b-4b80-bb75-1242542b1495
+01/12/2025 14:36:58:INFO:Received: evaluate message 862516ef-e10b-4b80-bb75-1242542b1495
+[92mINFO [0m:      Sent reply
+01/12/2025 14:43:11:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 14:43:51:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 14:43:51:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message de95dfa1-8b40-4be3-9af9-ed5d66c009e0
+01/12/2025 14:43:51:INFO:Received: train message de95dfa1-8b40-4be3-9af9-ed5d66c009e0
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 15:12:33:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 15:13:29:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 15:13:29:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message f34f6e4a-d0a7-4434-850c-d15194b11cdd
+01/12/2025 15:13:29:INFO:Received: evaluate message f34f6e4a-d0a7-4434-850c-d15194b11cdd
+[92mINFO [0m:      Sent reply
+01/12/2025 15:20:00:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 15:20:32:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 15:20:32:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message dbbe1438-8799-4384-a6df-e9e3e8852ae0
+01/12/2025 15:20:32:INFO:Received: train message dbbe1438-8799-4384-a6df-e9e3e8852ae0
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 15:57:05:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 15:57:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 15:57:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 9c6ae60f-417b-4c33-9e6f-b1d34db77b6f
+01/12/2025 15:57:37:INFO:Received: evaluate message 9c6ae60f-417b-4c33-9e6f-b1d34db77b6f
+[92mINFO [0m:      Sent reply
+01/12/2025 16:02:22:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 16:02:52:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 16:02:52:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 36a954aa-b90c-49bb-b405-f85cfb7366df
+01/12/2025 16:02:52:INFO:Received: train message 36a954aa-b90c-49bb-b405-f85cfb7366df
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 16:36:43:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 16:37:13:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 16:37:13:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 29c43428-a584-4bbb-b393-315c2be14499
+01/12/2025 16:37:13:INFO:Received: evaluate message 29c43428-a584-4bbb-b393-315c2be14499
+[92mINFO [0m:      Sent reply
+01/12/2025 16:42:56:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 16:44:08:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 16:44:08:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 5e1c70da-abd1-4f9e-838d-794a882dd83d
+01/12/2025 16:44:08:INFO:Received: train message 5e1c70da-abd1-4f9e-838d-794a882dd83d
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 17:17:01:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 17:17:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 17:17:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 494b4edb-09dd-4d8f-869b-a5b29f37cb96
+01/12/2025 17:17:37:INFO:Received: evaluate message 494b4edb-09dd-4d8f-869b-a5b29f37cb96
+[92mINFO [0m:      Sent reply
+01/12/2025 17:24:29:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 17:25:26:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 17:25:26:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message a4adfe94-0144-4e55-8f39-7c14ed8c07ee
+01/12/2025 17:25:26:INFO:Received: train message a4adfe94-0144-4e55-8f39-7c14ed8c07ee
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 18:00:56:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 18:01:48:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 18:01:48:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message f0a476c5-2a1a-4e4d-a7f7-6eeccff9f67b
+01/12/2025 18:01:48:INFO:Received: evaluate message f0a476c5-2a1a-4e4d-a7f7-6eeccff9f67b
+[92mINFO [0m:      Sent reply
+01/12/2025 18:06:42:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 18:07:21:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 18:07:21:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b703cba7-5c4c-401a-b089-7d379cb9e79a
+01/12/2025 18:07:21:INFO:Received: train message b703cba7-5c4c-401a-b089-7d379cb9e79a
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 18:42:03:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 18:42:40:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 18:42:40:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message b937a0a8-062b-4a3e-aa3b-32372f2bd563
+01/12/2025 18:42:40:INFO:Received: evaluate message b937a0a8-062b-4a3e-aa3b-32372f2bd563
+[92mINFO [0m:      Sent reply
+01/12/2025 18:47:29:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 18:48:24:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 18:48:24:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b66ca81e-f90c-4f1f-8093-3f8b32e660c1
+01/12/2025 18:48:24:INFO:Received: train message b66ca81e-f90c-4f1f-8093-3f8b32e660c1
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 19:18:19:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 19:19:09:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 19:19:09:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 8d1df483-c74b-4664-a5b0-be5c0b864b08
+01/12/2025 19:19:09:INFO:Received: evaluate message 8d1df483-c74b-4664-a5b0-be5c0b864b08
+[92mINFO [0m:      Sent reply
+01/12/2025 19:25:25:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 19:26:24:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 19:26:24:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 47d3bc86-2222-4dd9-b415-4241bba3ea5b
+01/12/2025 19:26:24:INFO:Received: train message 47d3bc86-2222-4dd9-b415-4241bba3ea5b
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 19:56:11:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 19:56:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 19:56:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message cfc7709d-eb95-46d7-a32b-2f10f6c9ddb6
+01/12/2025 19:56:53:INFO:Received: evaluate message cfc7709d-eb95-46d7-a32b-2f10f6c9ddb6
+[92mINFO [0m:      Sent reply
+01/12/2025 20:03:30:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 20:04:40:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 20:04:40:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message c5092253-d052-4377-9d36-5a3b13c44035
+01/12/2025 20:04:40:INFO:Received: train message c5092253-d052-4377-9d36-5a3b13c44035
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 20:38:03:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 20:38:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 20:38:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 310a0875-672c-4d10-a713-0ecb49b720a2
+01/12/2025 20:38:55:INFO:Received: evaluate message 310a0875-672c-4d10-a713-0ecb49b720a2
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/new_dynamic_noise_clients_20', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/.local/lib/python3.8/site-packages', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/new_dynamic_noise_clients_20']
+Epoch 1 - Adjusted noise multipliers: [0.50262451171875]
+Epsilon = 5.76
+
+{'loss': [141.91497695446014], 'accuracy': [0.3427305678614579], 'auc': [0.5460275263154342]}
+
+Epoch 2 - Adjusted noise multipliers: [0.4991064298977518]
+Epsilon = 5.90
+
+{'loss': [141.91497695446014, 134.84034168720245], 'accuracy': [0.3427305678614579, 0.3407168747482884], 'auc': [0.5460275263154342, 0.5869901776274173]}
+
+Epoch 3 - Adjusted noise multipliers: [0.49735663399219826]
+Epsilon = 5.97
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003]}
+
+Epoch 4 - Adjusted noise multipliers: [0.4956129726213404]
+Epsilon = 6.04
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139]}
+
+Epoch 5 - Adjusted noise multipliers: [0.4938754242783753]
+Epsilon = 6.11
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875]}
+
+Epoch 6 - Adjusted noise multipliers: [0.49214396753189965]
+Epsilon = 6.18
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494]}
+
+Epoch 7 - Adjusted noise multipliers: [0.4904185810256456]
+Epsilon = 6.26
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723]}
+
+Epoch 8 - Adjusted noise multipliers: [0.4886992434782173]
+Epsilon = 6.33
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026]}
+
+Epoch 9 - Adjusted noise multipliers: [0.4869859336828286]
+Epsilon = 6.41
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955]}
+
+Epoch 10 - Adjusted noise multipliers: [0.48527863050704106]
+Epsilon = 6.49
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888]}
+
+Epoch 11 - Adjusted noise multipliers: [0.4835773128925038]
+Epsilon = 6.57
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635]}
+
+Epoch 12 - Adjusted noise multipliers: [0.48188195985469323]
+Epsilon = 6.65
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779]}
+
+Epoch 13 - Adjusted noise multipliers: [0.4801925504826549]
+Epsilon = 6.73
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251]}
+
+Epoch 14 - Adjusted noise multipliers: [0.4785090639387448]
+Epsilon = 6.81
+[92mINFO [0m:      Sent reply
+01/12/2025 20:44:21:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 20:45:01:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 20:45:01:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 48f4f031-d14a-4a63-8fbb-41662de2b650
+01/12/2025 20:45:01:INFO:Received: train message 48f4f031-d14a-4a63-8fbb-41662de2b650
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 21:34:39:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 21:35:33:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 21:35:33:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 840442c2-9b28-4f61-a970-6d166601bfa7
+01/12/2025 21:35:33:INFO:Received: evaluate message 840442c2-9b28-4f61-a970-6d166601bfa7
+[92mINFO [0m:      Sent reply
+01/12/2025 21:40:51:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 21:41:44:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 21:41:44:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 8dcd3766-d9f2-40e9-a4ae-996130bf2a1d
+01/12/2025 21:41:44:INFO:Received: train message 8dcd3766-d9f2-40e9-a4ae-996130bf2a1d
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 22:31:53:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 22:32:42:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 22:32:42:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message fa75b133-0dc8-411a-8912-1f5678334523
+01/12/2025 22:32:42:INFO:Received: evaluate message fa75b133-0dc8-411a-8912-1f5678334523
+[92mINFO [0m:      Sent reply
+01/12/2025 22:37:08:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 22:38:48:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 22:38:48:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message daf75f9d-b178-40f4-9e88-be758293d62f
+01/12/2025 22:38:48:INFO:Received: train message daf75f9d-b178-40f4-9e88-be758293d62f
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 23:23:27:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 23:24:17:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 23:24:17:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message e219d9b9-e374-47f1-b584-b14de74de6c4
+01/12/2025 23:24:17:INFO:Received: evaluate message e219d9b9-e374-47f1-b584-b14de74de6c4
+[92mINFO [0m:      Sent reply
+01/12/2025 23:28:50:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 23:30:31:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 23:30:31:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message a7fed663-7138-4dca-ba78-dcc9d8922856
+01/12/2025 23:30:31:INFO:Received: train message a7fed663-7138-4dca-ba78-dcc9d8922856
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/12/2025 23:57:54:INFO:Sent reply
+[92mINFO [0m:      
+01/12/2025 23:59:07:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/12/2025 23:59:07:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 9e0bccb3-d8c3-4b98-b8ba-37574cbc444e
+01/12/2025 23:59:07:INFO:Received: evaluate message 9e0bccb3-d8c3-4b98-b8ba-37574cbc444e
+[92mINFO [0m:      Sent reply
+01/13/2025 00:03:52:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 00:07:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 00:07:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 84cf0f06-2bbb-4e3e-aa5a-caf54ef21cfd
+01/13/2025 00:07:46:INFO:Received: train message 84cf0f06-2bbb-4e3e-aa5a-caf54ef21cfd
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 00:39:31:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 00:40:45:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 00:40:45:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 01588e3b-8a5f-4968-8d4e-52d84fd7ea43
+01/13/2025 00:40:45:INFO:Received: evaluate message 01588e3b-8a5f-4968-8d4e-52d84fd7ea43
+[92mINFO [0m:      Sent reply
+01/13/2025 00:44:53:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 00:48:15:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 00:48:15:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 738ab8f9-1a56-4c4d-8e08-8670894ca8f8
+01/13/2025 00:48:15:INFO:Received: train message 738ab8f9-1a56-4c4d-8e08-8670894ca8f8
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 01:17:41:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 01:19:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 01:19:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 13365506-e891-4450-adf2-66da13f7580e
+01/13/2025 01:19:05:INFO:Received: evaluate message 13365506-e891-4450-adf2-66da13f7580e
+[92mINFO [0m:      Sent reply
+01/13/2025 01:23:28:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 01:26:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 01:26:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 0c2cbcfd-560b-4906-9f3e-95337e21e21d
+01/13/2025 01:26:46:INFO:Received: train message 0c2cbcfd-560b-4906-9f3e-95337e21e21d
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 01:50:48:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 01:51:19:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 01:51:19:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 723aa88c-9ba4-449f-99cc-86f4a82a2b1a
+01/13/2025 01:51:19:INFO:Received: evaluate message 723aa88c-9ba4-449f-99cc-86f4a82a2b1a
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977]}
+
+Epoch 15 - Adjusted noise multipliers: [0.47683147945837284]
+Epsilon = 6.89
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464]}
+
+Epoch 16 - Adjusted noise multipliers: [0.4751597763497469]
+Epsilon = 6.97
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962]}
+
+Epoch 17 - Adjusted noise multipliers: [0.4734939339936167]
+Epsilon = 7.06
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482]}
+
+Epoch 18 - Adjusted noise multipliers: [0.47183393184302086]
+Epsilon = 7.14
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577]}
+
+Epoch 19 - Adjusted noise multipliers: [0.47017974942303226]
+Epsilon = 7.23
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978]}
+
+Epoch 20 - Adjusted noise multipliers: [0.4685313663305059]
+Epsilon = 7.32
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848]}
+
+Epoch 21 - Adjusted noise multipliers: [0.4668887622338275]
+Epsilon = 7.40
+[92mINFO [0m:      Sent reply
+01/13/2025 01:56:02:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 01:58:31:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 01:58:31:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 5b37b27e-a5b3-4bea-84a4-0c2ce31ec29a
+01/13/2025 01:58:31:INFO:Received: train message 5b37b27e-a5b3-4bea-84a4-0c2ce31ec29a
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 02:24:36:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 02:25:13:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 02:25:13:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 420ae2f6-65c3-493a-a563-9d4d53b45f41
+01/13/2025 02:25:13:INFO:Received: evaluate message 420ae2f6-65c3-493a-a563-9d4d53b45f41
+[92mINFO [0m:      Sent reply
+01/13/2025 02:30:40:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 02:31:29:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 02:31:29:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b4fc0a09-5d0d-4e49-8a0d-805af79d8468
+01/13/2025 02:31:29:INFO:Received: train message b4fc0a09-5d0d-4e49-8a0d-805af79d8468
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 02:59:52:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 03:00:33:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 03:00:33:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 2c6349b1-7951-418c-a5c0-89861f6c9104
+01/13/2025 03:00:33:INFO:Received: evaluate message 2c6349b1-7951-418c-a5c0-89861f6c9104
+[92mINFO [0m:      Sent reply
+01/13/2025 03:05:45:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 03:06:16:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 03:06:16:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 1987c530-2a53-4f30-8427-16a2eda599e3
+01/13/2025 03:06:16:INFO:Received: train message 1987c530-2a53-4f30-8427-16a2eda599e3
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 03:31:25:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 03:32:11:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 03:32:11:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message de5a516b-aae0-4a5a-b170-07f316301bfa
+01/13/2025 03:32:11:INFO:Received: evaluate message de5a516b-aae0-4a5a-b170-07f316301bfa
+[92mINFO [0m:      Sent reply
+01/13/2025 03:37:44:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 03:38:04:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 03:38:04:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d00b81ad-7a2d-4036-a1ef-7fe2fd3fe4f0
+01/13/2025 03:38:04:INFO:Received: train message d00b81ad-7a2d-4036-a1ef-7fe2fd3fe4f0
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 04:02:34:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:03:07:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:03:07:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 4689fecf-fef7-4501-b184-6835b61a14de
+01/13/2025 04:03:07:INFO:Received: evaluate message 4689fecf-fef7-4501-b184-6835b61a14de
+[92mINFO [0m:      Sent reply
+01/13/2025 04:07:27:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:07:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:07:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b563da4c-fb21-44df-80a3-8b7f9ad380e1
+01/13/2025 04:07:53:INFO:Received: train message b563da4c-fb21-44df-80a3-8b7f9ad380e1
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 04:26:05:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:26:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:26:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 8988eb59-082f-4447-a0bd-2338ddb71aa7
+01/13/2025 04:26:37:INFO:Received: evaluate message 8988eb59-082f-4447-a0bd-2338ddb71aa7
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614]}
+
+Epoch 22 - Adjusted noise multipliers: [0.4652519168726626]
+Epsilon = 7.49
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602]}
+
+Epoch 23 - Adjusted noise multipliers: [0.4636208100577063]
+Epsilon = 7.58
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159]}
+
+Epoch 24 - Adjusted noise multipliers: [0.4619954216704346]
+Epsilon = 7.67
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947]}
+
+Epoch 25 - Adjusted noise multipliers: [0.46037573166285645]
+Epsilon = 7.77
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794]}
+
+Epoch 26 - Adjusted noise multipliers: [0.45876172005726573]
+Epsilon = 7.86
+[92mINFO [0m:      Sent reply
+01/13/2025 04:30:33:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:31:04:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:31:04:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 1176a985-02da-4fa8-abc1-44dcb574a5e2
+01/13/2025 04:31:04:INFO:Received: train message 1176a985-02da-4fa8-abc1-44dcb574a5e2
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 04:49:04:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:49:33:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:49:33:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 4a2e5b48-5d91-4c04-afd3-66c167bd69c2
+01/13/2025 04:49:33:INFO:Received: evaluate message 4a2e5b48-5d91-4c04-afd3-66c167bd69c2
+[92mINFO [0m:      Sent reply
+01/13/2025 04:53:28:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 04:53:54:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 04:53:54:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 404b947a-e199-43c9-a84f-ef67cd5573b6
+01/13/2025 04:53:54:INFO:Received: train message 404b947a-e199-43c9-a84f-ef67cd5573b6
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 05:11:59:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 05:12:29:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 05:12:29:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message a6c409aa-8414-40c5-936f-4bcd1a9e74f5
+01/13/2025 05:12:29:INFO:Received: evaluate message a6c409aa-8414-40c5-936f-4bcd1a9e74f5
+[92mINFO [0m:      Sent reply
+01/13/2025 05:16:24:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 05:16:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 05:16:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message f4009da5-f78b-4a79-b07e-f97ffffa3e52
+01/13/2025 05:16:35:INFO:Received: train message f4009da5-f78b-4a79-b07e-f97ffffa3e52
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 05:34:45:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 05:34:58:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 05:34:58:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 79f3e9f0-97e6-48fe-87f4-2964c38f25e7
+01/13/2025 05:34:58:INFO:Received: evaluate message 79f3e9f0-97e6-48fe-87f4-2964c38f25e7
+[92mINFO [0m:      Sent reply
+01/13/2025 05:38:10:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 05:39:33:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 05:39:33:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message a3013e43-4584-4ccd-8393-c2fde3c11573
+01/13/2025 05:39:33:INFO:Received: train message a3013e43-4584-4ccd-8393-c2fde3c11573
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: divide by zero encountered in log
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:55: RuntimeWarning: divide by zero encountered in log
+  t > np.log(1 - q),
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/13/2025 05:57:22:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 05:57:54:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 05:57:54:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message fcc6e0ea-8a0c-48f4-b652-876c8764c8e0
+01/13/2025 05:57:54:INFO:Received: evaluate message fcc6e0ea-8a0c-48f4-b652-876c8764c8e0
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637]}
+
+Epoch 27 - Adjusted noise multipliers: [0.45715336694599573]
+Epsilon = 7.96
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336, 118.47860705852509], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789, 0.5291985501409585], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637, 0.715579042825803]}
+
+Epoch 28 - Adjusted noise multipliers: [0.4555506524911729]
+Epsilon = 8.05
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336, 118.47860705852509, 118.49825662374496], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789, 0.5291985501409585, 0.5291985501409585], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637, 0.715579042825803, 0.7175310757281582]}
+
+Epoch 29 - Adjusted noise multipliers: [0.4539535569244726]
+Epsilon = 8.15
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336, 118.47860705852509, 118.49825662374496, 118.09141474962234], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789, 0.5291985501409585, 0.5291985501409585, 0.5316149818767619], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637, 0.715579042825803, 0.7175310757281582, 0.7198362246330008]}
+
+Epoch 30 - Adjusted noise multipliers: [0.452362060546875]
+Epsilon = 8.25
+[92mINFO [0m:      Sent reply
+01/13/2025 06:01:44:INFO:Sent reply
+[92mINFO [0m:      
+01/13/2025 06:01:45:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/13/2025 06:01:45:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: reconnect message c493c99f-fc94-40c2-ae4e-af72ccb5ab2d
+01/13/2025 06:01:45:INFO:Received: reconnect message c493c99f-fc94-40c2-ae4e-af72ccb5ab2d
+01/13/2025 06:01:45:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+01/13/2025 06:01:45:INFO:Disconnect and shut down
+
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336, 118.47860705852509, 118.49825662374496, 118.09141474962234, 117.91416239738464], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789, 0.5291985501409585, 0.5291985501409585, 0.5316149818767619, 0.5328231977446637], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637, 0.715579042825803, 0.7175310757281582, 0.7198362246330008, 0.7215036709935894]}
+
+
+
+Final client history:
+{'loss': [141.91497695446014, 134.84034168720245, 136.4370231628418, 138.98349595069885, 141.06049013137817, 141.32978522777557, 139.44960057735443, 137.0198596715927, 135.19087421894073, 133.25208604335785, 130.87761640548706, 129.43007016181946, 128.15691477060318, 126.90003663301468, 126.18732225894928, 125.55248373746872, 124.39782077074051, 123.39890646934509, 122.61008417606354, 121.46796369552612, 121.08033156394958, 120.88075113296509, 120.3770095705986, 119.96955144405365, 119.47245544195175, 118.84888142347336, 118.47860705852509, 118.49825662374496, 118.09141474962234, 117.91416239738464], 'accuracy': [0.3427305678614579, 0.3407168747482884, 0.3419250906161901, 0.34313330648409185, 0.346757954087797, 0.3527990334273057, 0.3685058397100282, 0.38219895287958117, 0.3999194522754732, 0.414418042690294, 0.4309303262182843, 0.44623439387837294, 0.4571083366894885, 0.46435763189689894, 0.4695932339911397, 0.47482883608538057, 0.4788562223117197, 0.48610551751913006, 0.4937575513491744, 0.5010068465565848, 0.5050342327829239, 0.5098670962545309, 0.513491743858236, 0.518324607329843, 0.522754732178816, 0.527184857027789, 0.5291985501409585, 0.5291985501409585, 0.5316149818767619, 0.5328231977446637], 'auc': [0.5460275263154342, 0.5869901776274173, 0.6120299279075003, 0.6255510371712139, 0.6343138551661875, 0.6406675712758494, 0.6471844657513723, 0.6525672629633026, 0.657673829211955, 0.6620855020032888, 0.6670285274730635, 0.6712012489385779, 0.674882852088251, 0.6788006918960977, 0.681939603264464, 0.6852399325458962, 0.6886075287266482, 0.6919449430043577, 0.6947114559938978, 0.6981839419349848, 0.7006418464237614, 0.7030176949411602, 0.7054652457208159, 0.7079037928014947, 0.7105425987957794, 0.7131986605208637, 0.715579042825803, 0.7175310757281582, 0.7198362246330008, 0.7215036709935894]}
+
