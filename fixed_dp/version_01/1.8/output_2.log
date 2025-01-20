@@ -1,0 +1,82 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.0 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/raid/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/fixed_dp/version_01/1.8/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+01/20/2025 02:23:28:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/20/2025 02:23:28:DEBUG:ChannelConnectivity.IDLE
+01/20/2025 02:23:28:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/20/2025 02:23:28:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 02:23:28:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: get_parameters message ab650767-6333-4138-8b3e-9bbb44fd10e5
+01/20/2025 02:23:28:INFO:Received: get_parameters message ab650767-6333-4138-8b3e-9bbb44fd10e5
+[92mINFO [0m:      Sent reply
+01/20/2025 02:23:32:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 02:24:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 02:24:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b9a950ce-5dd5-4ef1-89c2-84f121a22d29
+01/20/2025 02:24:02:INFO:Received: train message b9a950ce-5dd5-4ef1-89c2-84f121a22d29
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/20/2025 02:36:56:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 02:43:54:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 02:43:54:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 35fb5b83-faee-4ea5-98e8-f17ba9510692
+01/20/2025 02:43:54:INFO:Received: evaluate message 35fb5b83-faee-4ea5-98e8-f17ba9510692
+[92mINFO [0m:      Sent reply
+01/20/2025 02:47:54:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 02:48:20:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 02:48:20:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 9aad300e-0ff5-4011-b44c-b2fe8533ba09
+01/20/2025 02:48:20:INFO:Received: train message 9aad300e-0ff5-4011-b44c-b2fe8533ba09
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/20/2025 03:01:08:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 03:08:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 03:08:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 3a53e5f4-2b51-4c87-8282-d3ab19be623d
+01/20/2025 03:08:53:INFO:Received: evaluate message 3a53e5f4-2b51-4c87-8282-d3ab19be623d
+[92mINFO [0m:      Sent reply
+01/20/2025 03:13:04:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 03:13:24:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 03:13:24:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 20bd666e-214e-443d-956d-7359255c31c1
+01/20/2025 03:13:24:INFO:Received: train message 20bd666e-214e-443d-956d-7359255c31c1
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/20/2025 03:26:08:INFO:Sent reply
+[92mINFO [0m:      
+01/20/2025 03:33:25:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/20/2025 03:33:25:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 40c59392-f564-48e4-a0cf-6fcc9d32bf11
+01/20/2025 03:33:25:INFO:Received: evaluate message 40c59392-f564-48e4-a0cf-6fcc9d32bf11
