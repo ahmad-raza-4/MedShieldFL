@@ -1,0 +1,340 @@
+nohup: ignoring input
+Error importing huggingface_hub.hf_api: No module named 'tqdm'
+Error importing huggingface_hub.hf_api: No module named 'tqdm'
+01/21/2025 04:29:23:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/21/2025 04:29:23:DEBUG:ChannelConnectivity.IDLE
+01/21/2025 04:29:23:DEBUG:ChannelConnectivity.CONNECTING
+01/21/2025 04:29:23:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/21/2025 04:29:23:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:29:23:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: get_parameters message a72f56d4-59c5-498c-b06d-a85c684e116e
+01/21/2025 04:29:23:INFO:Received: get_parameters message a72f56d4-59c5-498c-b06d-a85c684e116e
+[92mINFO [0m:      Sent reply
+01/21/2025 04:29:28:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:29:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:29:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 823c92a4-c55d-4595-a46b-7dd25484d958
+01/21/2025 04:29:35:INFO:Received: train message 823c92a4-c55d-4595-a46b-7dd25484d958
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+01/21/2025 04:29:38:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:29:47:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:29:59:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:29:59:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message c919ab0f-732d-4640-b04a-f7795d058aa5
+01/21/2025 04:29:59:INFO:Received: evaluate message c919ab0f-732d-4640-b04a-f7795d058aa5
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:30:01:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:30:07:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:30:07:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 99f059a0-df7d-4879-b7e7-7c4bc2dcab7e
+01/21/2025 04:30:07:INFO:Received: train message 99f059a0-df7d-4879-b7e7-7c4bc2dcab7e
+
+{'loss': [48.84655028581619], 'accuracy': [0.35105551211884284], 'auc': [0.3712512512345969]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:30:19:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:30:31:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:30:31:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 1e7be6d5-693a-4913-a837-5ca1c8a79861
+01/21/2025 04:30:31:INFO:Received: evaluate message 1e7be6d5-693a-4913-a837-5ca1c8a79861
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:30:32:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:30:39:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:30:39:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message c91b9d85-c7c2-4a36-93c6-45fa1b15de69
+01/21/2025 04:30:39:INFO:Received: train message c91b9d85-c7c2-4a36-93c6-45fa1b15de69
+
+{'loss': [48.84655028581619, 53.11516425013542], 'accuracy': [0.35105551211884284, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:30:50:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:31:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:31:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 84d01663-571f-498a-9c32-142cbb690e10
+01/21/2025 04:31:02:INFO:Received: evaluate message 84d01663-571f-498a-9c32-142cbb690e10
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:31:04:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:31:10:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:31:10:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 106a59de-3ee0-4502-adce-9e12fcb41d79
+01/21/2025 04:31:10:INFO:Received: train message 106a59de-3ee0-4502-adce-9e12fcb41d79
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:31:21:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:31:32:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:31:32:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message bef891f9-857e-458c-a4c1-45b3ee10adb5
+01/21/2025 04:31:32:INFO:Received: evaluate message bef891f9-857e-458c-a4c1-45b3ee10adb5
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:31:34:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:31:40:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:31:40:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 0903a2c3-567c-43d0-97c1-2402097b334a
+01/21/2025 04:31:40:INFO:Received: train message 0903a2c3-567c-43d0-97c1-2402097b334a
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:31:51:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:32:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:32:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 7e20b859-820d-4c57-ae68-962a6fe19ff3
+01/21/2025 04:32:02:INFO:Received: evaluate message 7e20b859-820d-4c57-ae68-962a6fe19ff3
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:32:06:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:32:12:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:32:12:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 06a49993-98d3-48a4-a9ed-b1cc40b01404
+01/21/2025 04:32:12:INFO:Received: train message 06a49993-98d3-48a4-a9ed-b1cc40b01404
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:32:23:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:32:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:32:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message c22e22ee-15a4-4394-bb73-b121d670d8f8
+01/21/2025 04:32:35:INFO:Received: evaluate message c22e22ee-15a4-4394-bb73-b121d670d8f8
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:32:40:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:32:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:32:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 3f6abd0c-193f-4b95-9e73-6c01a84b4675
+01/21/2025 04:32:46:INFO:Received: train message 3f6abd0c-193f-4b95-9e73-6c01a84b4675
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:32:58:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:33:10:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:33:10:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 65ff9a8f-7301-444f-b6a7-9a725d6d8056
+01/21/2025 04:33:10:INFO:Received: evaluate message 65ff9a8f-7301-444f-b6a7-9a725d6d8056
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:33:15:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:33:21:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:33:21:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 370da614-a24d-4b3a-86ae-46369f01fdba
+01/21/2025 04:33:21:INFO:Received: train message 370da614-a24d-4b3a-86ae-46369f01fdba
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466, 82.93934373557568], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896, 0.48012737752916756]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:33:33:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:33:44:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:33:44:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 7ca061f9-f0cf-4bca-8cf2-a6b24a904b75
+01/21/2025 04:33:44:INFO:Received: evaluate message 7ca061f9-f0cf-4bca-8cf2-a6b24a904b75
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:33:46:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:33:52:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:33:52:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message b131354a-a334-4d7a-8b9c-fc32183aceec
+01/21/2025 04:33:52:INFO:Received: train message b131354a-a334-4d7a-8b9c-fc32183aceec
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466, 82.93934373557568, 90.97561521455646], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896, 0.48012737752916756, 0.4867864647952845]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:34:03:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:34:14:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:34:14:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 150c308d-b28f-4b69-9977-59b4f5f7a3c8
+01/21/2025 04:34:14:INFO:Received: evaluate message 150c308d-b28f-4b69-9977-59b4f5f7a3c8
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:34:16:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:34:22:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:34:22:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 5195032f-d4e6-45ba-a6ef-67b3766d6f40
+01/21/2025 04:34:22:INFO:Received: train message 5195032f-d4e6-45ba-a6ef-67b3766d6f40
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466, 82.93934373557568, 90.97561521455646, 96.54091126471758], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896, 0.48012737752916756, 0.4867864647952845, 0.4928310642782211]}
+
+BaseNM 1.23046875
+noise multiplier 0.3218253627419472
+Noise multiplier before  adjustment: 0.3218253627419472
+Noise multiplier before convergence adjustment: 0.3218253627419472
+Updated noise multiplier after convergence adjustment: 0.3218253627419472
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 04:34:33:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:34:45:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:34:45:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message db10f9b5-2a36-4040-9557-c78d49c2a27b
+01/21/2025 04:34:45:INFO:Received: evaluate message db10f9b5-2a36-4040-9557-c78d49c2a27b
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/21/2025 04:34:47:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 04:34:47:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 04:34:47:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: reconnect message 87da3e6d-e5c4-4fcb-8d2e-8bbd1e30d635
+01/21/2025 04:34:47:INFO:Received: reconnect message 87da3e6d-e5c4-4fcb-8d2e-8bbd1e30d635
+01/21/2025 04:34:47:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+01/21/2025 04:34:47:INFO:Disconnect and shut down
+
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466, 82.93934373557568, 90.97561521455646, 96.54091126471758, 98.45796865597367], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896, 0.48012737752916756, 0.4867864647952845, 0.4928310642782211, 0.4979834073907945]}
+
+
+
+Final client history:
+{'loss': [48.84655028581619, 53.11516425013542, 57.490891963243484, 62.78507153689861, 68.85214047133923, 75.17380636930466, 82.93934373557568, 90.97561521455646, 96.54091126471758, 98.45796865597367], 'accuracy': [0.35105551211884284, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704, 0.3502736512900704], 'auc': [0.3712512512345969, 0.4061668371490468, 0.4312673173831387, 0.44949334288306547, 0.46296270648999244, 0.47215071228712896, 0.48012737752916756, 0.4867864647952845, 0.4928310642782211, 0.4979834073907945]}
+

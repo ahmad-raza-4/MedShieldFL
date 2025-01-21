@@ -61,7 +61,7 @@ def main():
 
     # Start the Flower server
     fl.server.start_server(
-        server_address="0.0.0.0:8067",
+        server_address="0.0.0.0:8068",
         config=fl.server.ServerConfig(num_rounds=10),
         strategy=strategy,
     )

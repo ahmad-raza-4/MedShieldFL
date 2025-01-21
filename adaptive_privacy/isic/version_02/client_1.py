@@ -5,6 +5,8 @@ import flwr as fl
 from opacus import PrivacyEngine
 from collections import OrderedDict
 from sklearn.metrics import roc_auc_score
+from torch import autograd
+import torch.optim as optim
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from opacus.accountants.utils import get_noise_multiplier
@@ -14,35 +16,38 @@ from flamby.datasets.fed_isic2019 import FedIsic2019
 from main import ViT_GPU
 from plot_graphs import plot_metrics
 
-
+# Set seeds for reproducibility
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+# Select GPU and create a directory for logging
+os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
+# Client training history
 client_history = {
     "loss": [],
     "accuracy": [],
     "auc": []
 }
 
+# Hyperparameters
 PARAMS = {
     "batch_size": 32,
     "local_epochs": 3,
 }
 
+# Privacy parameters
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
 }
 
-global_sample_rate = 0  
-
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+global_sample_rate = 0.04885496183206107
 
 def save_str_to_file(string: str, dir_path: str) -> None:
     """Append a string to the log file in the specified directory."""
@@ -59,7 +64,7 @@ def load_data(client_index: int):
     testloader = DataLoader(test_dataset, batch_size=PARAMS["batch_size"])
 
     sample_rate = PARAMS["batch_size"] / len(train_dataset)
-    global_sample_rate = sample_rate 
+    global_sample_rate = sample_rate
     return trainloader, testloader, sample_rate
 
 
@@ -77,8 +82,9 @@ def train(net, trainloader, privacy_engine, optimizer, epochs):
             optimizer.zero_grad()
             loss = criterion(net(images), labels)
             loss.backward()
-            optimizer.step()
+            optimizer.step()  # <-- CRUCIAL: Update model parameters
 
+    # A placeholder for epsilon (overwritten below or by external logic)
     epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
     return epsilon, loss
 
@@ -114,7 +120,7 @@ def test(net, testloader):
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
-        labels=list(range(8)), 
+        labels=list(range(8)),  # 8 classes
         multi_class='ovr'
     )
 
@@ -124,7 +130,6 @@ def test(net, testloader):
 def compute_fisher_information(model, dataloader, device):
     """
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
-    Returns a list (one entry per parameter).
     """
     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
     model.eval()
@@ -148,70 +153,59 @@ def compute_fisher_information(model, dataloader, device):
     return fisher_diag
 
 
-def update_noise_multiplier(
-    base_noise_multiplier,
-    fisher_diag,
-    client_data_size,
-    avg_data_size,
-    epoch,
-    max_epochs
-):
-    """
-    Update the noise multiplier dynamically based on:
-    - base noise from the accountant
-    - Fisher information (averaged or aggregated)
-    - client data scale
-    - convergence factor (if desired)
-    """
+def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size, avg_data_size, epoch, max_epochs):
+        """
+        Update the noise multiplier dynamically based on base noise, Fisher information, and client data scale.
+        """
+        # Fisher scaling: parameters with higher Fisher information should have lower noise
+        #fisher_scaling_factor = ([1.0 / (f + 1e-6) for f in fisher_diag])  # Avoid division by zero
+        fisher_scaling_factor = [f + 1e-6 for f in fisher_diag]
+        print("BaseNM",base_noise_multiplier)
 
-    print("BaseNM =", base_noise_multiplier)
+        # Client data scale: clients with more data need less noise
+        total_size=24459
+        data_scaling_factor = total_size / avg_data_size
+       
+        # Ensure that each element is a scalar or a float value
+        fisher_scaling_factor = [f.detach().cpu().numpy() if isinstance(f, torch.Tensor) else f for f in fisher_scaling_factor]
 
-    # -------------------------------------------------------------------
-    # STEP 1: Combine Fisher diagonals into a single scalar (e.g. average).
-    # NOTE: You can apply the idea that "larger Fisher => smaller noise" by
-    # using 1 / (f + 1e-6), or do it the other way around. Here we just
-    # show a simple approach: average them.
-    # -------------------------------------------------------------------
-    # Convert each param's Fisher diag to scalar and store in list:
-    fisher_vals = []
-    for f in fisher_diag:
-        # Ensure it's a number (CPU float)
-        val = f.detach().cpu().mean().item()  # Average across that param
-        fisher_vals.append(val)
+        # Iterate over each tensor in fisher_scaling_factor and apply operations individually
+        for f in fisher_scaling_factor:
+           noise_multiplier = base_noise_multiplier * f * data_scaling_factor
 
-    # Average across all parameters
-    avg_fisher_val = np.mean(fisher_vals)
+        # Combine base noise multiplier with Fisher scaling and data scaling
+        #self.noise_multiplier = base_noise_multiplier * fisher_scaling_factor * data_scaling_factor
+        noise_multiplier = noise_multiplier.tolist()  # Convert to list for each parameter
+        
+        # Ensure it's a scalar float
+        if isinstance(noise_multiplier, list):
+            noise_multiplier = sum(noise_multiplier) / len(noise_multiplier)  # Example: average if list
+        
+        if isinstance(noise_multiplier, torch.Tensor):
+            noise_multiplier = noise_multiplier.item()  # Convert tensor to float if needed
+        
+        print("noise multiplier" , noise_multiplier)
+        
+        print(f"Noise multiplier before  adjustment: {noise_multiplier}")
+             
+        # Optional: Adjust noise based on some condition related to fisher scaling factor
+        
+        #noise_multiplier *= 0.9  # Apply less noise when fisher information is smaller (scale by 0.5)
+        
+        # Ensure the noise multiplier stays below 1.0
+        #noise_multiplier = min(noise_multiplier, base_noise_multiplier)
+        
+        print(f"Noise multiplier before convergence adjustment: {noise_multiplier}")
+        # Convergence-based adjustment
+        # Reduce the noise multiplier as the model converges
+        if epoch > max_epochs // 2:  # Starting to converge after half of the epochs
+               # We reduce the noise multiplier gradually after halfway through the training
+                convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
+                noise_multiplier *= convergence_factor
+       
+        print(f"Updated noise multiplier after convergence adjustment: {noise_multiplier}")
 
-    # Add a small offset to avoid zero
-    avg_fisher_val += 1e-6
-
-    # -------------------------------------------------------------------
-    # STEP 2: Apply "client data scale" if desired. (Your logic might vary.)
-    # -------------------------------------------------------------------
-    total_size = 24459
-    data_scaling_factor = total_size / avg_data_size
-
-    # -------------------------------------------------------------------
-    # STEP 3: Compute a single final noise multiplier for this client.
-    # If you want "higher Fisher => lower noise," you might do 1/avg_fisher_val.
-    # Right now we multiply directly, so "higher Fisher => bigger noise."
-    # Modify as your logic requires.
-    # -------------------------------------------------------------------
-    noise_multiplier = base_noise_multiplier * avg_fisher_val * data_scaling_factor
-
-    print("Noise multiplier (pre-convergence) =", noise_multiplier)
-
-    # -------------------------------------------------------------------
-    # STEP 4: Optional convergence-based adjustment.
-    # E.g., linearly reduce noise after half of the total epochs.
-    # -------------------------------------------------------------------
-    if epoch > max_epochs // 2:
-        convergence_factor = 1 - (epoch - (max_epochs // 2)) / (max_epochs // 2)
-        noise_multiplier *= convergence_factor
-
-    print("Noise multiplier (post-convergence) =", noise_multiplier)
-
-    return noise_multiplier
+        return noise_multiplier
 
 
 class FedViTDPClient1(fl.client.NumPyClient):
@@ -228,14 +222,12 @@ class FedViTDPClient1(fl.client.NumPyClient):
         self.fisher_diag = fisher_diag
         self.loss_fn = torch.nn.CrossEntropyLoss()
         self.device = DEVICE
-
         self.fisher_threshold = 0.4
         self.lambda_1 = 0.05
         self.lambda_2 = 0.1
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
         self.privacy_engine = None
 
@@ -254,7 +246,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         Perform local training (DP-enabled) using the provided parameters.
         Returns new parameters, number of examples, and a dict of metrics.
         """
-        # 1) Load updated model parameters from server
+        # 1) Update model parameters
         self.set_parameters(parameters)
 
         # 2) Compute dynamic noise multiplier
@@ -263,15 +255,16 @@ class FedViTDPClient1(fl.client.NumPyClient):
         avg_data_size = total_size / 6
 
         accountant = create_accountant(mechanism="prv")
+
+        print("Sample rate in Fit\n", global_sample_rate)
+        
         base_noise_multiplier = get_noise_multiplier(
-            target_epsilon=20,          
+            target_epsilon=1,
             target_delta=1e-5,
-            sample_rate=self.sample_rate,  # Use the real sample rate
+            sample_rate=global_sample_rate,
             epochs=PARAMS["local_epochs"],
             accountant=accountant.mechanism(),
         )
-
-        # Use the updated function which aggregates Fisher diagonals
         dynamic_noise_multiplier = update_noise_multiplier(
             base_noise_multiplier,
             self.fisher_diag,
@@ -281,7 +274,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
             self.max_global_epochs
         )
 
-        # 3) Re-initialize PrivacyEngine with the new noise multiplier
+        # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
 
@@ -305,12 +298,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         )
 
         # Log training details
-        log_str = (
-            f"Global Epoch (Round): {self.global_epoch}, "
-            f"Train Size: {len(self.trainloader.dataset)}, "
-            f"Sample Rate: {self.sample_rate:.6f}, "
-            f"Noise Mult: {dynamic_noise_multiplier:.4f}"
-        )
+        log_str = f"Global Epoch (Round): {self.global_epoch}, Train Size: {len(self.trainloader.dataset)}, Sample Rate: {self.sample_rate}"
         save_str_to_file(log_str, client_name)
         print(f"Epsilon = {epsilon:.2f}")
 
@@ -344,17 +332,17 @@ class FedViTDPClient1(fl.client.NumPyClient):
 if __name__ == "__main__":
     model = ViT_GPU(device=DEVICE)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    trainload, testloader, sample_rate = load_data(client_index=4)
 
-    trainload, testloader, sample_rate = load_data(client_index=0)
-
-    init_log_str = f"Initial Train Dataset Size: {len(trainload.dataset)} Sample rate: {sample_rate:.6f}"
+    init_log_str = f"Initial Train Dataset Size: {len(trainload.dataset)} Sample rate: {sample_rate}"
     save_str_to_file(init_log_str, client_name)
-    print(init_log_str)
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
+    client_data_size = len(trainload.dataset)
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8067",
+        server_address="127.0.0.1:8068",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,
