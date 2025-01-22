@@ -132,7 +132,7 @@ def test(net, testloader):
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
-        labels=list(range(4)),  # 8 classes
+        labels=list(range(4)), 
         multi_class='ovr'
     )
 
@@ -348,7 +348,7 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
     fl.client.start_client(
         server_address="127.0.0.1:8055",

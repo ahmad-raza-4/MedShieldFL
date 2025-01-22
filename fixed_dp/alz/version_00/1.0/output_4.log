@@ -1,0 +1,94 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+01/21/2025 10:04:46:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+01/21/2025 10:04:46:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/21/2025 10:04:46:DEBUG:ChannelConnectivity.IDLE
+01/21/2025 10:04:46:DEBUG:ChannelConnectivity.CONNECTING
+01/21/2025 10:04:46:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/21/2025 10:04:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:04:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: get_parameters message 20fc4302-3c9d-4388-8d6d-97c75afc4597
+01/21/2025 10:04:46:INFO:Received: get_parameters message 20fc4302-3c9d-4388-8d6d-97c75afc4597
+[92mINFO [0m:      Sent reply
+01/21/2025 10:04:50:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:05:19:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:05:19:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 80ab5094-f509-48c1-b04d-b7ad571fc087
+01/21/2025 10:05:19:INFO:Received: train message 80ab5094-f509-48c1-b04d-b7ad571fc087
+Error importing huggingface_hub.hf_api: No module named 'tqdm'
+Error importing huggingface_hub.hf_api: No module named 'tqdm'
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 10:13:48:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:14:49:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:14:49:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message fa62d6cf-9c77-41da-a635-e7857f9cd59b
+01/21/2025 10:14:49:INFO:Received: evaluate message fa62d6cf-9c77-41da-a635-e7857f9cd59b
+Epsilon = 0.71
+[92mINFO [0m:      Sent reply
+01/21/2025 10:16:36:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:17:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:17:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message edb498e4-8ab4-45c2-9b6f-7f27dcb680c8
+01/21/2025 10:17:05:INFO:Received: train message edb498e4-8ab4-45c2-9b6f-7f27dcb680c8
+
+{'loss': [183.56197291612625], 'accuracy': [0.49648162627052383], 'auc': [0.5590802922012008]}
+
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 10:25:26:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:26:34:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:26:34:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 9a386b3e-5eb2-40bb-b85a-ac1b07baeb3b
+01/21/2025 10:26:34:INFO:Received: evaluate message 9a386b3e-5eb2-40bb-b85a-ac1b07baeb3b
+Epsilon = 0.97
+[92mINFO [0m:      Sent reply
+01/21/2025 10:28:22:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:28:47:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:28:47:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 3edbdc07-f0aa-48ba-bdbf-3bfa80ab0b80
+01/21/2025 10:28:47:INFO:Received: train message 3edbdc07-f0aa-48ba-bdbf-3bfa80ab0b80
+
+{'loss': [183.56197291612625, 174.04597514867783], 'accuracy': [0.49648162627052383, 0.49569976544175137], 'auc': [0.5590802922012008, 0.5831169002518957]}
+
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 10:37:15:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:38:08:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:38:08:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 3a01f42a-0251-4638-b2d7-136cb7977741
+01/21/2025 10:38:08:INFO:Received: evaluate message 3a01f42a-0251-4638-b2d7-136cb7977741
+Epsilon = 1.18
+[92mINFO [0m:      Sent reply
+01/21/2025 10:39:55:INFO:Sent reply
+[92mINFO [0m:      
+01/21/2025 10:40:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/21/2025 10:40:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d69b4ee8-0b17-43eb-9869-851f6c6a18a9
+01/21/2025 10:40:37:INFO:Received: train message d69b4ee8-0b17-43eb-9869-851f6c6a18a9
+
+{'loss': [183.56197291612625, 174.04597514867783, 171.55733466148376], 'accuracy': [0.49648162627052383, 0.49569976544175137, 0.4910086004691165], 'auc': [0.5590802922012008, 0.5831169002518957, 0.5971922107095]}
+
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/21/2025 10:48:56:INFO:Sent reply

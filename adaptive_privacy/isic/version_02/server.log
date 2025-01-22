@@ -137,3 +137,18 @@ nohup: ignoring input
 [Server] Model checkpoint saved at round 10 => /home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/adaptive_privacy/version_02/checkpoints/model_checkpoint_round_10.pth
 Time taken (hours): 0.5961180563767751
 Failed to save time taken: [Errno 2] No such file or directory: 'server/log_file.txt'
+[92mINFO [0m:      Sampling failed: number of available clients (0) is less than number of requested clients (1).
+Traceback (most recent call last):
+  File "server.py", line 85, in <module>
+    main()
+  File "server.py", line 63, in main
+    fl.server.start_server(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/app.py", line 171, in start_server
+    hist = run_fl(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 483, in run_fl
+    hist, elapsed_time = server.fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 93, in fit
+    self.parameters = self._get_initial_parameters(server_round=0, timeout=timeout)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 280, in _get_initial_parameters
+    random_client = self._client_manager.sample(1)[0]
+IndexError: list index out of range
