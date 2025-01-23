@@ -18,7 +18,7 @@ from plot_graphs import plot_metrics
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
@@ -39,8 +39,8 @@ PARAMS = {
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
-    "epsilon": 10,
-    "target_epsilon": 10
+    "epsilon": 1,
+    "target_epsilon": 1
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -331,7 +331,7 @@ if __name__ == "__main__":
     optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8076",
+        server_address="127.0.0.1:8088",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,
