@@ -14,7 +14,12 @@ np.random.seed(2)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+os.environ['TORCH_USE_CUDA_DSA'] = "1"
 client_name = "client_3"
+
+torch.backends.cuda.enable_flash_sdp(False)
+torch.backends.cuda.enable_mem_efficient_sdp(False)
+torch.backends.cuda.enable_math_sdp(True)
 
 if not os.path.exists(client_name):
     os.makedirs(client_name)
@@ -27,7 +32,7 @@ client_history = {
 
 PARAMS = {
     "batch_size": 8,
-    "local_epochs": 3,
+    "local_epochs": 5,
 }
 
 PRIVACY_PARAMS = {
@@ -58,14 +63,14 @@ def load_data(client_index: int):
 
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=PARAMS["batch_size"], shuffle=True,
-        num_workers=4, drop_last=True         
+        num_workers=0, drop_last=True         
     )
     testloader = torch.utils.data.DataLoader(
         testset, batch_size=PARAMS["batch_size"], shuffle=False,
-        num_workers=4
+        num_workers=0
     )
 
-    sample_rate = PARAMS["batch_size"] / len(trainset)
+    sample_rate = len(trainset) / 6400.0
     return trainloader, testloader, sample_rate
 
 def train(net, trainloader, privacy_engine, optimizer, epochs):
@@ -75,7 +80,7 @@ def train(net, trainloader, privacy_engine, optimizer, epochs):
         for images, labels in trainloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             optimizer.zero_grad()
-            loss = criterion(net(images), labels)
+            loss=criterion(net(images),labels)
             loss.backward()
             optimizer.step()
     epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
@@ -102,7 +107,10 @@ def test(net, testloader):
             loss += criterion(outputs, labels).item()
             _, predicted = torch.max(outputs.data, 1)
             correct += (predicted == labels).sum().item()
+            
     accuracy = correct / len(testloader.dataset)
+    save_str_to_file(f"Correct: {correct}, Total: {len(testloader.dataset)}", client_name)
+    save_str_to_file(f"Accuracy = {accuracy:.2f}", client_name)
 
     # Add 3
     labels_array = np.concatenate(labels_list)
@@ -115,7 +123,7 @@ def test(net, testloader):
 class FedViTDPClient3(fl.client.NumPyClient):
     def __init__(self, model, trainloader, testloader) -> None:
         super().__init__()
-        optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.5)
+        optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.6)
         self.testloader = testloader
         self.privacy_engine = PrivacyEngine()
         self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
