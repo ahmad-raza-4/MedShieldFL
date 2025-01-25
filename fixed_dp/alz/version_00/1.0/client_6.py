@@ -17,9 +17,9 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
 client_name = "client_6"
 
-torch.backends.cuda.enable_flash_sdp(False)
-torch.backends.cuda.enable_mem_efficient_sdp(False)
-torch.backends.cuda.enable_math_sdp(True)
+# torch.backends.cuda.enable_flash_sdp(False)
+# torch.backends.cuda.enable_mem_efficient_sdp(False)
+# torch.backends.cuda.enable_math_sdp(True)
 
 
 if not os.path.exists(client_name):
@@ -37,7 +37,7 @@ PARAMS = {
 }
 
 PRIVACY_PARAMS = {
-    "target_delta": 1e-5,
+    "target_delta": 1e-3,
     "noise_multiplier": 1.0,
     "max_grad_norm": 1.0,
 }

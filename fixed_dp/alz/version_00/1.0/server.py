@@ -15,6 +15,6 @@ strategy = fl.server.strategy.FedAvg(
 
 fl.server.start_server(
     server_address="0.0.0.0:8091",
-    config=fl.server.ServerConfig(num_rounds=30),
+    config=fl.server.ServerConfig(num_rounds=10),
     strategy=strategy,
 )
