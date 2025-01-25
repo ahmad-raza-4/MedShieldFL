@@ -1,7 +1,6 @@
 import torch
-from flamby.datasets.fed_isic2019 import FedIsic2019
 from torch.utils.data import DataLoader
-from main import ViT, ViT_GPU
+from main import ViT_GPU
 import flwr as fl
 from collections import OrderedDict
 from sklearn.metrics import roc_auc_score
@@ -9,10 +8,19 @@ import numpy as np
 from plot_graphs import plot_metrics
 import os
 
+import torch
+from torch.utils.data import DataLoader
+import matplotlib.pyplot as plt
+import torchvision
+import torchvision.transforms as transforms
+import numpy as np
+
+from flamby.datasets.fed_heart_disease import FedHeartDisease
+
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 client_name = "client_1"
 
 if not os.path.exists(client_name):
@@ -25,7 +33,7 @@ client_history = {
 }
 
 PARAMS = {
-    "batch_size": 32,
+    "batch_size": 8,
     "local_epochs": 3,
 }
 
@@ -35,12 +43,23 @@ def save_str_to_file(string, dir: str):
     with open(f"{dir}/log_file.txt", "a") as file:
         file.write(string + '\n')
 
+
+
 def load_data(client_index: int):
-    train_dataset = FedIsic2019(center=client_index, train=True)
-    test_dataset = FedIsic2019(train=False)
-    trainloader = DataLoader(train_dataset, batch_size=PARAMS["batch_size"])
-    testloader = DataLoader(test_dataset, batch_size=PARAMS["batch_size"])
-    sample_rate = PARAMS["batch_size"] / len(train_dataset)
+    transform_func = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                         std=[0.229, 0.224, 0.225]),
+    ])
+    train_dataset = FedHeartDisease(center=client_index, train=True, transform=transform_func)
+    test_dataset = FedHeartDisease(train=False)
+    
+    trainloader = DataLoader(train_dataset, batch_size=PARAMS["batch_size"], shuffle=True)
+    testloader = DataLoader(test_dataset, batch_size=PARAMS["batch_size"], shuffle=False)
+    
+    sample_rate = len(train_dataset) / 496
+    
     return trainloader, testloader, sample_rate
 
 def train(net, trainloader, optimizer, epochs):
@@ -48,6 +67,7 @@ def train(net, trainloader, optimizer, epochs):
     net.train()
     for _ in range(epochs):
         for images, labels in trainloader:
+            print(f"Image shape: {images.shape}")
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             optimizer.zero_grad()
             loss = criterion(net(images), labels)
@@ -78,7 +98,7 @@ def test(net, testloader):
 
     labels_array = np.concatenate(labels_list)
     scores_array = np.concatenate(scores_list)
-    auc_score = roc_auc_score(y_true=labels_array, y_score=scores_array, multi_class='ovr')
+    auc_score = roc_auc_score(y_true=labels_array, y_score=scores_array[:, 1])
 
     return loss, accuracy, auc_score
 

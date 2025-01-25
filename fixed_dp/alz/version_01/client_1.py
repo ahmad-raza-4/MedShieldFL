@@ -74,35 +74,48 @@ def load_data(client_index: int):
     sample_rate = len(trainset) / 6400.0
     return trainloader, testloader, sample_rate
 
-
 def train(net, trainloader, privacy_engine, optimizer, epochs):
     criterion = torch.nn.CrossEntropyLoss()
     net.train()
-    
-    for epoch in range(epochs):
-        epoch_loss = 0.0  # Accumulate loss for the current epoch
-        for batch_idx, (images, labels) in enumerate(trainloader):
+    for _ in range(epochs):
+        for images, labels in trainloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             optimizer.zero_grad()
-            outputs = net(images)
-            loss = criterion(outputs, labels)
+            loss=criterion(net(images),labels)
             loss.backward()
             optimizer.step()
-            
-            # Accumulate loss
-            epoch_loss += loss.item()
-            
-            # Optionally, print loss every few batches
-            if (batch_idx + 1) % 10 == 0:
-                print(f"Epoch [{epoch+1}/{epochs}], Batch [{batch_idx+1}/{len(trainloader)}], Loss: {loss.item():.4f}")
-        
-        # Compute average loss for the epoch
-        average_epoch_loss = epoch_loss / len(trainloader)
-        save_str_to_file(f"Epoch [{epoch+1}/{epochs}] Average Loss: {average_epoch_loss:.4f}", client_name)
-    
     epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
     save_str_to_file(f"Epsilon = {epsilon:.2f}", client_name)
     return epsilon
+
+# def train(net, trainloader, privacy_engine, optimizer, epochs):
+#     criterion = torch.nn.CrossEntropyLoss()
+#     net.train()
+    
+#     for epoch in range(epochs):
+#         epoch_loss = 0.0  # Accumulate loss for the current epoch
+#         for batch_idx, (images, labels) in enumerate(trainloader):
+#             images, labels = images.to(DEVICE), labels.to(DEVICE)
+#             optimizer.zero_grad()
+#             outputs = net(images)
+#             loss = criterion(outputs, labels)
+#             loss.backward()
+#             optimizer.step()
+            
+#             # Accumulate loss
+#             epoch_loss += loss.item()
+            
+#             # Optionally, print loss every few batches
+#             if (batch_idx + 1) % 10 == 0:
+#                 print(f"Epoch [{epoch+1}/{epochs}], Batch [{batch_idx+1}/{len(trainloader)}], Loss: {loss.item():.4f}")
+        
+#         # Compute average loss for the epoch
+#         average_epoch_loss = epoch_loss / len(trainloader)
+#         save_str_to_file(f"Epoch [{epoch+1}/{epochs}] Average Loss: {average_epoch_loss:.4f}", client_name)
+    
+#     epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
+#     save_str_to_file(f"Epsilon = {epsilon:.2f}", client_name)
+#     return epsilon
 
 
 def test(net, testloader):

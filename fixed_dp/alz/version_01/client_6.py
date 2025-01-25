@@ -1,7 +1,6 @@
 import torch
 from torchvision import datasets, transforms
-
-from main import ViT_GPU
+from main import ViT, ViT_GPU
 import flwr as fl
 from opacus import PrivacyEngine
 from collections import OrderedDict
@@ -10,17 +9,18 @@ import numpy as np
 from plot_graphs import plot_metrics
 import os
 
-torch.manual_seed(0)
-np.random.seed(0)
+torch.manual_seed(5)
+np.random.seed(5)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
-client_name = "client_1"
+client_name = "client_6"
 
 # torch.backends.cuda.enable_flash_sdp(False)
 # torch.backends.cuda.enable_mem_efficient_sdp(False)
 # torch.backends.cuda.enable_math_sdp(True)
+
 
 if not os.path.exists(client_name):
     os.makedirs(client_name)
@@ -135,7 +135,7 @@ def test(net, testloader):
     return loss, accuracy, auc_score
 
 
-class FedViTDPClient1(fl.client.NumPyClient):
+class FedViTDPClient6(fl.client.NumPyClient):
     def __init__(self, model, trainloader, testloader) -> None:
         super().__init__()
         optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.6)
@@ -194,13 +194,13 @@ class FedViTDPClient1(fl.client.NumPyClient):
 # model = ViT()
 model = ViT_GPU(device=DEVICE)
 
-trainload, testloader, sample_rate = load_data(client_index=0)
+trainload, testloader, sample_rate = load_data(client_index=5)
 string = f"Train Dataset Size: {len(trainload)} Sample rate: {sample_rate}"
 save_str_to_file(string, client_name)
 
 fl.client.start_client(
     server_address="127.0.0.1:8091",
-    client = FedViTDPClient1(model=model, trainloader=trainload, testloader=testloader).to_client()
+    client = FedViTDPClient6(model=model, trainloader=trainload, testloader=testloader).to_client()
 )
 
 plot_metrics(client_history, client_name)

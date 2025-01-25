@@ -12,3 +12,250 @@ nohup: ignoring input
 01/24/2025 21:05:28:INFO:[RUN 0, ROUND ]
 [92mINFO [0m:      Received: train message fce650b3-fdeb-4ba9-9906-5a70db1538be
 01/24/2025 21:05:28:INFO:Received: train message fce650b3-fdeb-4ba9-9906-5a70db1538be
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/24/2025 21:08:10:INFO:Sent reply
+[92mINFO [0m:      
+01/24/2025 21:09:56:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/24/2025 21:09:56:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message b899daec-7598-4f8d-979d-c73fcb27a6e8
+01/24/2025 21:09:56:INFO:Received: evaluate message b899daec-7598-4f8d-979d-c73fcb27a6e8
+[92mINFO [0m:      Sent reply
+01/24/2025 21:10:29:INFO:Sent reply
+[92mINFO [0m:      
+01/24/2025 21:10:45:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/24/2025 21:10:45:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 8c456ebb-b3e5-42b2-b1fb-a0691cacd8fe
+01/24/2025 21:10:45:INFO:Received: train message 8c456ebb-b3e5-42b2-b1fb-a0691cacd8fe
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/24/2025 21:13:32:INFO:Sent reply
+[92mINFO [0m:      
+01/24/2025 21:15:09:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/24/2025 21:15:09:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message bc5784cc-f252-4df4-92a6-93a2a356d9c9
+01/24/2025 21:15:09:INFO:Received: evaluate message bc5784cc-f252-4df4-92a6-93a2a356d9c9
+[92mINFO [0m:      Sent reply
+01/24/2025 21:15:34:INFO:Sent reply
+[92mINFO [0m:      
+01/24/2025 21:16:01:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/24/2025 21:16:01:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message f74828ff-28dd-452a-b0fb-13ad09652af2
+01/24/2025 21:16:01:INFO:Received: train message f74828ff-28dd-452a-b0fb-13ad09652af2
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[91mERROR [0m:     Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 147, in fit
+    epsilon = train(
+  File "client_2.py", line 83, in train
+    loss=criterion(net(images),labels)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/grad_sample/grad_sample_module.py", line 149, in forward
+    return self._module(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/fixed_dp/alz/version_00/1.0/main.py", line 52, in forward
+    return self.model(x.to(self.device))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 298, in forward
+    x = self.encoder(x)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 157, in forward
+    return self.ln(self.layers(self.dropout(input)))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 113, in forward
+    x, _ = self.self_attention(x, x, x, need_weights=False)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1241, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 5440, in multi_head_attention_forward
+    attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+RuntimeError: CUDA error: invalid configuration argument
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+01/24/2025 21:16:33:ERROR:Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 147, in fit
+    epsilon = train(
+  File "client_2.py", line 83, in train
+    loss=criterion(net(images),labels)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/grad_sample/grad_sample_module.py", line 149, in forward
+    return self._module(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/fixed_dp/alz/version_00/1.0/main.py", line 52, in forward
+    return self.model(x.to(self.device))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 298, in forward
+    x = self.encoder(x)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 157, in forward
+    return self.ln(self.layers(self.dropout(input)))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 113, in forward
+    x, _ = self.self_attention(x, x, x, need_weights=False)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1241, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 5440, in multi_head_attention_forward
+    attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+RuntimeError: CUDA error: invalid configuration argument
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+01/24/2025 21:16:34:DEBUG:gRPC channel closed
+Epsilon = 0.83
+
+{'loss': [183.9899045228958], 'accuracy': [0.49335418295543393], 'auc': [0.5195222601061145]}
+
+Epsilon = 1.20
+
+{'loss': [183.9899045228958, 172.18215262889862], 'accuracy': [0.49335418295543393, 0.4988272087568413], 'auc': [0.5195222601061145, 0.5699655157327924]}
+
+Traceback (most recent call last):
+  File "client_2.py", line 183, in <module>
+    fl.client.start_client(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 147, in fit
+    epsilon = train(
+  File "client_2.py", line 83, in train
+    loss=criterion(net(images),labels)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/grad_sample/grad_sample_module.py", line 149, in forward
+    return self._module(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/fixed_dp/alz/version_00/1.0/main.py", line 52, in forward
+    return self.model(x.to(self.device))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 298, in forward
+    x = self.encoder(x)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 157, in forward
+    return self.ln(self.layers(self.dropout(input)))
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 113, in forward
+    x, _ = self.self_attention(x, x, x, need_weights=False)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1241, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/functional.py", line 5440, in multi_head_attention_forward
+    attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+RuntimeError: CUDA error: invalid configuration argument
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
