@@ -21,7 +21,7 @@ from opacus.accountants import create_accountant
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 client_name = "client_1"
 
 if not os.path.exists(client_name):
