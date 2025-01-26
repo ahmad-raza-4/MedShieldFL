@@ -198,9 +198,9 @@ for se in seeds:
         total_size = 740
         avg_data_size = total_size / 4
         
-        for client_idx, dl in enumerate(training_dls):
-            fisher_diag = compute_fisher_information(Baseline(), dl, device=device)
-            client_data_size = len(dl.dataset)
+        for client_idx, train_dl in enumerate(training_dls):
+            fisher_diag = compute_fisher_information(Baseline(), train_dl, device=device)
+            client_data_size = len(train_dl.dataset)
             dynamic_noise_multiplier = update_noise_multiplier(
                 base_noise_multiplier, fisher_diag, client_data_size, avg_data_size, epsilon
             )
