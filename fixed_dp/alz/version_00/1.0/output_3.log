@@ -1,62 +1,53 @@
 nohup: ignoring input
 /home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
   warnings.warn(
-01/24/2025 21:04:57:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
-01/24/2025 21:04:57:DEBUG:Opened insecure gRPC connection (no certificates were passed)
-01/24/2025 21:04:57:DEBUG:ChannelConnectivity.IDLE
-01/24/2025 21:04:57:DEBUG:ChannelConnectivity.CONNECTING
-01/24/2025 21:04:57:DEBUG:ChannelConnectivity.READY
+01/25/2025 03:53:14:WARNING:Ignoring drop_last as it is not compatible with DPDataLoader.
+01/25/2025 03:53:14:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/25/2025 03:53:14:DEBUG:ChannelConnectivity.IDLE
+01/25/2025 03:53:14:DEBUG:ChannelConnectivity.READY
 [92mINFO [0m:      
-01/24/2025 21:04:57:INFO:
+01/25/2025 03:53:48:INFO:
 [92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:04:57:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: get_parameters message 6f6400c1-87c3-4c21-b031-22cb9345b693
-01/24/2025 21:04:57:INFO:Received: get_parameters message 6f6400c1-87c3-4c21-b031-22cb9345b693
-[92mINFO [0m:      Sent reply
-01/24/2025 21:05:00:INFO:Sent reply
-[92mINFO [0m:      
-01/24/2025 21:05:22:INFO:
-[92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:05:22:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: train message 1197685c-3306-44af-ac96-411f23e80935
-01/24/2025 21:05:22:INFO:Received: train message 1197685c-3306-44af-ac96-411f23e80935
+01/25/2025 03:53:48:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d24b114c-7417-4016-9359-225e968792b1
+01/25/2025 03:53:48:INFO:Received: train message d24b114c-7417-4016-9359-225e968792b1
 /home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
 [92mINFO [0m:      Sent reply
-01/24/2025 21:07:29:INFO:Sent reply
+01/25/2025 03:56:35:INFO:Sent reply
 [92mINFO [0m:      
-01/24/2025 21:09:47:INFO:
+01/25/2025 03:59:08:INFO:
 [92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:09:47:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: evaluate message 659d7fb3-2742-47d7-8753-251463063d7f
-01/24/2025 21:09:47:INFO:Received: evaluate message 659d7fb3-2742-47d7-8753-251463063d7f
+01/25/2025 03:59:08:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 729a909f-562f-4a6c-bd77-54affdb55ae7
+01/25/2025 03:59:08:INFO:Received: evaluate message 729a909f-562f-4a6c-bd77-54affdb55ae7
 [92mINFO [0m:      Sent reply
-01/24/2025 21:10:20:INFO:Sent reply
+01/25/2025 03:59:24:INFO:Sent reply
 [92mINFO [0m:      
-01/24/2025 21:10:55:INFO:
+01/25/2025 04:00:37:INFO:
 [92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:10:55:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: train message ec9d768f-450b-4781-b4ec-5b64cd4ec16f
-01/24/2025 21:10:55:INFO:Received: train message ec9d768f-450b-4781-b4ec-5b64cd4ec16f
+01/25/2025 04:00:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message fb851c11-a46a-4dca-9113-a7475b6d9e25
+01/25/2025 04:00:37:INFO:Received: train message fb851c11-a46a-4dca-9113-a7475b6d9e25
 /home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
 [92mINFO [0m:      Sent reply
-01/24/2025 21:13:17:INFO:Sent reply
+01/25/2025 04:03:08:INFO:Sent reply
 [92mINFO [0m:      
-01/24/2025 21:15:09:INFO:
+01/25/2025 04:05:29:INFO:
 [92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:15:09:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: evaluate message 8786256d-a890-4bc0-af0a-30262f759365
-01/24/2025 21:15:09:INFO:Received: evaluate message 8786256d-a890-4bc0-af0a-30262f759365
+01/25/2025 04:05:29:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 72e7b8e5-dab5-4533-b444-d0d5954b7ac7
+01/25/2025 04:05:29:INFO:Received: evaluate message 72e7b8e5-dab5-4533-b444-d0d5954b7ac7
 [92mINFO [0m:      Sent reply
-01/24/2025 21:15:34:INFO:Sent reply
+01/25/2025 04:06:04:INFO:Sent reply
 [92mINFO [0m:      
-01/24/2025 21:15:50:INFO:
+01/25/2025 04:06:37:INFO:
 [92mINFO [0m:      [RUN 0, ROUND ]
-01/24/2025 21:15:50:INFO:[RUN 0, ROUND ]
-[92mINFO [0m:      Received: train message fafc92e0-edf8-4a5d-9ed6-315f0e226f1a
-01/24/2025 21:15:50:INFO:Received: train message fafc92e0-edf8-4a5d-9ed6-315f0e226f1a
+01/25/2025 04:06:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 78cdfdc2-ca58-4e4d-a0a1-89aed438e6a3
+01/25/2025 04:06:37:INFO:Received: train message 78cdfdc2-ca58-4e4d-a0a1-89aed438e6a3
 /home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
 [92mINFO [0m:      Sent reply
-01/24/2025 21:17:39:INFO:Sent reply
+01/25/2025 04:08:51:INFO:Sent reply

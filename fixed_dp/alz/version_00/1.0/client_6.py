@@ -12,14 +12,14 @@ import os
 torch.manual_seed(5)
 np.random.seed(5)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '5'
+os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
 client_name = "client_6"
 
-# torch.backends.cuda.enable_flash_sdp(False)
-# torch.backends.cuda.enable_mem_efficient_sdp(False)
-# torch.backends.cuda.enable_math_sdp(True)
+torch.backends.cuda.enable_flash_sdp(False)
+torch.backends.cuda.enable_mem_efficient_sdp(False)
+torch.backends.cuda.enable_math_sdp(True)
 
 
 if not os.path.exists(client_name):

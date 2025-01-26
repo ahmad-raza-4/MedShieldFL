@@ -54,3 +54,43 @@ nohup: ignoring input
   return np.log((d1[i] - delta_target) / d2[i])
 [92mINFO [0m:      Sent reply
 01/24/2025 23:54:06:INFO:Sent reply
+[92mINFO [0m:      
+01/25/2025 03:55:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/25/2025 03:55:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 562e8c0f-c8c6-4290-84af-86540dbbb73b
+01/25/2025 03:55:55:INFO:Received: evaluate message 562e8c0f-c8c6-4290-84af-86540dbbb73b
+[92mINFO [0m:      Sent reply
+01/25/2025 03:59:51:INFO:Sent reply
+[92mINFO [0m:      
+01/25/2025 04:01:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/25/2025 04:01:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 1b936e74-6df0-4a91-9913-ca4319a67c9c
+01/25/2025 04:01:02:INFO:Received: train message 1b936e74-6df0-4a91-9913-ca4319a67c9c
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the smallest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: overflow encountered in exp
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: overflow encountered in divide
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:52: RuntimeWarning: overflow encountered in scalar divide
+  z = np.log(np.where(t > np.log(1 - q), (np.exp(t) + q - 1) / q, 1))
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:145: RuntimeWarning: overflow encountered in exp
+  d2 = np.flip(np.flip(p * np.exp(-t)).cumsum())
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:145: RuntimeWarning: invalid value encountered in accumulate
+  d2 = np.flip(np.flip(p * np.exp(-t)).cumsum())
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:146: RuntimeWarning: overflow encountered in exp
+  ndelta = np.exp(t) * d2 - d1
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:146: RuntimeWarning: invalid value encountered in multiply
+  ndelta = np.exp(t) * d2 - d1
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/prv/prvs.py:152: RuntimeWarning: overflow encountered in scalar divide
+  return np.log((d1[i] - delta_target) / d2[i])
+[92mINFO [0m:      Sent reply
+01/25/2025 04:26:09:INFO:Sent reply

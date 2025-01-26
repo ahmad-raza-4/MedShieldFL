@@ -3,32 +3,20 @@ from itertools import product
 
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
+
 import torch
 import torch.multiprocessing
 from torch.utils.data import DataLoader as dl
-from tqdm import tqdm
+import torch.nn.functional as F
 
 import sys
 import importlib.util
 
 from opacus.accountants import create_accountant
 from opacus.accountants.utils import get_noise_multiplier
-import torch.nn.functional as F
 
-device = torch.device("cpu")
-
-# Define the absolute path to 'strategies.py'
-file_path = '/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/new_exp_2/flamby/strategies/fed_avg.py'
-
-# Load the module dynamically
-spec = importlib.util.spec_from_file_location("fed_avg", file_path)
-strategies = importlib.util.module_from_spec(spec)
-sys.modules["fed_avg"] = strategies
-spec.loader.exec_module(strategies)
-
-# Now you can access FedAvg from the strategies module
-FedAvg = strategies.FedAvg
-
+from flamby.utils import evaluate_model_on_tests
 from flamby.datasets.fed_heart_disease import (
     BATCH_SIZE,
     LR,
@@ -39,44 +27,21 @@ from flamby.datasets.fed_heart_disease import (
     get_nb_max_rounds,
     metric,
 )
-#from flamby.strategies import FedAvg
-from flamby.utils import evaluate_model_on_tests
+
+device = torch.device("cpu")
+
+file_path = '/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/new_exp_2/flamby/strategies/fed_avg.py'
+
+# Load the module dynamically
+spec = importlib.util.spec_from_file_location("fed_avg", file_path)
+strategies = importlib.util.module_from_spec(spec)
+sys.modules["fed_avg"] = strategies
+spec.loader.exec_module(strategies)
+
+FedAvg = strategies.FedAvg
 
 torch.multiprocessing.set_sharing_strategy("file_system")
 
-# def compute_fisher_information(model, dataloader, device):
-#     """
-#     Compute Fisher Information (diagonal approximation) for each parameter of the model.
-#     """
-#     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
-#     model.eval()
-
-#     for data, labels in dataloader:
-#         data, labels = data.to(device), labels.to(device)
-#         outputs = model(data)
-#         outputs = model(data)
-#         print(f"Outputs: {outputs}")
-#         print(f"Outputs shape: {outputs.shape}")
-
-#         log_probs = F.log_softmax(outputs, dim=1)
-
-#         for i, label in enumerate(labels):
-#             print(f"Processing label {label}")
-#             print(f"label size {label.size()}")
-#             print(f"label item {label.item()}")
-
-#             log_prob = log_probs[i, int(label.item())]  # Convert label to integer
-#             model.zero_grad()
-#             log_prob.backward(retain_graph=True)
-
-#             for j, param in enumerate(model.parameters()):
-#                 if param.grad is not None:
-#                     fisher_diag[j] += param.grad ** 2
-#             model.zero_grad()
-
-
-#     fisher_diag = [fisher_value / len(dataloader.dataset) for fisher_value in fisher_diag]
-#     return fisher_diag
 
 def compute_fisher_information(model, dataloader, device):
     """
@@ -117,9 +82,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         fisher_scaling_factor = [f + 1e-6 for f in fisher_diag]
         print("BaseNM",base_noise_multiplier)
 
-
-        # Client data scale: clients with more data need less noise
-        total_size=24459
+        total_size=740
         data_scaling_factor = total_size / avg_data_size
        
         # Ensure that each element is a scalar or a float value
@@ -144,9 +107,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         print("noise multiplier" , noise_multiplier)
         noise_multiplier=noise_multiplier/epsilon
         
-        
-        print(f"Noise multiplier before  adjustment: {noise_multiplier}")
-             
+        print(f"Noise multiplier before  adjustment: {noise_multiplier}")     
 
         return noise_multiplier
         
@@ -157,7 +118,6 @@ nrounds = get_nb_max_rounds(num_updates)
 
 
 bloss = BaselineLoss()
-# We init the strategy parameters to the following default ones
 
 args = {
     "loss": bloss,
@@ -211,7 +171,7 @@ for se in seeds:
         sample_rate=1 / 6,  # Replace with your actual sample rate
         epochs=20,  # Replace with your actual local epochs
         accountant=accountant.mechanism(),)
-        total_size = 23250
+        total_size = 740
         avg_data_size = total_size / 6
         
         # Iterate over each client and their corresponding data loader
@@ -242,7 +202,15 @@ for se in seeds:
     results_all_reps.append({"perf": mean_perf, "e": None, "d": None, "seed": se})
     # args["dp_dynamic_noise_multiplier"] = dynamic_noise_multiplier
 
-    for e, d in tqdm(edelta_list):
+    for entry in tqdm(edelta_list):
+        if len(entry) == 2:
+            e, d = entry
+            noise = None  # Set to None or skip this if unnecessary
+        elif len(entry) == 3:
+            e, d, noise = entry
+        else:
+            raise ValueError(f"Unexpected tuple length in edelta_list: {len(entry)}")
+        
         current_args = copy.deepcopy(args)
         current_args["model"] = copy.deepcopy(global_init)
         current_args["dp_target_epsilon"] = e
@@ -254,8 +222,7 @@ for se in seeds:
         mean_perf = np.array(
             [v for _, v in evaluate_model_on_tests(cm, test_dls, metric).items()]
         ).mean()
-        print(f"Mean performance eps={e}, delta={d}, Perf={mean_perf}")
-        # mean_perf = float(np.random.uniform(0, 1.))
+        print(f"Mean performance eps={e}, delta={d}, Perf={mean_perf}, Noise={noise}")
         results_all_reps.append({"perf": mean_perf, "e": e, "d": d, "seed": se})
 
 results = pd.DataFrame.from_dict(results_all_reps)
