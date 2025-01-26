@@ -182,14 +182,11 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
        
         fisher_scaling_factor = [f.detach().cpu().numpy() if isinstance(f, torch.Tensor) else f for f in fisher_scaling_factor]
 
-        noise_multiplier = []
         for f in fisher_scaling_factor:
-           noise_multiplier.append(base_noise_multiplier * f * data_scaling_factor)
+           noise_multiplier = base_noise_multiplier * f * data_scaling_factor
 
         noise_multiplier = noise_multiplier.tolist()  
         print("Noise Multiplier after Fisher Scaling: ",noise_multiplier)
-
-        noise_multiplier = np.mean(noise_multiplier)
 
         if isinstance(noise_multiplier, list):
             noise_multiplier = sum(noise_multiplier) / len(noise_multiplier) 
@@ -278,7 +275,6 @@ class FedViTDPClient2(fl.client.NumPyClient):
             epsilon=PRIVACY_PARAMS["epsilon"]
         )
 
-        # 3) Re-initialize PrivacyEngine
         
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
 
