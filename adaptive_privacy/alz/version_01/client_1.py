@@ -6,53 +6,59 @@ from opacus import PrivacyEngine
 from collections import OrderedDict
 from sklearn.metrics import roc_auc_score
 import torch.nn.functional as F
-from torchvision import datasets, transforms
-
+from torch.utils.data import DataLoader
 from opacus.accountants.utils import get_noise_multiplier
 from opacus.accountants import create_accountant
 
 from main import ViT_GPU
 from plot_graphs import plot_metrics
 
+from torchvision import datasets, transforms
 
-# Set seeds for reproducibility
+
 torch.manual_seed(0)
 np.random.seed(0)
 
-# Select GPU and create a directory for logging
-os.environ['CUDA_VISIBLE_DEVICES'] = '7'
+os.environ['CUDA_VISIBLE_DEVICES'] = '4'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
-# Client training history
 client_history = {
     "loss": [],
     "accuracy": [],
     "auc": []
 }
 
-# Hyperparameters
 PARAMS = {
-    "batch_size": 32,
+    "batch_size": 4,
     "local_epochs": 3,
+    "full_dataset_size": 6400,
+    "number_of_classes": 4
 }
 
-# Privacy parameters
 PRIVACY_PARAMS = {
-    "target_delta": 1e-3,
+    "target_delta": 1e-5,
     "max_grad_norm": 1.0,
+    "epsilon": 10,
+    "target_epsilon": 10
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+print(f"Params:\n batch_size: {PARAMS['batch_size']}, local_epochs: {PARAMS['local_epochs']}, full_dataset_size: {PARAMS['full_dataset_size']}, num_classes: {PARAMS['number_of_classes']}\n")
+print(f"Privacy Params:\n epsilon: {PRIVACY_PARAMS['epsilon']}, target_epsilon: {PRIVACY_PARAMS['target_epsilon']}, target_delta: {PRIVACY_PARAMS['target_delta']}\n")
+print(f"Device: {DEVICE}\n")
 
+
+# Helper function to save a string to a file
 def save_str_to_file(string: str, dir_path: str) -> None:
     """Append a string to the log file in the specified directory."""
     with open(f"{dir_path}/log_file.txt", "a") as file:
         file.write(string + '\n')
 
 
+# Helper function to load training and testing data
 def load_data(client_index: int):
     """Load training and testing data for the given client index."""
     # Paths to the training and testing directories
@@ -69,17 +75,18 @@ def load_data(client_index: int):
 
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=PARAMS["batch_size"], shuffle=True,
-        num_workers=0, drop_last=True         
+        num_workers=4,
     )
     testloader = torch.utils.data.DataLoader(
         testset, batch_size=PARAMS["batch_size"], shuffle=False,
-        num_workers=0
+        num_workers=4
     )
 
-    sample_rate = PARAMS["batch_size"] / len(trainset)
+    sample_rate = len(trainset) / PARAMS["full_dataset_size"]
     return trainloader, testloader, sample_rate
 
 
+# Helper function to train the model
 def train(net, trainloader, privacy_engine, optimizer, epochs):
     """
     Train the network with Opacus for the specified number of epochs.
@@ -88,19 +95,26 @@ def train(net, trainloader, privacy_engine, optimizer, epochs):
     criterion = torch.nn.CrossEntropyLoss()
     net.train()
 
+    print("Training the model with the following parameters:")
+    print(f"Epochs: {epochs}, Trainloader Size: {trainloader.dataset}, Optimizer: {optimizer}\n")
+
     for _ in range(epochs):
         for images, labels in trainloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
+            print(f"Image Shape: {images.shape}")
+            print(f"Label Shape: {labels.shape}")
+            if images.size(0) == 0:
+                continue  # Skip empty batches
             optimizer.zero_grad()
             loss = criterion(net(images), labels)
             loss.backward()
-            optimizer.step()  # <-- CRUCIAL: Update model parameters
+            optimizer.step()  
 
-    # A placeholder for epsilon (overwritten below or by external logic)
-    epsilon = 1
+    epsilon = PRIVACY_PARAMS["epsilon"]
     return epsilon, loss
 
 
+# Helper function to test the model
 def test(net, testloader):
     """
     Evaluate the network on the test set.
@@ -132,13 +146,14 @@ def test(net, testloader):
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
-        labels=list(range(4)), 
+        labels=list(range(PARAMS["number_of_classes"])), 
         multi_class='ovr'
     )
 
     return total_loss, accuracy, auc_score
 
 
+# Helper function to compute Fisher Information which is used to compute dynamic noise multiplier
 def compute_fisher_information(model, dataloader, device):
     """
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
@@ -165,65 +180,51 @@ def compute_fisher_information(model, dataloader, device):
     return fisher_diag
 
 
-def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size, avg_data_size, epoch, max_epochs):
+# Helper function to update noise multiplier dynamically based on Fisher Information
+def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size, epoch, max_epochs, epsilon):
         """
         Update the noise multiplier dynamically based on base noise, Fisher information, and client data scale.
         """
-        # Fisher scaling: parameters with higher Fisher information should have lower noise
-        #fisher_scaling_factor = ([1.0 / (f + 1e-6) for f in fisher_diag])  # Avoid division by zero
         fisher_scaling_factor = [f + 1e-6 for f in fisher_diag]
-        print("BaseNM",base_noise_multiplier)
+        print("Base Noise Multiplier Received: ",base_noise_multiplier)
 
-        # Client data scale: clients with more data need less noise
-        total_size=client_data_size
-        data_scaling_factor = total_size / avg_data_size
+        
+        data_scaling_factor = client_data_size / PARAMS["full_dataset_size"]
+        print(f"Data Scaling Factor: {data_scaling_factor} where Client Data Size: {client_data_size}")
        
-        # Ensure that each element is a scalar or a float value
         fisher_scaling_factor = [f.detach().cpu().numpy() if isinstance(f, torch.Tensor) else f for f in fisher_scaling_factor]
 
-        # Iterate over each tensor in fisher_scaling_factor and apply operations individually
         for f in fisher_scaling_factor:
            noise_multiplier = base_noise_multiplier * f * data_scaling_factor
 
-        # Combine base noise multiplier with Fisher scaling and data scaling
-        #self.noise_multiplier = base_noise_multiplier * fisher_scaling_factor * data_scaling_factor
-        noise_multiplier = noise_multiplier.tolist()  # Convert to list for each parameter
-        
-        # Ensure it's a scalar float
+        noise_multiplier = noise_multiplier.tolist()  
+        print("Noise Multiplier after Fisher Scaling: ",noise_multiplier)
+
         if isinstance(noise_multiplier, list):
-            noise_multiplier = sum(noise_multiplier) / len(noise_multiplier)  # Example: average if list
-        
+            noise_multiplier = sum(noise_multiplier) / len(noise_multiplier) 
+    
         if isinstance(noise_multiplier, torch.Tensor):
-            noise_multiplier = noise_multiplier.item()  # Convert tensor to float if needed
+            noise_multiplier = noise_multiplier.item()
+
+        print("Noise Multiplier after list and tensor: " , noise_multiplier)
         
-        print("noise multiplier" , noise_multiplier)
+        # noise_multiplier *= (1 / epsilon)  
         
-        print(f"Noise multiplier before  adjustment: {noise_multiplier}")
-             
-        # Optional: Adjust noise based on some condition related to fisher scaling factor
+        # print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
         
-        #noise_multiplier *= 0.9  # Apply less noise when fisher information is smaller (scale by 0.5)
-        
-        # Ensure the noise multiplier stays below 1.0
-        #noise_multiplier = min(noise_multiplier, base_noise_multiplier)
-        
-        print(f"Noise multiplier before convergence adjustment: {noise_multiplier}")
-        # Convergence-based adjustment
-        # Reduce the noise multiplier as the model converges
-        if epoch > max_epochs // 2:  # Starting to converge after half of the epochs
-               # We reduce the noise multiplier gradually after halfway through the training
-                convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
-                noise_multiplier *= convergence_factor
+        # # convergence factor
+        # if epoch > max_epochs // 2:
+        #         convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
+        #         noise_multiplier *= convergence_factor
        
-        print(f"Updated noise multiplier after convergence adjustment: {noise_multiplier}")
+        # print(f"Noise Multiplier after Convergence: {noise_multiplier}")
 
         return noise_multiplier
 
 
 class FedViTDPClient1(fl.client.NumPyClient):
     """
-    Flower client for a Vision Transformer (ViT) model
-    with differential privacy via Opacus.
+    Flower client for a Vision Transformer (ViT) model with differential privacy via Opacus.
     """
     def __init__(self, model, trainloader, testloader, sample_rate, fisher_diag) -> None:
         super().__init__()
@@ -243,15 +244,20 @@ class FedViTDPClient1(fl.client.NumPyClient):
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
         self.privacy_engine = None
 
+        print("Step 1: Client Initialized")
+
+
     def get_parameters(self, config):
         """Return the client's model parameters."""
         return [val.cpu().numpy() for _, val in self.model.state_dict().items()]
+
 
     def set_parameters(self, parameters):
         """Load the given parameters into the client's model."""
         params_dict = zip(self.model.state_dict().keys(), parameters)
         state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
         self.model.load_state_dict(state_dict, strict=True)
+
 
     def fit(self, parameters, config):
         """
@@ -263,29 +269,36 @@ class FedViTDPClient1(fl.client.NumPyClient):
 
         # 2) Compute dynamic noise multiplier
         client_data_size = len(self.trainloader.dataset)
-        total_size = 6400
-        avg_data_size = total_size / 6
+
+        print("Step 2a: Compute base noise multiplier")
 
         accountant = create_accountant(mechanism="prv")
         base_noise_multiplier = get_noise_multiplier(
-            target_epsilon=1,
-            target_delta=1e-3,
-            sample_rate=client_data_size/6400.0,
+            target_epsilon=PRIVACY_PARAMS["target_epsilon"],
+            target_delta=PRIVACY_PARAMS["target_delta"],
+            sample_rate=client_data_size / PARAMS["full_dataset_size"],
             epochs=PARAMS["local_epochs"],
             accountant=accountant.mechanism(),
         )
+
+        print("Step 2b: Update noise multiplier dynamically")
+
         dynamic_noise_multiplier = update_noise_multiplier(
-            base_noise_multiplier,
-            self.fisher_diag,
-            client_data_size,
-            avg_data_size,
-            self.global_epoch,
-            self.max_global_epochs
+            base_noise_multiplier=base_noise_multiplier,
+            fisher_diag=self.fisher_diag,
+            client_data_size=client_data_size,
+            epoch=self.global_epoch,
+            max_epochs=self.max_global_epochs,
+            epsilon=PRIVACY_PARAMS["epsilon"]
         )
+
+        print("Step 2c: Re-initialize PrivacyEngine")
 
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+
+        print("Step 2d: Make model private")
 
         self.model.train()
         
@@ -297,6 +310,8 @@ class FedViTDPClient1(fl.client.NumPyClient):
             noise_multiplier=dynamic_noise_multiplier
         )
 
+        print("Step 2e: Perform local DP training")
+
         # 4) Perform local DP training
         epsilon, loss = train(
             self.model,
@@ -306,16 +321,17 @@ class FedViTDPClient1(fl.client.NumPyClient):
             PARAMS["local_epochs"]
         )
 
+        print("Step 2f: Log training details")
+
         # Log training details
-        log_str = f"Global Epoch (Round): {self.global_epoch}, Train Size: {len(self.trainloader.dataset)}, Sample Rate: {self.sample_rate}"
+        log_str = f"Global Epoch (Round): {self.global_epoch}, Train Size: {len(self.trainloader.dataset)}, Sample Rate: {self.sample_rate}, Train Loss: {loss:.2f}, Epsilon: {epsilon:.2f}, Dynamic Noise Multiplier: {dynamic_noise_multiplier:.2f}"
         save_str_to_file(log_str, client_name)
-        print(f"Epsilon = {epsilon:.2f}")
 
         self.global_epoch += 1
 
         return (
             self.get_parameters(config={}),
-            len(self.trainloader),
+            len(self.trainloader.dataset),
             {"epsilon": epsilon}
         )
 
@@ -324,6 +340,9 @@ class FedViTDPClient1(fl.client.NumPyClient):
         Evaluate the model locally using the given parameters,
         and return the loss, number of examples, and metrics.
         """
+
+        print("Step 3: Evaluate the model locally")
+
         self.set_parameters(parameters)
         loss, accuracy, auc_score = test(self.model, self.testloader)
 
@@ -335,7 +354,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         save_str_to_file(log_str, client_name)
         print(f"\n{client_history}\n")
 
-        return float(loss), len(self.testloader), {"accuracy": float(accuracy)}
+        return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
 
 
 if __name__ == "__main__":
@@ -348,7 +367,7 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
 
     fl.client.start_client(
         server_address="127.0.0.1:8055",
