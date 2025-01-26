@@ -1,25 +1,33 @@
-import os
 import torch
-import numpy as np
+import os
+
+from flamby.datasets.fed_isic2019 import FedIsic2019
+
+from torch.utils.data import DataLoader
+from main import ViT_GPU 
 import flwr as fl
 from opacus import PrivacyEngine
 from collections import OrderedDict
 from sklearn.metrics import roc_auc_score
+import numpy as np
+from plot_graphs import plot_metrics
+import os
+import warnings
 import torch.nn.functional as F
-from torch.utils.data import DataLoader
+
+warnings.filterwarnings("ignore")
+
+# ---------- Additional Imports for Dynamic Noise Multiplier ----------
 from opacus.accountants.utils import get_noise_multiplier
 from opacus.accountants import create_accountant
-
-from flamby.datasets.fed_isic2019 import FedIsic2019
-from main import ViT_GPU
-from plot_graphs import plot_metrics
-
+# ---------------------------------------------------------------------
 
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 client_name = "client_1"
+
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
@@ -29,6 +37,7 @@ client_history = {
     "auc": []
 }
 
+# Hyperparameters
 PARAMS = {
     "batch_size": 32,
     "local_epochs": 3,
@@ -50,52 +59,52 @@ print(f"Privacy Params:\n epsilon: {PRIVACY_PARAMS['epsilon']}, target_epsilon: 
 print(f"Device: {DEVICE}\n")
 
 
-# Helper function to save a string to a file
-def save_str_to_file(string: str, dir_path: str) -> None:
-    """Append a string to the log file in the specified directory."""
-    with open(f"{dir_path}/log_file.txt", "a") as file:
+def save_str_to_file(string, dir: str):
+    with open(f"{dir}/log_file.txt", "a") as file:
         file.write(string + '\n')
 
 
-# Helper function to load training and testing data
 def load_data(client_index: int):
-    """Load training and testing data for the given client index."""
+    """
+    Loads the training and test datasets for the specified client index.
+    Returns trainloader, testloader, and sample_rate.
+    """
     train_dataset = FedIsic2019(center=client_index, train=True)
     test_dataset = FedIsic2019(train=False)
 
     trainloader = DataLoader(train_dataset, batch_size=PARAMS["batch_size"])
     testloader = DataLoader(test_dataset, batch_size=PARAMS["batch_size"])
 
-    sample_rate = len(train_dataset)/PARAMS["full_dataset_size"]
+    sample_rate = len(train_dataset) / PARAMS["full_dataset_size"]
     return trainloader, testloader, sample_rate
 
 
-# Helper function to train the model
 def train(net, trainloader, privacy_engine, optimizer, epochs):
     """
-    Train the network with Opacus for the specified number of epochs.
-    Returns the final epsilon value and the last computed loss.
+    Standard training loop with Opacus privacy engine.
+    Returns the privacy budget epsilon after training.
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.train()
+
+    total_loss = 0.0
 
     for _ in range(epochs):
         for images, labels in trainloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             optimizer.zero_grad()
             loss = criterion(net(images), labels)
+            total_loss += loss.item()
             loss.backward()
-            optimizer.step()  
+            optimizer.step()
 
     epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
-    return epsilon, loss
+    return epsilon, total_loss / len(trainloader)
 
 
-# Helper function to test the model
 def test(net, testloader):
     """
-    Evaluate the network on the test set.
-    Returns (total_loss, accuracy, auc_score).
+    Standard evaluation loop returning (loss, accuracy, AUC).
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.eval()
@@ -107,19 +116,21 @@ def test(net, testloader):
         for data in testloader:
             images, labels = data[0].to(DEVICE), data[1].to(DEVICE)
             outputs = net(images)
-            scores = torch.softmax(outputs, dim=1)
 
+            # Compute softmax scores for AUC
+            scores = torch.softmax(outputs, dim=1)
             labels_list.append(labels.cpu().numpy())
             scores_list.append(scores.cpu().numpy())
-            total_loss += criterion(outputs, labels).item()
 
+            total_loss += criterion(outputs, labels).item()
             _, predicted = torch.max(outputs.data, 1)
             correct += (predicted == labels).sum().item()
 
     accuracy = correct / len(testloader.dataset)
+
+    # Compute AUC in multi-class setting
     labels_array = np.concatenate(labels_list)
     scores_array = np.concatenate(scores_list)
-
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
@@ -171,11 +182,14 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
        
         fisher_scaling_factor = [f.detach().cpu().numpy() if isinstance(f, torch.Tensor) else f for f in fisher_scaling_factor]
 
+        noise_multiplier = []
         for f in fisher_scaling_factor:
-           noise_multiplier = base_noise_multiplier * f * data_scaling_factor
+           noise_multiplier.append(base_noise_multiplier * f * data_scaling_factor)
 
         noise_multiplier = noise_multiplier.tolist()  
         print("Noise Multiplier after Fisher Scaling: ",noise_multiplier)
+
+        noise_multiplier = np.mean(noise_multiplier)
 
         if isinstance(noise_multiplier, list):
             noise_multiplier = sum(noise_multiplier) / len(noise_multiplier) 
@@ -199,7 +213,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         return noise_multiplier
 
 
-class FedViTDPClient1(fl.client.NumPyClient):
+class FedViTDPClient2(fl.client.NumPyClient):
     """
     Flower client for a Vision Transformer (ViT) model with differential privacy via Opacus.
     """
@@ -220,6 +234,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         self.max_global_epochs = 30
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
         self.privacy_engine = None
+        self.privacy_engine = PrivacyEngine()
 
 
     def get_parameters(self, config):
@@ -264,7 +279,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         )
 
         # 3) Re-initialize PrivacyEngine
-        self.privacy_engine = PrivacyEngine()
+        
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
 
         self.model.train()
@@ -295,7 +310,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
 
         return (
             self.get_parameters(config={}),
-            len(self.trainloader),
+            len(self.trainloader.dataset),
             {"epsilon": epsilon}
         )
 
@@ -315,13 +330,13 @@ class FedViTDPClient1(fl.client.NumPyClient):
         save_str_to_file(log_str, client_name)
         print(f"\n{client_history}\n")
 
-        return float(loss), len(self.testloader), {"accuracy": float(accuracy)}
+        return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
 
 
 if __name__ == "__main__":
     model = ViT_GPU(device=DEVICE)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    trainload, testloader, sample_rate = load_data(client_index=0)
+    trainload, testloader, sample_rate = load_data(client_index=1)
 
     init_log_str = f"Initial Train Dataset Size: {len(trainload.dataset)} Sample rate: {sample_rate}"
     save_str_to_file(init_log_str, client_name)
@@ -331,8 +346,8 @@ if __name__ == "__main__":
     optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8076",
-        client=FedViTDPClient1(
+        server_address="127.0.0.1:8044",
+        client=FedViTDPClient2(
             model=model,
             trainloader=trainload,
             testloader=testloader,

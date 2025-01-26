@@ -12,7 +12,7 @@ from flamby.strategies.utils import DataLoaderWithMemory
 # Define the absolute path to 'strategies.py'
 
 
-from .utils import _Model as utils_model
+from utils import _Model as utils_model
 
 
 # # Define the absolute path to 'strategies.py'
