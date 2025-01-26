@@ -12,18 +12,20 @@ from flamby.strategies.utils import DataLoaderWithMemory
 # Define the absolute path to 'strategies.py'
 
 
+from .utils import _Model as utils_model
 
-# Define the absolute path to 'strategies.py'
-file_path = '/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/new_exp/flamby/strategies/utils.py'
 
-# Load the module dynamically
-spec = importlib.util.spec_from_file_location("utils", file_path)
-utils = importlib.util.module_from_spec(spec)
-sys.modules["utils"] = utils
-spec.loader.exec_module(utils)
+# # Define the absolute path to 'strategies.py'
+# file_path = '/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/new_exp/flamby/strategies/utils.py'
+
+# # Load the module dynamically
+# spec = importlib.util.spec_from_file_location("utils", file_path)
+# utils = importlib.util.module_from_spec(spec)
+# sys.modules["utils"] = utils
+# spec.loader.exec_module(utils)
 
 # Now you can access FedAvg from the strategies module
-_Model = utils._Model
+_Model = utils_model
 
 class FedAvg:
     """Federated Averaging Strategy class.
