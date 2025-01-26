@@ -9,7 +9,7 @@ from typing import List, Tuple, Optional, Dict, Any
 from main import ViT  # or ViT_GPU if needed
 
 # Path where you want to save the model checkpoints
-CHECKPOINT_DIR = "/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/adaptive_privacy/alz/version_01/checkpoint"
+CHECKPOINT_DIR = "/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/adaptive_privacy/alz/version_03_deepseek/checkpoints"
 
 
 class SaveModelStrategy(fl.server.strategy.FedAvg):
@@ -53,15 +53,15 @@ def main():
     strategy = SaveModelStrategy(
         fraction_fit=1.0,
         fraction_evaluate=1.0,
-        min_fit_clients=2,
-        min_evaluate_clients=2,
-        min_available_clients=2,
+        min_fit_clients=1,
+        min_evaluate_clients=1,
+        min_available_clients=1,
         # You can pass additional FedAvg constructor arguments if needed
     )
 
     # Start the Flower server
     fl.server.start_server(
-        server_address="0.0.0.0:8056",
+        server_address="0.0.0.0:8057",
         config=fl.server.ServerConfig(num_rounds=10),
         strategy=strategy,
     )

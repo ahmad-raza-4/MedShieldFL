@@ -19,7 +19,7 @@ from torchvision import datasets, transforms
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
@@ -31,17 +31,17 @@ client_history = {
 }
 
 PARAMS = {
-    "batch_size": 4,
+    "batch_size": 32,
     "local_epochs": 3,
     "full_dataset_size": 6400,
     "number_of_classes": 4
 }
 
 PRIVACY_PARAMS = {
-    "target_delta": 1e-5,
+    "target_delta": 1e-3,
     "max_grad_norm": 1.0,
-    "epsilon": 10,
-    "target_epsilon": 10
+    "epsilon": 30,
+    "target_epsilon": 30
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -63,7 +63,7 @@ def load_data(client_index: int):
     """Load training and testing data for the given client index."""
     # Paths to the training and testing directories
     train_dir = f"/home/dgxuser16/NTL/mccarthy/ahmad/github/data/alzheimers/train/client_{client_index}/"
-    test_dir = "/home/dgxuser16/NTL/mccarthy/ahmad/github/data/alzheimers/test"
+    test_dir = f"/home/dgxuser16/NTL/mccarthy/ahmad/github/data/alzheimers/test/"
 
     transform = transforms.Compose([
         transforms.Resize((32, 32)), 
@@ -72,6 +72,8 @@ def load_data(client_index: int):
 
     trainset = datasets.ImageFolder(root=train_dir, transform=transform)
     testset = datasets.ImageFolder(root=test_dir, transform=transform)
+
+    print(f"Trainset Size: {len(trainset)}, Testset Size: {len(testset)}")
 
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=PARAMS["batch_size"], shuffle=True,
@@ -145,6 +147,7 @@ def train(net, trainloader, privacy_engine, optimizer, epochs):
             total_examples += batch_size
 
     average_loss = total_loss / total_examples if total_examples > 0 else 0.0
+    # epsilon = privacy_engine.get_epsilon(delta=PRIVACY_PARAMS["target_delta"])
     epsilon = PRIVACY_PARAMS["epsilon"]
     return epsilon, average_loss
 
@@ -237,7 +240,7 @@ def compute_fisher_information(model, dataloader, device):
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
     """
     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
-    model.eval()
+    model.train()
 
     for data, labels in dataloader:
         data, labels = data.to(device), labels.to(device)
@@ -286,9 +289,9 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
 
         print("Noise Multiplier after list and tensor: " , noise_multiplier)
         
-        # noise_multiplier *= (1 / epsilon)  
+        noise_multiplier *= (1 / epsilon)  
         
-        # print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
+        print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
         
         # # convergence factor
         # if epoch > max_epochs // 2:
@@ -319,7 +322,8 @@ class FedViTDPClient1(fl.client.NumPyClient):
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        # self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
         self.privacy_engine = None
 
         print("Step 1: Client Initialized")
@@ -450,7 +454,8 @@ class FedViTDPClient1(fl.client.NumPyClient):
 
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        # self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        # self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
 
         print("Step 2d: Make model private")
 
@@ -555,10 +560,10 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.6)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8056",
+        server_address="127.0.0.1:8057",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,

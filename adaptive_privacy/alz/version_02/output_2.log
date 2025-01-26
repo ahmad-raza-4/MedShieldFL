@@ -1,0 +1,123 @@
+nohup: ignoring input
+01/26/2025 14:35:37:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/26/2025 14:35:37:DEBUG:ChannelConnectivity.IDLE
+01/26/2025 14:35:37:DEBUG:ChannelConnectivity.CONNECTING
+01/26/2025 14:35:37:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/26/2025 14:35:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/26/2025 14:35:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: get_parameters message 4cb55335-04c0-4c9b-a708-40735b4fc284
+01/26/2025 14:35:37:INFO:Received: get_parameters message 4cb55335-04c0-4c9b-a708-40735b4fc284
+[92mINFO [0m:      Sent reply
+01/26/2025 14:35:40:INFO:Sent reply
+[92mINFO [0m:      
+01/26/2025 14:36:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/26/2025 14:36:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message c958d7c6-21c2-4e31-87c9-4e9a9f270d76
+01/26/2025 14:36:02:INFO:Received: train message c958d7c6-21c2-4e31-87c9-4e9a9f270d76
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+[91mERROR [0m:     Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 464, in fit
+    self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 352, in make_private
+    module = self._prepare_model(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 177, in _prepare_model
+    self.validate(module=module, optimizer=None, data_loader=None)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 242, in validate
+    ModuleValidator.validate(module, strict=True)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/validators/module_validator.py", line 69, in validate
+    raise UnsupportedModuleError(errors)
+opacus.validators.errors.UnsupportedModuleError: [ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!')]
+01/26/2025 14:36:13:ERROR:Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 464, in fit
+    self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 352, in make_private
+    module = self._prepare_model(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 177, in _prepare_model
+    self.validate(module=module, optimizer=None, data_loader=None)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 242, in validate
+    ModuleValidator.validate(module, strict=True)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/validators/module_validator.py", line 69, in validate
+    raise UnsupportedModuleError(errors)
+opacus.validators.errors.UnsupportedModuleError: [ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!')]
+01/26/2025 14:36:13:DEBUG:gRPC channel closed
+Params:
+ batch_size: 32, local_epochs: 3, full_dataset_size: 6400, num_classes: 4
+
+Privacy Params:
+ epsilon: 30, target_epsilon: 30, target_delta: 0.001
+
+Device: cuda:0
+
+Trainset Size: 768, Testset Size: 1279
+Step 1: Client Initialized
+Step 2a: Compute base noise multiplier
+Step 2b: Update noise multiplier dynamically
+Base Noise Multiplier Received:  0.3443145751953125
+Data Scaling Factor: 0.12 where Client Data Size: 768
+Noise Multiplier after Fisher Scaling:  [0.012547383084893227, 0.0015186683740466833, 0.003217191668227315, 0.009448934346437454]
+Noise Multiplier after list and tensor:  0.00668304436840117
+Noise Multiplier after Epsilon Scaling:  0.00022276814561337233
+Step 2c: Re-initialize PrivacyEngine
+Step 2d: Make model private
+Traceback (most recent call last):
+  File "client_2.py", line 565, in <module>
+    fl.client.start_client(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_2.py", line 464, in fit
+    self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 352, in make_private
+    module = self._prepare_model(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 177, in _prepare_model
+    self.validate(module=module, optimizer=None, data_loader=None)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py", line 242, in validate
+    ModuleValidator.validate(module, strict=True)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/validators/module_validator.py", line 69, in validate
+    raise UnsupportedModuleError(errors)
+opacus.validators.errors.UnsupportedModuleError: [ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!'), ShouldReplaceModuleError('We do not support nn.MultiheadAttention because its implementation uses special modules. We have written a DPMultiheadAttention class that is a drop-in replacement which is compatible with our Grad Sample hooks. Please run the recommended replacement!')]
