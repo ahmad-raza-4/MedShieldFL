@@ -10,16 +10,16 @@ from torch.utils.data import DataLoader
 from opacus.accountants.utils import get_noise_multiplier
 from opacus.accountants import create_accountant
 
-from flamby.datasets.fed_isic2019 import FedIsic2019
 from main import ViT_GPU
 from plot_graphs import plot_metrics
 
+from flamby.datasets.fed_isic2019 import FedIsic2019
 
-torch.manual_seed(6)
-np.random.seed(6)
+torch.manual_seed(0)
+np.random.seed(0)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '4'
-client_name = "client_6"
+client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
@@ -32,15 +32,15 @@ client_history = {
 PARAMS = {
     "batch_size": 32,
     "local_epochs": 3,
-    "full_dataset_size": 25331,
+    "full_dataset_size": 18597,
     "number_of_classes": 8
 }
 
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
-    "epsilon": 10,
-    "target_epsilon": 10
+    "epsilon": 30.0,
+    "target_epsilon": 30.0
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -68,6 +68,7 @@ def load_data(client_index: int):
 
     sample_rate = len(train_dataset) / PARAMS["full_dataset_size"]
     return trainloader, testloader, sample_rate
+
 
 
 def train(net, trainloader, privacy_engine, optimizer, epochs):
@@ -218,8 +219,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         return noise_multiplier
 
 
-
-class FedViTDPClient6(fl.client.NumPyClient):
+class FedViTDPClient1(fl.client.NumPyClient):
     """
     Flower client for a Vision Transformer (ViT) model with differential privacy via Opacus.
     """
@@ -238,8 +238,10 @@ class FedViTDPClient6(fl.client.NumPyClient):
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
         self.privacy_engine = None
+
+        print("Step 1: Client Initialized")
 
 
     def get_parameters(self, config):
@@ -265,6 +267,8 @@ class FedViTDPClient6(fl.client.NumPyClient):
         # 2) Compute dynamic noise multiplier
         client_data_size = len(self.trainloader.dataset)
 
+        print("Step 2a: Compute base noise multiplier")
+
         accountant = create_accountant(mechanism="prv")
         base_noise_multiplier = get_noise_multiplier(
             target_epsilon=PRIVACY_PARAMS["target_epsilon"],
@@ -273,6 +277,8 @@ class FedViTDPClient6(fl.client.NumPyClient):
             epochs=PARAMS["local_epochs"],
             accountant=accountant.mechanism(),
         )
+
+        print("Step 2b: Update noise multiplier dynamically")
 
         dynamic_noise_multiplier = update_noise_multiplier(
             base_noise_multiplier=base_noise_multiplier,
@@ -283,9 +289,13 @@ class FedViTDPClient6(fl.client.NumPyClient):
             epsilon=PRIVACY_PARAMS["epsilon"]
         )
 
+        print("Step 2c: Re-initialize PrivacyEngine")
+
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
-        
+
+        print("Step 2d: Make model private")
+
         self.model.train()
         
         self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
@@ -296,6 +306,8 @@ class FedViTDPClient6(fl.client.NumPyClient):
             noise_multiplier=dynamic_noise_multiplier
         )
 
+        print("Step 2e: Perform local DP training")
+
         # 4) Perform local DP training
         epsilon, average_loss = train(
             self.model,
@@ -305,7 +317,9 @@ class FedViTDPClient6(fl.client.NumPyClient):
             PARAMS["local_epochs"]
         )
 
-        # Log training details
+        print("Step 2f: Log training details")
+
+        # Log training details with average loss
         log_str = (
             f"Global Epoch (Round): {self.global_epoch}, "
             f"Train Size: {len(self.trainloader.dataset)}, "
@@ -324,39 +338,48 @@ class FedViTDPClient6(fl.client.NumPyClient):
             {"epsilon": epsilon, "train_loss": average_loss}
         )
 
+
     def evaluate(self, parameters, config):
         """
         Evaluate the model locally using the given parameters,
         and return the loss, number of examples, and metrics.
         """
-        self.set_parameters(parameters)
-        loss, accuracy, auc_score = test(self.model, self.testloader)
 
-        client_history["loss"].append(loss)
+        print("Step 3: Evaluate the model locally")
+
+        self.set_parameters(parameters)
+        average_loss, accuracy, auc_score = test(self.model, self.testloader)
+
+        client_history["loss"].append(average_loss)
         client_history["accuracy"].append(accuracy)
         client_history["auc"].append(auc_score)
 
-        log_str = f"Loss: {loss:.2f}, Accuracy: {accuracy:.4f}, AUC: {auc_score:.4f}"
+        log_str = (
+            f"Loss: {average_loss:.4f}, "
+            f"Accuracy: {accuracy:.4f}, "
+            f"AUC: {auc_score:.4f}"
+        )
         save_str_to_file(log_str, client_name)
         print(f"\n{client_history}\n")
 
-        return float(loss), len(self.testloader), {"accuracy": float(accuracy)}
+        return float(average_loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
+
 
 
 if __name__ == "__main__":
     model = ViT_GPU(device=DEVICE)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    trainload, testloader, sample_rate = load_data(client_index=5)
+    trainload, testloader, sample_rate = load_data(client_index=0)
 
     init_log_str = f"Initial Train Dataset Size: {len(trainload.dataset)} Sample rate: {sample_rate}"
     save_str_to_file(init_log_str, client_name)
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    
+
     fl.client.start_client(
-        server_address="127.0.0.1:8031",
-        client=FedViTDPClient6(
+        server_address="127.0.0.1:8052",
+        client=FedViTDPClient1(
             model=model,
             trainloader=trainload,
             testloader=testloader,

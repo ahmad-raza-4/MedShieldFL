@@ -15,8 +15,8 @@ from main import ViT_GPU
 from plot_graphs import plot_metrics
 
 
-torch.manual_seed(2)
-np.random.seed(2)
+torch.manual_seed(3)
+np.random.seed(3)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '4'
 client_name = "client_3"
@@ -66,42 +66,56 @@ def load_data(client_index: int):
     trainloader = DataLoader(train_dataset, batch_size=PARAMS["batch_size"])
     testloader = DataLoader(test_dataset, batch_size=PARAMS["batch_size"])
 
-    sample_rate = PARAMS["batch_size"] / len(train_dataset)
+    sample_rate = len(train_dataset) / PARAMS["full_dataset_size"]
     return trainloader, testloader, sample_rate
 
 
-# Helper function to train the model
 def train(net, trainloader, privacy_engine, optimizer, epochs):
     """
     Train the network with Opacus for the specified number of epochs.
-    Returns the final epsilon value and the last computed loss.
+    Returns the final epsilon value and the average loss.
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.train()
 
-    for _ in range(epochs):
+    print("Training the model with the following parameters:")
+    print(f"Epochs: {epochs}, Trainloader Size: {len(trainloader.dataset)}, Optimizer: {optimizer}\n")
+
+    total_loss = 0.0
+    total_examples = 0
+
+    for epoch in range(epochs):
         for images, labels in trainloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
+            if images.size(0) == 0:
+                continue  # Skip empty batches
             optimizer.zero_grad()
-            loss = criterion(net(images), labels)
+            outputs = net(images)
+            loss = criterion(outputs, labels)
             loss.backward()
-            optimizer.step()  
+            optimizer.step()
 
+            # Accumulate loss
+            batch_size = images.size(0)
+            total_loss += loss.item() * batch_size
+            total_examples += batch_size
+
+    average_loss = total_loss / total_examples if total_examples > 0 else 0.0
     epsilon = PRIVACY_PARAMS["epsilon"]
-    return epsilon, loss
+    return epsilon, average_loss
 
 
-# Helper function to test the model
 def test(net, testloader):
     """
     Evaluate the network on the test set.
-    Returns (total_loss, accuracy, auc_score).
+    Returns (average_loss, accuracy, auc_score).
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.eval()
 
     labels_list, scores_list = [], []
     correct, total_loss = 0, 0.0
+    total_examples = 0
 
     with torch.no_grad():
         for data in testloader:
@@ -111,11 +125,16 @@ def test(net, testloader):
 
             labels_list.append(labels.cpu().numpy())
             scores_list.append(scores.cpu().numpy())
-            total_loss += criterion(outputs, labels).item()
+
+            loss = criterion(outputs, labels).item()
+            batch_size = images.size(0)
+            total_loss += loss * batch_size
+            total_examples += batch_size
 
             _, predicted = torch.max(outputs.data, 1)
             correct += (predicted == labels).sum().item()
 
+    average_loss = total_loss / total_examples if total_examples > 0 else 0.0
     accuracy = correct / len(testloader.dataset)
     labels_array = np.concatenate(labels_list)
     scores_array = np.concatenate(scores_list)
@@ -127,7 +146,7 @@ def test(net, testloader):
         multi_class='ovr'
     )
 
-    return total_loss, accuracy, auc_score
+    return average_loss, accuracy, auc_score
 
 
 # Helper function to compute Fisher Information which is used to compute dynamic noise multiplier
@@ -136,7 +155,7 @@ def compute_fisher_information(model, dataloader, device):
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
     """
     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
-    model.eval()
+    model.train()
 
     for data, labels in dataloader:
         data, labels = data.to(device), labels.to(device)
@@ -166,7 +185,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         print("Base Noise Multiplier Received: ",base_noise_multiplier)
 
         
-        data_scaling_factor = PARAMS["full_dataset_size"] / client_data_size
+        data_scaling_factor = client_data_size / PARAMS["full_dataset_size"]
         print(f"Data Scaling Factor: {data_scaling_factor} where Client Data Size: {client_data_size}")
        
         fisher_scaling_factor = [f.detach().cpu().numpy() if isinstance(f, torch.Tensor) else f for f in fisher_scaling_factor]
@@ -185,18 +204,19 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
 
         print("Noise Multiplier after list and tensor: " , noise_multiplier)
         
-        noise_multiplier *= (1 / epsilon)  
+        # noise_multiplier *= (1 / epsilon)  
         
-        print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
+        # print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
         
-        # convergence factor
-        if epoch > max_epochs // 2:
-                convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
-                noise_multiplier *= convergence_factor
+        # # convergence factor
+        # if epoch > max_epochs // 2:
+        #         convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
+        #         noise_multiplier *= convergence_factor
        
-        print(f"Noise Multiplier after Convergence: {noise_multiplier}")
+        # print(f"Noise Multiplier after Convergence: {noise_multiplier}")
 
         return noise_multiplier
+
 
 
 class FedViTDPClient3(fl.client.NumPyClient):
@@ -218,7 +238,7 @@ class FedViTDPClient3(fl.client.NumPyClient):
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001)
         self.privacy_engine = None
 
 
@@ -265,8 +285,7 @@ class FedViTDPClient3(fl.client.NumPyClient):
 
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
-
+        
         self.model.train()
         
         self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
@@ -278,7 +297,7 @@ class FedViTDPClient3(fl.client.NumPyClient):
         )
 
         # 4) Perform local DP training
-        epsilon, loss = train(
+        epsilon, average_loss = train(
             self.model,
             self.trainloader,
             self.privacy_engine,
@@ -287,16 +306,22 @@ class FedViTDPClient3(fl.client.NumPyClient):
         )
 
         # Log training details
-        log_str = f"Global Epoch (Round): {self.global_epoch}, Train Size: {len(self.trainloader.dataset)}, Sample Rate: {self.sample_rate}"
+        log_str = (
+            f"Global Epoch (Round): {self.global_epoch}, "
+            f"Train Size: {len(self.trainloader.dataset)}, "
+            f"Sample Rate: {self.sample_rate}, "
+            f"Train Loss: {average_loss:.4f}, "
+            f"Epsilon: {epsilon:.2f}, "
+            f"Dynamic Noise Multiplier: {dynamic_noise_multiplier:.2f}"
+        )
         save_str_to_file(log_str, client_name)
-        print(f"Epsilon = {epsilon:.2f} and Loss = {loss:.2f}")
 
         self.global_epoch += 1
 
         return (
             self.get_parameters(config={}),
-            len(self.trainloader),
-            {"epsilon": epsilon}
+            len(self.trainloader.dataset),
+            {"epsilon": epsilon, "train_loss": average_loss}
         )
 
     def evaluate(self, parameters, config):
@@ -328,10 +353,9 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
-
+    
     fl.client.start_client(
-        server_address="127.0.0.1:8076",
+        server_address="127.0.0.1:8031",
         client=FedViTDPClient3(
             model=model,
             trainloader=trainload,
