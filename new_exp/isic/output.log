@@ -1754,3 +1754,229 @@ Mean performance without DP, Perf=0.5308100231070408
   warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
 
  11%|█         | 1/9 [42:24<5:39:18, 2544.76s/it][A 78%|███████▊  | 7/9 [4:20:05<1:18:28, 2354.44s/it]
+ 22%|██▏       | 2/9 [1:31:54<5:26:01, 2794.52s/it][A 89%|████████▉ | 8/9 [5:10:48<42:53, 2573.51s/it]  
+ 33%|███▎      | 3/9 [2:17:50<4:37:43, 2777.23s/it][A100%|██████████| 9/9 [5:52:24<00:00, 2549.42s/it]100%|██████████| 9/9 [5:52:24<00:00, 2349.43s/it]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [02:29<12:26, 149.33s/it]/home/dgxuser16/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:2006: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+ 33%|███▎      | 2/6 [03:17<05:58, 89.70s/it] /home/dgxuser16/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:2006: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+ 50%|█████     | 3/6 [04:04<03:31, 70.48s/it]/home/dgxuser16/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:2006: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+ 67%|██████▋   | 4/6 [04:29<01:44, 52.21s/it]/home/dgxuser16/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:2006: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+ 83%|████████▎ | 5/6 [04:42<00:38, 38.21s/it]/home/dgxuser16/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:2006: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+100%|██████████| 6/6 [04:47<00:00, 26.94s/it]100%|██████████| 6/6 [04:47<00:00, 47.92s/it]
+Mean performance without DP, Perf=0.5307503696368445
+  0%|          | 0/252 [00:00<?, ?it/s]{'loss': BaselineLoss(), 'optimizer_class': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.0005, 'num_updates': 100, 'nrounds': 9, 'training_dataloaders': [<torch.utils.data.dataloader.DataLoader object at 0x7f3c10258b20>, <torch.utils.data.dataloader.DataLoader object at 0x7f3c10258a60>, <torch.utils.data.dataloader.DataLoader object at 0x7f3c10258eb0>, <torch.utils.data.dataloader.DataLoader object at 0x7f3c10258d00>, <torch.utils.data.dataloader.DataLoader object at 0x7f3c10258dc0>, <torch.utils.data.dataloader.DataLoader object at 0x7f3c10258c10>], 'dp_dynamic_noise_multiplier': 459.2552000284195, 'model': Baseline(
+  (model): VisionTransformer(
+    (conv_proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+    (encoder): Encoder(
+      (dropout): Dropout(p=0.0, inplace=False)
+      (layers): Sequential(
+        (encoder_layer_0): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_1): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_2): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_3): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_4): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_5): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_6): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_7): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_8): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_9): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_10): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (encoder_layer_11): EncoderBlock(
+          (ln_1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (self_attention): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (dropout): Dropout(p=0.0, inplace=False)
+          (ln_2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (mlp): MLPBlock(
+            (0): Linear(in_features=768, out_features=3072, bias=True)
+            (1): GELU(approximate='none')
+            (2): Dropout(p=0.0, inplace=False)
+            (3): Linear(in_features=3072, out_features=768, bias=True)
+            (4): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (ln): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+    )
+    (heads): Sequential(
+      (head): Linear(in_features=768, out_features=8, bias=True)
+    )
+  )
+), 'dp_target_epsilon': 50.0, 'dp_target_delta': 0.1, 'dp_max_grad_norm': 1.1}/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+
+1...
+1...
+1...
+1...
+1...
+1...
+
+  0%|          | 0/9 [00:00<?, ?it/s][A
+ 44%|████▍     | 4/9 [3:04:34<3:52:19, 2787.86s/it][A/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+
+ 11%|█         | 1/9 [49:01<6:32:10, 2941.36s/it][A
+ 56%|█████▌    | 5/9 [3:54:47<3:11:15, 2868.90s/it][A
+ 22%|██▏       | 2/9 [1:36:45<5:37:50, 2895.76s/it][A
+ 67%|██████▋   | 6/9 [4:42:25<2:23:15, 2865.25s/it][A
+ 33%|███▎      | 3/9 [2:20:05<4:36:03, 2760.63s/it][A
