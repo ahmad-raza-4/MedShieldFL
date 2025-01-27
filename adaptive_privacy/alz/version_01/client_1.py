@@ -31,7 +31,7 @@ client_history = {
 }
 
 PARAMS = {
-    "batch_size": 4,
+    "batch_size": 32,
     "local_epochs": 3,
     "full_dataset_size": 6400,
     "number_of_classes": 4
@@ -40,8 +40,8 @@ PARAMS = {
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
-    "epsilon": 10,
-    "target_epsilon": 10
+    "epsilon": 30,
+    "target_epsilon": 30
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -237,7 +237,7 @@ def compute_fisher_information(model, dataloader, device):
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
     """
     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
-    model.eval()
+    model.train()
 
     for data, labels in dataloader:
         data, labels = data.to(device), labels.to(device)
@@ -319,7 +319,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.0001)
         self.privacy_engine = None
 
         print("Step 1: Client Initialized")
@@ -450,7 +450,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
 
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        # self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.001, momentum=0.9)
 
         print("Step 2d: Make model private")
 
@@ -555,7 +555,7 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
+    # optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
     fl.client.start_client(
         server_address="127.0.0.1:8056",

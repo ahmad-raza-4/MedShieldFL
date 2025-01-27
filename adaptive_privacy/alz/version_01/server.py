@@ -53,9 +53,9 @@ def main():
     strategy = SaveModelStrategy(
         fraction_fit=1.0,
         fraction_evaluate=1.0,
-        min_fit_clients=2,
-        min_evaluate_clients=2,
-        min_available_clients=2,
+        min_fit_clients=1,
+        min_evaluate_clients=1,
+        min_available_clients=1,
         # You can pass additional FedAvg constructor arguments if needed
     )
 

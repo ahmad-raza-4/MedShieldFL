@@ -46,7 +46,7 @@ TRAIN_PARAMS = {
 }
 
 PRIVACY_PARAMS = {
-    "target_delta": 1e-3,
+    "target_delta": 1e-5,
     "max_grad_norm": 1.0,
     "target_epsilon": 30
 }
