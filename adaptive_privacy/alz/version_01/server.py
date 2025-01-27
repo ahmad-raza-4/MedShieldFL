@@ -53,16 +53,16 @@ def main():
     strategy = SaveModelStrategy(
         fraction_fit=1.0,
         fraction_evaluate=1.0,
-        min_fit_clients=1,
-        min_evaluate_clients=1,
-        min_available_clients=1,
+        min_fit_clients=6,
+        min_evaluate_clients=6,
+        min_available_clients=6,
         # You can pass additional FedAvg constructor arguments if needed
     )
 
     # Start the Flower server
     fl.server.start_server(
-        server_address="0.0.0.0:8056",
-        config=fl.server.ServerConfig(num_rounds=10),
+        server_address="0.0.0.0:8053",
+        config=fl.server.ServerConfig(num_rounds=30),
         strategy=strategy,
     )
 

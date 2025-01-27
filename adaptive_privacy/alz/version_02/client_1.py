@@ -30,7 +30,7 @@ client_history = {
 }
 
 PARAMS = {
-    "batch_size": 32,
+    "batch_size": 16,
     "local_epochs": 3,
     "full_dataset_size": 6400,
     "number_of_classes": 4
@@ -219,16 +219,16 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
 
         print("Noise Multiplier after list and tensor: " , noise_multiplier)
         
-        # noise_multiplier *= (1 / epsilon)  
+        noise_multiplier *= (1 / epsilon)  
         
-        # print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
+        print("Noise Multiplier after Epsilon Scaling: ",noise_multiplier)
         
-        # # convergence factor
-        # if epoch > max_epochs // 2:
-        #         convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
-        #         noise_multiplier *= convergence_factor
+        # convergence factor
+        if epoch > max_epochs // 2:
+                convergence_factor = 1 - (epoch - max_epochs // 2) / (max_epochs // 2)
+                noise_multiplier *= convergence_factor
        
-        # print(f"Noise Multiplier after Convergence: {noise_multiplier}")
+        print(f"Noise Multiplier after Convergence: {noise_multiplier}")
 
         return noise_multiplier
 
@@ -392,7 +392,7 @@ if __name__ == "__main__":
     client_data_size = len(trainload.dataset)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8053",
+        server_address="127.0.0.1:8036",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,

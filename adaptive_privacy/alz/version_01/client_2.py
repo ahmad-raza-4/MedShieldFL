@@ -15,7 +15,6 @@ from plot_graphs import plot_metrics
 
 from torchvision import datasets, transforms
 
-
 torch.manual_seed(1)
 np.random.seed(1)
 
@@ -31,7 +30,7 @@ client_history = {
 }
 
 PARAMS = {
-    "batch_size": 4,
+    "batch_size": 32,
     "local_epochs": 3,
     "full_dataset_size": 6400,
     "number_of_classes": 4
@@ -40,8 +39,8 @@ PARAMS = {
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
-    "epsilon": 10,
-    "target_epsilon": 10
+    "epsilon": 30,
+    "target_epsilon": 30
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -86,34 +85,6 @@ def load_data(client_index: int):
     return trainloader, testloader, sample_rate
 
 
-# # Helper function to train the model
-# def train(net, trainloader, privacy_engine, optimizer, epochs):
-#     """
-#     Train the network with Opacus for the specified number of epochs.
-#     Returns the final epsilon value and the last computed loss.
-#     """
-#     criterion = torch.nn.CrossEntropyLoss()
-#     net.train()
-
-#     print("Training the model with the following parameters:")
-#     print(f"Epochs: {epochs}, Trainloader Size: {trainloader.dataset}, Optimizer: {optimizer}\n")
-
-#     for _ in range(epochs):
-#         for images, labels in trainloader:
-#             images, labels = images.to(DEVICE), labels.to(DEVICE)
-#             print(f"Image Shape: {images.shape}")
-#             print(f"Label Shape: {labels.shape}")
-#             if images.size(0) == 0:
-#                 continue  # Skip empty batches
-#             optimizer.zero_grad()
-#             loss = criterion(net(images), labels)
-#             loss.backward()
-#             optimizer.step()  
-
-#     epsilon = PRIVACY_PARAMS["epsilon"]
-#     return epsilon, loss
-
-
 def train(net, trainloader, privacy_engine, optimizer, epochs):
     """
     Train the network with Opacus for the specified number of epochs.
@@ -148,44 +119,6 @@ def train(net, trainloader, privacy_engine, optimizer, epochs):
     epsilon = PRIVACY_PARAMS["epsilon"]
     return epsilon, average_loss
 
-
-# # Helper function to test the model
-# def test(net, testloader):
-#     """
-#     Evaluate the network on the test set.
-#     Returns (total_loss, accuracy, auc_score).
-#     """
-#     criterion = torch.nn.CrossEntropyLoss()
-#     net.eval()
-
-#     labels_list, scores_list = [], []
-#     correct, total_loss = 0, 0.0
-
-#     with torch.no_grad():
-#         for data in testloader:
-#             images, labels = data[0].to(DEVICE), data[1].to(DEVICE)
-#             outputs = net(images)
-#             scores = torch.softmax(outputs, dim=1)
-
-#             labels_list.append(labels.cpu().numpy())
-#             scores_list.append(scores.cpu().numpy())
-#             total_loss += criterion(outputs, labels).item()
-
-#             _, predicted = torch.max(outputs.data, 1)
-#             correct += (predicted == labels).sum().item()
-
-#     accuracy = correct / len(testloader.dataset)
-#     labels_array = np.concatenate(labels_list)
-#     scores_array = np.concatenate(scores_list)
-
-#     auc_score = roc_auc_score(
-#         y_true=labels_array,
-#         y_score=scores_array,
-#         labels=list(range(PARAMS["number_of_classes"])), 
-#         multi_class='ovr'
-#     )
-
-#     return total_loss, accuracy, auc_score
 
 def test(net, testloader):
     """
@@ -237,7 +170,7 @@ def compute_fisher_information(model, dataloader, device):
     Compute Fisher Information (diagonal approximation) for each parameter of the model.
     """
     fisher_diag = [torch.zeros_like(param).to(device) for param in model.parameters()]
-    model.eval()
+    model.train()
 
     for data, labels in dataloader:
         data, labels = data.to(device), labels.to(device)
@@ -319,7 +252,7 @@ class FedViTDPClient2(fl.client.NumPyClient):
         self.clipping_bound = 2.4
         self.global_epoch = 1
         self.max_global_epochs = 30
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
         self.privacy_engine = None
 
         print("Step 1: Client Initialized")
@@ -336,82 +269,6 @@ class FedViTDPClient2(fl.client.NumPyClient):
         state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
         self.model.load_state_dict(state_dict, strict=True)
 
-
-    # def fit(self, parameters, config):
-    #     """
-    #     Perform local training (DP-enabled) using the provided parameters.
-    #     Returns new parameters, number of examples, and a dict of metrics.
-    #     """
-    #     # 1) Update model parameters
-    #     self.set_parameters(parameters)
-
-    #     # 2) Compute dynamic noise multiplier
-    #     client_data_size = len(self.trainloader.dataset)
-
-    #     print("Step 2a: Compute base noise multiplier")
-
-    #     accountant = create_accountant(mechanism="prv")
-    #     base_noise_multiplier = get_noise_multiplier(
-    #         target_epsilon=PRIVACY_PARAMS["target_epsilon"],
-    #         target_delta=PRIVACY_PARAMS["target_delta"],
-    #         sample_rate=client_data_size / PARAMS["full_dataset_size"],
-    #         epochs=PARAMS["local_epochs"],
-    #         accountant=accountant.mechanism(),
-    #     )
-
-    #     print("Step 2b: Update noise multiplier dynamically")
-
-    #     dynamic_noise_multiplier = update_noise_multiplier(
-    #         base_noise_multiplier=base_noise_multiplier,
-    #         fisher_diag=self.fisher_diag,
-    #         client_data_size=client_data_size,
-    #         epoch=self.global_epoch,
-    #         max_epochs=self.max_global_epochs,
-    #         epsilon=PRIVACY_PARAMS["epsilon"]
-    #     )
-
-    #     print("Step 2c: Re-initialize PrivacyEngine")
-
-    #     # 3) Re-initialize PrivacyEngine
-    #     self.privacy_engine = PrivacyEngine()
-    #     self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
-
-    #     print("Step 2d: Make model private")
-
-    #     self.model.train()
-        
-    #     self.model, self.optimizer, self.trainloader = self.privacy_engine.make_private(
-    #         module=self.model,
-    #         optimizer=self.optimizer,
-    #         data_loader=self.trainloader,
-    #         max_grad_norm=PRIVACY_PARAMS["max_grad_norm"],
-    #         noise_multiplier=dynamic_noise_multiplier
-    #     )
-
-    #     print("Step 2e: Perform local DP training")
-
-    #     # 4) Perform local DP training
-    #     epsilon, loss = train(
-    #         self.model,
-    #         self.trainloader,
-    #         self.privacy_engine,
-    #         self.optimizer,
-    #         PARAMS["local_epochs"]
-    #     )
-
-    #     print("Step 2f: Log training details")
-
-    #     # Log training details
-    #     log_str = f"Global Epoch (Round): {self.global_epoch}, Train Size: {len(self.trainloader.dataset)}, Sample Rate: {self.sample_rate}, Train Loss: {loss:.2f}, Epsilon: {epsilon:.2f}, Dynamic Noise Multiplier: {dynamic_noise_multiplier:.2f}"
-    #     save_str_to_file(log_str, client_name)
-
-    #     self.global_epoch += 1
-
-    #     return (
-    #         self.get_parameters(config={}),
-    #         len(self.trainloader.dataset),
-    #         {"epsilon": epsilon}
-    #     )
 
     def fit(self, parameters, config):
         """
@@ -450,7 +307,6 @@ class FedViTDPClient2(fl.client.NumPyClient):
 
         # 3) Re-initialize PrivacyEngine
         self.privacy_engine = PrivacyEngine()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.0001, momentum=0.9)
 
         print("Step 2d: Make model private")
 
@@ -497,27 +353,6 @@ class FedViTDPClient2(fl.client.NumPyClient):
         )
 
 
-    # def evaluate(self, parameters, config):
-    #     """
-    #     Evaluate the model locally using the given parameters,
-    #     and return the loss, number of examples, and metrics.
-    #     """
-
-    #     print("Step 3: Evaluate the model locally")
-
-    #     self.set_parameters(parameters)
-    #     loss, accuracy, auc_score = test(self.model, self.testloader)
-
-    #     client_history["loss"].append(loss)
-    #     client_history["accuracy"].append(accuracy)
-    #     client_history["auc"].append(auc_score)
-
-    #     log_str = f"Loss: {loss:.2f}, Accuracy: {accuracy:.4f}, AUC: {auc_score:.4f}"
-    #     save_str_to_file(log_str, client_name)
-    #     print(f"\n{client_history}\n")
-
-    #     return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
-
     def evaluate(self, parameters, config):
         """
         Evaluate the model locally using the given parameters,
@@ -555,10 +390,9 @@ if __name__ == "__main__":
 
     fisher_diag = compute_fisher_information(model, trainload, device=device)
     client_data_size = len(trainload.dataset)
-    optimizer = torch.optim.SGD(model.parameters(), lr=0.0001, momentum=0.9)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8056",
+        server_address="127.0.0.1:8053",
         client=FedViTDPClient2(
             model=model,
             trainloader=trainload,
