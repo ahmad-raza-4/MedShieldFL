@@ -18,7 +18,7 @@ from flamby.datasets.fed_isic2019 import FedIsic2019
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '7'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)

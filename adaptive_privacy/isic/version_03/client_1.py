@@ -15,10 +15,10 @@ from plot_graphs import plot_metrics
 
 from flamby.datasets.fed_isic2019 import FedIsic2019
 
-torch.manual_seed(0)
-np.random.seed(0)
+torch.manual_seed(1)
+np.random.seed(1)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 client_name = "client_1"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
@@ -378,7 +378,7 @@ if __name__ == "__main__":
     client_data_size = len(trainload.dataset)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8052",
+        server_address="127.0.0.1:8022",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,
