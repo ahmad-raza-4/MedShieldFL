@@ -6,9 +6,25 @@ import torch.nn as nn
 from efficientnet_pytorch import EfficientNet
 
 from flamby.datasets.fed_isic2019 import FedIsic2019
-
+from torchvision.models import vit_b_16, ViT_B_16_Weights
 
 class Baseline(nn.Module):
+    def __init__(self, device: torch.device) -> None:
+        super(Baseline, self).__init__()  
+        self.device = device
+        self.model = vit_b_16(weights=ViT_B_16_Weights.IMAGENET1K_V1).to(device)
+        
+        for param in self.model.parameters():
+            param.requires_grad = False
+        
+        in_features = self.model.heads[-1].in_features
+        self.model.heads[-1] = nn.Linear(in_features, 8).to(device)
+        self.model.heads[-1].requires_grad = True
+        
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.model(x.to(self.device))
+
+class Baseline1(nn.Module):
     """Baseline model
     We use the EfficientNets architecture that many participants in the ISIC
     competition have identified to work best.

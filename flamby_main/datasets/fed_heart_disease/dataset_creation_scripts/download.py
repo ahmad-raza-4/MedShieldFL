@@ -6,6 +6,12 @@ import sys
 import pandas as pd
 import wget
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_dir))))
+sys.path.append(parent_dir)
+
+print(sys.path)
+
 from flamby.utils import accept_license, create_config, write_value_in_config
 
 

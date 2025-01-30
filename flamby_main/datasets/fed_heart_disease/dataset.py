@@ -7,6 +7,14 @@ import torch
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
 
+import sys
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_dir))))
+sys.path.append(parent_dir)
+
+print(sys.path)
+
 from flamby.utils import check_dataset_from_config
 
 

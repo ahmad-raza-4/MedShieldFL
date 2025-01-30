@@ -9,3 +9,4 @@ class Baseline(nn.Module):
 
     def forward(self, x):
         return torch.sigmoid(self.linear(x))
+

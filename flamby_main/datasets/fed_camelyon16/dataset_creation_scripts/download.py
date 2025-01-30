@@ -12,6 +12,12 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaIoBaseDownload
 from tqdm import tqdm
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_dir))))
+sys.path.append(parent_dir)
+
+print(sys.path)
+
 import flamby.datasets.fed_camelyon16.dataset_creation_scripts as dl_module
 from flamby.utils import accept_license, create_config, write_value_in_config
 
