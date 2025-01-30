@@ -1378,3 +1378,25 @@ Step 3: Evaluate the model locally
   warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
 [92mINFO [0m:      Sent reply
 01/30/2025 05:04:41:INFO:Sent reply
+[92mINFO [0m:      
+01/30/2025 05:40:26:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/30/2025 05:40:26:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message b664a1bc-ff2a-45be-8fcb-60d1cb6574c2
+01/30/2025 05:40:26:INFO:Received: evaluate message b664a1bc-ff2a-45be-8fcb-60d1cb6574c2
+[92mINFO [0m:      Sent reply
+01/30/2025 05:44:47:INFO:Sent reply
+[92mINFO [0m:      
+01/30/2025 05:46:27:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/30/2025 05:46:27:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 19fbe0fe-266d-456e-bee2-dfde85b98320
+01/30/2025 05:46:27:INFO:Received: train message 19fbe0fe-266d-456e-bee2-dfde85b98320
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1359: UserWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  warnings.warn("Using a non-full backward hook when the forward contains multiple autograd Nodes "
+[92mINFO [0m:      Sent reply
+01/30/2025 05:48:53:INFO:Sent reply
