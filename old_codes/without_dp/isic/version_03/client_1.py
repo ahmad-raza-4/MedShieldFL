@@ -1,27 +1,39 @@
+import os
 import torch
 from flamby.datasets.fed_isic2019 import FedIsic2019
 from torch.utils.data import DataLoader
-from main import ViT, ViT_GPU
+from main import ViT, ViT_GPU  # ensure that ViT_GPU is defined in your main module
 import flwr as fl
 from collections import OrderedDict
-from sklearn.metrics import roc_auc_score
 import numpy as np
 from plot_graphs import plot_metrics
-import os
 
+# Additional metric imports
+from sklearn.metrics import (
+    roc_auc_score,
+    confusion_matrix,
+    balanced_accuracy_score,
+    f1_score,
+)
+
+# For reproducibility
 torch.manual_seed(1)
 np.random.seed(1)
 
+# Set CUDA device if available
 os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 client_name = "client_1"
-
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
 client_history = {
     "loss": [],
     "accuracy": [],
-    "auc": []
+    "auc": [],
+    # New metrics will be added to the log
+    "balanced_accuracy": [],
+    "f1_score": [],
+    "confusion_matrix": []  # We'll store the confusion matrix as a list (for logging)
 }
 
 PARAMS = {
@@ -32,14 +44,13 @@ PARAMS = {
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 print(f"Device: {DEVICE}")
 print(f"Client Name: {client_name}")
 print(f"Params: {PARAMS}")
 
 
-def save_str_to_file(string, dir: str):
-    with open(f"{dir}/log_file.txt", "a") as file:
+def save_str_to_file(string, dir_path: str):
+    with open(f"{dir_path}/log_file.txt", "a") as file:
         file.write(string + '\n')
 
 
@@ -52,59 +63,28 @@ def load_data(client_index: int):
     return trainloader, testloader, sample_rate
 
 
-def train(net, trainloader, optimizer, epochs):
-    """
-    Train the network with Opacus for the specified number of epochs.
-    Returns the final epsilon value and the average loss.
-    """
-    criterion = torch.nn.CrossEntropyLoss()
-    net.train()
-
-    print("Training the model with the following parameters:")
-    print(f"Epochs: {epochs}, Trainloader Size: {len(trainloader.dataset)}, Optimizer: {optimizer}\n")
-
-    total_loss = 0.0
-    total_examples = 0
-
-    for epoch in range(epochs):
-        for images, labels in trainloader:
-            images, labels = images.to(DEVICE), labels.to(DEVICE)
-            if images.size(0) == 0:
-                continue  # Skip empty batches
-            optimizer.zero_grad()
-            outputs = net(images)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(net.parameters(), max_norm=1.0)
-            optimizer.step()
-
-            # Accumulate loss
-            batch_size = images.size(0)
-            total_loss += loss.item() * batch_size
-            total_examples += batch_size
-
-    average_loss = total_loss / total_examples if total_examples > 0 else 0.0
-    return average_loss
-
-
 def test(net, testloader):
     """
     Evaluate the network on the test set.
-    Returns (average_loss, accuracy, auc_score).
+    Returns:
+        average_loss, accuracy, auc_score, balanced_accuracy, f1_score, confusion_matrix
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.eval()
 
-    labels_list, scores_list = [], []
+    labels_list = []
+    scores_list = []
+    predictions_list = []
     correct, total_loss = 0, 0.0
     total_examples = 0
 
     with torch.no_grad():
-        for data in testloader:
-            images, labels = data[0].to(DEVICE), data[1].to(DEVICE)
+        for images, labels in testloader:
+            images, labels = images.to(DEVICE), labels.to(DEVICE)
             outputs = net(images)
             scores = torch.softmax(outputs, dim=1)
 
+            # Append raw labels and scores for AUC computation
             labels_list.append(labels.cpu().numpy())
             scores_list.append(scores.cpu().numpy())
 
@@ -113,22 +93,37 @@ def test(net, testloader):
             total_loss += loss * batch_size
             total_examples += batch_size
 
+            # Get predictions and store them for other metrics
             _, predicted = torch.max(outputs.data, 1)
+            predictions_list.append(predicted.cpu().numpy())
             correct += (predicted == labels).sum().item()
 
     average_loss = total_loss / total_examples if total_examples > 0 else 0.0
     accuracy = correct / len(testloader.dataset)
+
+    # Concatenate arrays from all batches
     labels_array = np.concatenate(labels_list)
     scores_array = np.concatenate(scores_list)
+    predictions_array = np.concatenate(predictions_list)
 
+    # Compute multi-class AUC (One-vs-Rest)
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
-        labels=list(range(PARAMS["number_of_classes"])), 
+        labels=list(range(PARAMS["number_of_classes"])),
         multi_class='ovr'
     )
-
-    return average_loss, accuracy, auc_score
+    
+    # Compute balanced accuracy (averages recall per class)
+    balanced_acc = balanced_accuracy_score(labels_array, predictions_array)
+    
+    # Compute macro F1 score (average F1 score across classes)
+    f1 = f1_score(labels_array, predictions_array, average='macro')
+    
+    # Compute confusion matrix
+    cm = confusion_matrix(labels_array, predictions_array)
+    
+    return average_loss, accuracy, auc_score, balanced_acc, f1, cm
 
 
 class FedViTClient1(fl.client.NumPyClient):
@@ -153,15 +148,15 @@ class FedViTClient1(fl.client.NumPyClient):
         """Train the model using the provided parameters and return the updated parameters."""
         self.set_parameters(parameters)
         
-        average_loss=train(
+        average_loss = train(
             net=self.model,
             trainloader=self.trainloader,
             optimizer=self.optimizer,
-            epochs= PARAMS["local_epochs"]
+            epochs=PARAMS["local_epochs"]
         )
 
-        string = f"Average Loss: {average_loss:.4f}"
-        save_str_to_file(string, client_name)
+        log_str = f"Average Loss: {average_loss:.4f}"
+        save_str_to_file(log_str, client_name)
         
         return (
             self.get_parameters(config={}),
@@ -173,32 +168,85 @@ class FedViTClient1(fl.client.NumPyClient):
         """Evaluate the model using the provided parameters."""
         self.set_parameters(parameters)
 
-        loss, accuracy, auc = test(self.model, self.testloader)
+        (loss,
+         accuracy,
+         auc,
+         balanced_acc,
+         f1,
+         cm) = test(self.model, self.testloader)
 
         client_history["loss"].append(loss)
         client_history["accuracy"].append(accuracy)
         client_history["auc"].append(auc)
-        string = f"Loss: {loss:.4f}, Accuracy: {accuracy:.4f}, AUC: {auc:.4f}"
-        save_str_to_file(string, client_name)
-        
+        client_history["balanced_accuracy"].append(balanced_acc)
+        client_history["f1_score"].append(f1)
+        client_history["confusion_matrix"].append(cm.tolist())
+
+        log_str = (
+            f"Loss: {loss:.4f}, Accuracy: {accuracy:.4f}, AUC: {auc:.4f}, "
+            f"Balanced Acc: {balanced_acc:.4f}, F1 Score: {f1:.4f}\n"
+            f"Confusion Matrix:\n{cm}"
+        )
+        save_str_to_file(log_str, client_name)
         print(f"\n{client_history}\n")
-        return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
+        return float(loss), len(self.testloader.dataset), {
+            "accuracy": float(accuracy),
+            "balanced_accuracy": balanced_acc,
+            "f1_score": f1
+        }
+
+
+def train(net, trainloader, optimizer, epochs):
+    """
+    Train the network for the specified number of epochs.
+    Returns the average loss.
+    """
+    criterion = torch.nn.CrossEntropyLoss()
+    net.train()
+
+    print("Training the model with the following parameters:")
+    print(f"Epochs: {epochs}, Trainloader Size: {len(trainloader.dataset)}, Optimizer: {optimizer}\n")
+
+    total_loss = 0.0
+    total_examples = 0
+
+    for epoch in range(epochs):
+        for images, labels in trainloader:
+            images, labels = images.to(DEVICE), labels.to(DEVICE)
+            if images.size(0) == 0:
+                continue  # Skip empty batches
+            optimizer.zero_grad()
+            outputs = net(images)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(net.parameters(), max_norm=1.0)
+            optimizer.step()
+
+            batch_size = images.size(0)
+            total_loss += loss.item() * batch_size
+            total_examples += batch_size
+
+    average_loss = total_loss / total_examples if total_examples > 0 else 0.0
+    return average_loss
 
 
 if __name__ == "__main__":
     model = ViT_GPU(device=DEVICE)
 
-    trainload, testloader, sample_rate = load_data(client_index=0)
-    string = f"Train Dataset Size: {len(trainload)} Sample rate: {sample_rate}"
-    save_str_to_file(string, client_name)
+    trainloader, testloader, sample_rate = load_data(client_index=0)
+    log_str = f"Train Dataset Size: {len(trainloader.dataset)} Sample rate: {sample_rate}"
+    save_str_to_file(log_str, client_name)
 
+    # Start the Flower client
     fl.client.start_client(
         server_address="127.0.0.1:8067",
         client=FedViTClient1(
             model=model, 
-            trainloader=trainload, 
-            testloader=testloader).to_client()
+            trainloader=trainloader, 
+            testloader=testloader
+        )
     )
 
+    # Optionally, plot your tracked metrics
     plot_metrics(client_history, client_name)
     print(f"\n\nFinal client history:\n{client_history}\n")
