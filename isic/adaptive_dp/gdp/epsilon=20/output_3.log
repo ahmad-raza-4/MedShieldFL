@@ -1,0 +1,137 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.2 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/rcmod.py:82: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(mpl.__version__) >= "3.0":
+/home/dgxuser16/.local/lib/python3.8/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/cm.py:1582: MatplotlibDeprecationWarning: The register_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps.register(name)`` instead.
+  mpl_cm.register_cmap(_name, _cmap)
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adaptive_dp/gdp/epsilon=20/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+01/31/2025 05:09:42:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/31/2025 05:09:42:DEBUG:ChannelConnectivity.IDLE
+01/31/2025 05:09:42:DEBUG:ChannelConnectivity.CONNECTING
+01/31/2025 05:09:42:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/31/2025 05:15:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/31/2025 05:15:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message a22bb607-6366-4a1a-a611-41deadf4ad70
+01/31/2025 05:15:05:INFO:Received: train message a22bb607-6366-4a1a-a611-41deadf4ad70
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/gdp.py:23: UserWarning: GDP accounting is experimental and can underestimate privacy expenditure.Proceed with caution. More details: https://arxiv.org/pdf/2106.02848.pdf
+  warnings.warn(
+[91mERROR [0m:     Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_3.py", line 273, in fit
+    base_noise_multiplier = get_noise_multiplier(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/utils.py", line 70, in get_noise_multiplier
+    eps = accountant.get_epsilon(delta=target_delta, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/gdp.py", line 63, in get_epsilon
+    return compute_eps(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 140, in compute_eps_poisson
+    return eps_from_mu(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 97, in eps_from_mu
+    return optimize.root_scalar(f, bracket=[0, 500], method="brentq").root
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_root_scalar.py", line 275, in root_scalar
+    r, sol = methodc(f, a, b, args=args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_zeros_py.py", line 784, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+ValueError: f(a) and f(b) must have different signs
+01/31/2025 05:15:06:ERROR:Client raised an exception.
+Traceback (most recent call last):
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_3.py", line 273, in fit
+    base_noise_multiplier = get_noise_multiplier(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/utils.py", line 70, in get_noise_multiplier
+    eps = accountant.get_epsilon(delta=target_delta, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/gdp.py", line 63, in get_epsilon
+    return compute_eps(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 140, in compute_eps_poisson
+    return eps_from_mu(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 97, in eps_from_mu
+    return optimize.root_scalar(f, bracket=[0, 500], method="brentq").root
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_root_scalar.py", line 275, in root_scalar
+    r, sol = methodc(f, a, b, args=args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_zeros_py.py", line 784, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+ValueError: f(a) and f(b) must have different signs
+01/31/2025 05:15:06:DEBUG:gRPC channel closed
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adaptive_dp/gdp/epsilon=20', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/.local/lib/python3.8/site-packages', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adaptive_dp/gdp/epsilon=20']
+Params:
+ batch_size: 32, local_epochs: 3, full_dataset_size: 18597, num_classes: 8
+
+Privacy Params:
+ epsilon: 20.0, target_epsilon: 20.0, target_delta: 1e-05
+
+Device: cuda:0
+
+Step 1: Client Initialized
+Step 2a: Compute base noise multiplier
+Traceback (most recent call last):
+  File "client_3.py", line 380, in <module>
+    fl.client.start_client(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "client_3.py", line 273, in fit
+    base_noise_multiplier = get_noise_multiplier(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/utils.py", line 70, in get_noise_multiplier
+    eps = accountant.get_epsilon(delta=target_delta, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/gdp.py", line 63, in get_epsilon
+    return compute_eps(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 140, in compute_eps_poisson
+    return eps_from_mu(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/gdp.py", line 97, in eps_from_mu
+    return optimize.root_scalar(f, bracket=[0, 500], method="brentq").root
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_root_scalar.py", line 275, in root_scalar
+    r, sol = methodc(f, a, b, args=args, **kwargs)
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/scipy/optimize/_zeros_py.py", line 784, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+ValueError: f(a) and f(b) must have different signs
