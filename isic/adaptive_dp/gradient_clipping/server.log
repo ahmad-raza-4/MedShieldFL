@@ -1,0 +1,52 @@
+nohup: ignoring input
+[92mINFO [0m:      Starting Flower server, config: num_rounds=30, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (30 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Requesting initial parameters from one random client
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Evaluating initial global parameters
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
+[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.1.
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+[92mINFO [0m:      aggregate_fit: central DP noise with standard deviation: 0.041957365679821494 added to parameters.
+[92mINFO [0m:      configure_evaluate: strategy sampled 11 clients (out of 11)
+[92mINFO [0m:      aggregate_evaluate: received 11 results and 0 failures
+[93mWARNING [0m:   No evaluate_metrics_aggregation_fn provided
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   The number of clients returning parameters (11) differs from the number of sampled clients (6). This could impact the differential privacy guarantees, potentially leading to privacy leakage or inadequate noise calibration.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.09250729604683679.
+[92mINFO [0m:      aggregate_fit: central DP noise with standard deviation: 0.03769499394982821 added to parameters.
+[92mINFO [0m:      configure_evaluate: strategy sampled 11 clients (out of 11)
+[92mINFO [0m:      aggregate_evaluate: received 11 results and 0 failures
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   The number of clients returning parameters (11) differs from the number of sampled clients (6). This could impact the differential privacy guarantees, potentially leading to privacy leakage or inadequate noise calibration.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.08310964971944149.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.08310964971944149.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.08310964971944149.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.08310964971944149.
+[92mINFO [0m:      aggregate_fit: parameters are clipped by value: 0.08310964971944149.
+[92mINFO [0m:      aggrega

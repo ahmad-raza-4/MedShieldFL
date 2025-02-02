@@ -379,7 +379,7 @@ if __name__ == "__main__":
     client_data_size = len(trainload.dataset)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8085",
+        server_address="127.0.0.1:8086",
         client=FedViTDPClient5(
             model=model,
             trainloader=trainload,

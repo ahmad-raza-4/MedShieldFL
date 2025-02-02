@@ -56,7 +56,7 @@ def main():
     )
 
     fl.server.start_server(
-        server_address="0.0.0.0:8085",
+        server_address="0.0.0.0:8066",
         config=fl.server.ServerConfig(num_rounds=30),
         strategy=strategy,
     )

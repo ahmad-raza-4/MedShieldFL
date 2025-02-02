@@ -39,8 +39,8 @@ PARAMS = {
 PRIVACY_PARAMS = {
     "target_delta": 1e-5,
     "max_grad_norm": 1.0,
-    "epsilon": 20.0,
-    "target_epsilon": 20.0
+    "epsilon": 1.0,
+    "target_epsilon": 1.0
 }
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -378,7 +378,7 @@ if __name__ == "__main__":
     client_data_size = len(trainload.dataset)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8085",
+        server_address="127.0.0.1:8086",
         client=FedViTDPClient1(
             model=model,
             trainloader=trainload,
