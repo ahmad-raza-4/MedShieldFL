@@ -292,12 +292,7 @@ def update_noise_multiplier(
     for f in fisher_diag:
         if isinstance(f, torch.Tensor):
             f = f.detach().cpu().numpy()
-        
-        f_mean = np.mean(f)
-        if(f_mean > 0.0001):
-            fisher_scalars.append(np.mean(f))
-
-    save_str_to_file("Fisher Scalars: " + str(fisher_scalars), client_name)
+        fisher_scalars.append(np.mean(f))
 
     noise_multipliers = [
         base_noise_multiplier * f  
@@ -308,9 +303,6 @@ def update_noise_multiplier(
 
     # Aggregate using mean
     noise_multiplier = np.mean(noise_multipliers)
-
-    # noise_multiplier *= 100
-
     return float(noise_multiplier)
 
 
