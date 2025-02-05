@@ -6,7 +6,7 @@ from time import time
 from typing import List, Tuple, Optional, Dict, Any
 
 # Import the model architecture from your main.py
-from main_new import ViT  # or ViT_GPU if needed
+from main import ViT  # or ViT_GPU if needed
 
 # Path where you want to save the model checkpoints
 CHECKPOINT_DIR = "/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/adaptive_privacy/alzheimer's/version_04/chk"
@@ -38,8 +38,7 @@ class SaveModelStrategy(fl.server.strategy.FedAvg):
             state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
             model.load_state_dict(state_dict, strict=True)
 
-
-            if server_round==30:
+            if server_round%30==0:
                 # Save the model checkpoint
                 checkpoint_path = f"{CHECKPOINT_DIR}/model_checkpoint_round_{server_round}.pth"
                 torch.save(model.state_dict(), checkpoint_path)
@@ -55,16 +54,16 @@ def main():
     strategy = SaveModelStrategy(
         fraction_fit=1.0,
         fraction_evaluate=1.0,
-        min_fit_clients=1,
-        min_evaluate_clients=1,
-        min_available_clients=1,
+        min_fit_clients=6,
+        min_evaluate_clients=6,
+        min_available_clients=6,
         # You can pass additional FedAvg constructor arguments if needed
     )
 
     # Start the Flower server
     fl.server.start_server(
-        server_address="0.0.0.0:8047",
-        config=fl.server.ServerConfig(num_rounds=30),
+        server_address="0.0.0.0:8053",
+        config=fl.server.ServerConfig(num_rounds=10),
         strategy=strategy,
     )
 

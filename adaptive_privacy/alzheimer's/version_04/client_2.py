@@ -19,7 +19,7 @@ torch.manual_seed(0)
 np.random.seed(0)
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '5'
-client_name = "client_1"
+client_name = "client_2"
 if not os.path.exists(client_name):
     os.makedirs(client_name)
 
@@ -245,7 +245,7 @@ def update_noise_multiplier(base_noise_multiplier, fisher_diag, client_data_size
         return noise_multiplier
 
 
-class FedViTDPClient1(fl.client.NumPyClient):
+class FedViTDPClient2(fl.client.NumPyClient):
     """
     Flower client for a Vision Transformer (ViT) model with differential privacy via Opacus.
     """
@@ -433,7 +433,7 @@ class FedViTDPClient1(fl.client.NumPyClient):
 if __name__ == "__main__":
     model = ViT_GPU(device=DEVICE)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    trainload, testloader, sample_rate = load_data(client_index=0)
+    trainload, testloader, sample_rate = load_data(client_index=1)
 
     init_log_str = f"Initial Train Dataset Size: {len(trainload.dataset)} Sample rate: {sample_rate}"
     save_str_to_file(init_log_str, client_name)
@@ -443,7 +443,7 @@ if __name__ == "__main__":
 
     fl.client.start_client(
         server_address="127.0.0.1:8053",
-        client=FedViTDPClient1(
+        client=FedViTDPClient2(
             model=model,
             trainloader=trainload,
             testloader=testloader,
