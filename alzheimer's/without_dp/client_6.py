@@ -11,7 +11,7 @@ import os
 torch.manual_seed(6)
 np.random.seed(6)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 client_name = "client_6"
 
 if not os.path.exists(client_name):

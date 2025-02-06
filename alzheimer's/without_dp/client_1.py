@@ -11,7 +11,7 @@ import os
 torch.manual_seed(1)
 np.random.seed(1)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 client_name = "client_1"
 
 if not os.path.exists(client_name):
@@ -20,7 +20,11 @@ if not os.path.exists(client_name):
 client_history = {
     "loss": [],
     "accuracy": [],
-    "auc": []
+    "auc": [],
+    "precision": [],
+    "recall": [],
+    "f1": [],
+    "confusion_matrix": []
 }
 
 PARAMS = {
@@ -74,31 +78,58 @@ def train(net, trainloader, optimizer, epochs):
             optimizer.step()
     return None
 
+# Add new imports at the top
+from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score
+
+# Update the test function
 def test(net, testloader):
     criterion = torch.nn.CrossEntropyLoss()
     net.eval()
 
-    labels_list, scores_list = [], []
-    correct, loss = 0, 0.0
+    labels_list, scores_list, predicted_list = [], [], []
+    correct, total_loss = 0, 0.0
+    total_examples = 0
+
     with torch.no_grad():
         for data in testloader:
             images, labels = data[0].to(DEVICE), data[1].to(DEVICE)
             outputs = net(images)
-
             scores = torch.softmax(outputs, dim=1)
+            predicted = torch.argmax(outputs, dim=1)
+
             labels_list.append(labels.cpu().numpy())
             scores_list.append(scores.cpu().numpy())
+            predicted_list.append(predicted.cpu().numpy())
 
-            loss += criterion(outputs, labels).item() 
-            _, predicted = torch.max(outputs.data, 1)
+            loss = criterion(outputs, labels).item()
+            batch_size = images.size(0)
+            total_loss += loss * batch_size
+            total_examples += batch_size
             correct += (predicted == labels).sum().item()
+
+    # Compute metrics
+    average_loss = total_loss / total_examples if total_examples > 0 else 0.0
     accuracy = correct / len(testloader.dataset)
-
     labels_array = np.concatenate(labels_list)
+    predicted_array = np.concatenate(predicted_list)
     scores_array = np.concatenate(scores_list)
-    auc_score = roc_auc_score(y_true=labels_array, y_score=scores_array, labels=list(range(4)), multi_class='ovr')
 
-    return loss, accuracy, auc_score
+    # Calculate AUC
+    auc_score = roc_auc_score(
+        y_true=labels_array,
+        y_score=scores_array,
+        labels=list(range(4)), 
+        multi_class='ovr'
+    )
+
+    # Calculate classification metrics
+    cm = confusion_matrix(labels_array, predicted_array)
+    precision = precision_score(labels_array, predicted_array, average='macro')
+    recall = recall_score(labels_array, predicted_array, average='macro')
+    f1 = f1_score(labels_array, predicted_array, average='macro')
+
+    return average_loss, accuracy, auc_score, cm, precision, recall, f1
+
 
 class FedViTClient1(fl.client.NumPyClient):
     def __init__(self, model, trainloader, testloader) -> None:
@@ -136,17 +167,29 @@ class FedViTClient1(fl.client.NumPyClient):
             {}  
         )
 
+    # Modify the evaluate method in FedViTClient1
     def evaluate(self, parameters, config):
-        """Evaluate the model using the provided parameters."""
         self.set_parameters(parameters)
-        loss, accuracy, auc = test(self.model, self.testloader)
+        loss, accuracy, auc, cm, precision, recall, f1 = test(self.model, self.testloader)
+        
+        # Update history
         client_history["loss"].append(loss)
         client_history["accuracy"].append(accuracy)
         client_history["auc"].append(auc)
-        string = f"Loss: {loss:.2f}, Accuracy: {accuracy:.2f}, AUC: {auc:.2f}"
-        save_str_to_file(string, client_name)
-        print(f"\n{client_history}\n")
-        return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}
+        client_history["precision"].append(precision)
+        client_history["recall"].append(recall)
+        client_history["f1"].append(f1)
+        client_history["confusion_matrix"].append(cm)
+        
+        # Log metrics
+        metrics_str = (
+            f"Loss: {loss:.2f}, Accuracy: {accuracy:.2f}, AUC: {auc:.2f}, "
+            f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1: {f1:.2f}\n"
+            f"Confusion Matrix:\n{np.array2string(cm)}"
+        )
+        save_str_to_file(metrics_str, client_name)
+        
+        return float(loss), len(self.testloader.dataset), {"accuracy": accuracy, "auc": auc}
 
 model = ViT_GPU(device=DEVICE)
 
