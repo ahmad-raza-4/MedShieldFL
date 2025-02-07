@@ -3,3 +3,14 @@ nohup: ignoring input
 [92mINFO [0m:      Flower ECE: gRPC server running (30 rounds), SSL is disabled
 [92mINFO [0m:      [INIT]
 [92mINFO [0m:      Requesting initial parameters from one random client
+[92mINFO [0m:      Sampling failed: number of available clients (0) is less than number of requested clients (1).
+Traceback (most recent call last):
+  File "server.py", line 80, in <module>
+    main()
+  File "server.py", line 58, in main
+    fl.server.start_server(
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/app.py", line 171, in start_server
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 483, in run_fl
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 93, in fit
+  File "/home/dgxuser16/.local/lib/python3.8/site-packages/flwr/server/server.py", line 280, in _get_initial_parameters
+IndexError: list index out of range

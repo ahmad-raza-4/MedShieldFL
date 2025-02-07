@@ -1,0 +1,31 @@
+nohup: ignoring input
+[92mINFO [0m:      Starting Flower server, config: num_rounds=30, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (30 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Requesting initial parameters from one random client
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1738698520.217843 4036505 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      Received initial parameters from one random client
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
+[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+Traceback (most recent call last):
+  File "server.py", line 20, in <module>
+    fl.server.start_server(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/app.py", line 186, in start_server
+    hist = run_fl(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/server.py", line 115, in fit
+    res_fit = self.fit_round(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/server.py", line 251, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/strategy/dp_adaptive_clipping.py", line 415, in aggregate_fit
+    self._update_clip_norm(results)
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/server/strategy/dp_adaptive_clipping.py", line 440, in _update_clip_norm
+    raise KeyError(
+KeyError: 'norm_bit not returned by client with id bc9e8bb7e33e49b08a120b9b78b9031d.'

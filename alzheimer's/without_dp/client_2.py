@@ -143,7 +143,7 @@ class FedViTClient2(fl.client.NumPyClient):
         client_history["loss"].append(loss)
         client_history["accuracy"].append(accuracy)
         client_history["auc"].append(auc)
-        string = f"Loss: {loss:.2f}, Accuracy: {accuracy:.2f}, AUC: {auc:.2f}"
+        string = f"Loss: {loss:.4f}, Accuracy: {accuracy:.4f}, AUC: {auc:.4f}"
         save_str_to_file(string, client_name)
         print(f"\n{client_history}\n")
         return float(loss), len(self.testloader.dataset), {"accuracy": float(accuracy)}

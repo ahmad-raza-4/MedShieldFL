@@ -183,8 +183,8 @@ class FedViTClient1(fl.client.NumPyClient):
         
         # Log metrics
         metrics_str = (
-            f"Loss: {loss:.2f}, Accuracy: {accuracy:.2f}, AUC: {auc:.2f}, "
-            f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1: {f1:.2f}\n"
+            f"Loss: {loss:.4f}, Accuracy: {accuracy:.4f}, AUC: {auc:.4f}, "
+            f"Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}\n"
             f"Confusion Matrix:\n{np.array2string(cm)}"
         )
         save_str_to_file(metrics_str, client_name)
