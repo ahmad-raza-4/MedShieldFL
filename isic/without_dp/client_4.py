@@ -75,7 +75,7 @@ def train(net, trainloader, optimizer, epochs):
             outputs = net(images)
             loss = criterion(outputs, labels)
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(net.parameters(), max_norm=1.0)
+            # torch.nn.utils.clip_grad_norm_(net.parameters(), max_norm=1.0)
             optimizer.step()
 
             # Accumulate loss
