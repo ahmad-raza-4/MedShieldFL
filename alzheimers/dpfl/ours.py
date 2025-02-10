@@ -13,7 +13,7 @@ import numpy as np
 import torch.nn.functional as F
 from torchvision import datasets, transforms
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 args = parse_args()
 num_clients = args.num_clients

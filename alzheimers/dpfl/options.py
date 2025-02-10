@@ -10,7 +10,7 @@ def parse_args():
 
     parser.add_argument('--user_sample_rate', type=float, default=1, help="Sample rate for user sampling")
 
-    parser.add_argument('--target_epsilon', type=float, default=1, help="Target privacy budget epsilon")
+    parser.add_argument('--target_epsilon', type=float, default=10, help="Target privacy budget epsilon")
     parser.add_argument('--target_delta', type=float, default=1e-5, help="Target privacy budget delta")
     parser.add_argument('--clipping_bound', type=float, default=2.4, help="Gradient clipping bound")
 
