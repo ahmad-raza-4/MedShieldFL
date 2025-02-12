@@ -180,6 +180,11 @@ def test(net, testloader):
     labels_array = np.concatenate(labels_list)
     scores_array = np.concatenate(scores_list)
 
+    if np.any(np.isnan(scores_array)) or np.any(np.isnan(labels_array)):
+        print("NaN values detected in the inputs to roc_auc_score")
+        return average_loss, accuracy, 0.0
+
+
     auc_score = roc_auc_score(
         y_true=labels_array,
         y_score=scores_array,
