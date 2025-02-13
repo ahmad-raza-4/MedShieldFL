@@ -1,0 +1,164 @@
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.4 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/0.41, e=30/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+02/13/2025 07:14:32:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/13/2025 07:14:32:DEBUG:ChannelConnectivity.IDLE
+02/13/2025 07:14:32:DEBUG:ChannelConnectivity.TRANSIENT_FAILURE
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739459672.772150 2841204 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+02/13/2025 07:14:32:DEBUG:gRPC channel closed
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/0.41, e=30', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/0.41, e=30']
+Device: cuda:0
+Params: {'batch_size': 32, 'local_epochs': 3, 'full_dataset_size': 18597, 'number_of_classes': 8}
+Privacy Params: {'target_delta': 1e-05, 'noise_multiplier': 0.41, 'max_grad_norm': 1.0}
+Traceback (most recent call last):
+  File "client_6.py", line 199, in <module>
+    fl.client.start_client(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/app.py", line 175, in start_client
+    start_client_internal(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/app.py", line 405, in start_client_internal
+    message = receive()
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/grpc_client/connection.py", line 150, in receive
+    proto = next(server_message_iterator)
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/grpc/_channel.py", line 543, in __next__
+    return self._next()
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/grpc/_channel.py", line 952, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:8725: Failed to connect to remote host: connect: Connection refused (111)"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:8725: Failed to connect to remote host: connect: Connection refused (111)", grpc_status:14, created_time:"2025-02-13T07:14:32.723790426-08:00"}"
+>
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.4 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/0.41, e=30/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+02/13/2025 07:15:41:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/13/2025 07:15:41:DEBUG:ChannelConnectivity.IDLE
+02/13/2025 07:15:41:DEBUG:ChannelConnectivity.CONNECTING
+02/13/2025 07:15:41:DEBUG:ChannelConnectivity.READY
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739459741.853281 2842892 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      
+02/13/2025 07:16:15:INFO:
+[92mINFO [0m:      Received: train message e53e9c4c-929f-4f9a-82d1-7bfb0261b7f4
+02/13/2025 07:16:15:INFO:Received: train message e53e9c4c-929f-4f9a-82d1-7bfb0261b7f4
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 07:18:46:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 07:47:07:INFO:
+[92mINFO [0m:      Received: evaluate message 3ed766b0-c902-4bb1-8d53-88b0d82cdbfe
+02/13/2025 07:47:07:INFO:Received: evaluate message 3ed766b0-c902-4bb1-8d53-88b0d82cdbfe
+[92mINFO [0m:      Sent reply
+02/13/2025 07:51:11:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 07:52:16:INFO:
+[92mINFO [0m:      Received: train message 9a210870-1983-455a-b139-68b5ad9abe11
+02/13/2025 07:52:16:INFO:Received: train message 9a210870-1983-455a-b139-68b5ad9abe11
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 07:54:31:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 08:18:45:INFO:
+[92mINFO [0m:      Received: evaluate message 3b4cf749-dbae-48ae-9f3f-df5f04f70b28
+02/13/2025 08:18:45:INFO:Received: evaluate message 3b4cf749-dbae-48ae-9f3f-df5f04f70b28
+[92mINFO [0m:      Sent reply
+02/13/2025 08:22:43:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 08:23:54:INFO:
+[92mINFO [0m:      Received: train message dc30d27b-f82a-4584-924e-0ccb9887058c
+02/13/2025 08:23:54:INFO:Received: train message dc30d27b-f82a-4584-924e-0ccb9887058c
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 08:26:03:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 08:52:08:INFO:
+[92mINFO [0m:      Received: evaluate message cd61a508-c22a-442a-bd49-ec9e022fae32
+02/13/2025 08:52:08:INFO:Received: evaluate message cd61a508-c22a-442a-bd49-ec9e022fae32
+[92mINFO [0m:      Sent reply
+02/13/2025 08:55:57:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 08:57:15:INFO:
+[92mINFO [0m:      Received: train message c0dccbfd-89d4-492f-b062-4a2f380d893d
+02/13/2025 08:57:15:INFO:Received: train message c0dccbfd-89d4-492f-b062-4a2f380d893d
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 08:59:32:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 09:23:38:INFO:
+[92mINFO [0m:      Received: evaluate message 50c39b26-5017-4804-8dca-5e8145118afc
+02/13/2025 09:23:38:INFO:Received: evaluate message 50c39b26-5017-4804-8dca-5e8145118afc
+[92mINFO [0m:      Sent reply
+02/13/2025 09:27:34:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 09:28:17:INFO:
+[92mINFO [0m:      Received: train message e12ba486-dfb1-4292-aa39-9bf325572b5e
+02/13/2025 09:28:17:INFO:Received: train message e12ba486-dfb1-4292-aa39-9bf325572b5e
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 09:29:47:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 09:53:36:INFO:
+[92mINFO [0m:      Received: evaluate message 70adc19a-cabc-4d1c-a1f1-fd493d1d23e6
+02/13/2025 09:53:36:INFO:Received: evaluate message 70adc19a-cabc-4d1c-a1f1-fd493d1d23e6
+[92mINFO [0m:      Sent reply
+02/13/2025 09:57:12:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 09:58:34:INFO:
+[92mINFO [0m:      Received: train message acf3bddf-c5d4-4a27-9b00-b61a39d81e16
+02/13/2025 09:58:34:INFO:Received: train message acf3bddf-c5d4-4a27-9b00-b61a39d81e16
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 10:00:39:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 10:25:57:INFO:
+[92mINFO [0m:      Received: evaluate message f7484ebe-7684-45bc-82f2-a28519cc1362
+02/13/2025 10:25:57:INFO:Received: evaluate message f7484ebe-7684-45bc-82f2-a28519cc1362
+[92mINFO [0m:      Sent reply
+02/13/2025 10:30:30:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 10:30:48:INFO:
+[92mINFO [0m:      Received: train message 2e53b9f9-581f-4ebc-9e3d-534d019e4225
+02/13/2025 10:30:48:INFO:Received: train message 2e53b9f9-581f-4ebc-9e3d-534d019e4225
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/13/2025 10:33:14:INFO:Sent reply
+[92mINFO [0m:      
+02/13/2025 11:01:39:INFO:
+[92mINFO [0m:      Received: evaluate message 7d859700-dc02-4231-aeb5-8c4e9a94bc22
+02/13/2025 11:01:39:INFO:Received: evaluate message 7d859700-dc02-4231-aeb5-8c4e9a94bc22
