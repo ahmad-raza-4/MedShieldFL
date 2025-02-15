@@ -2,13 +2,14 @@ nohup: ignoring input
 [92mINFO [0m:      Starting Flower server, config: num_rounds=30, no round_timeout
 [92mINFO [0m:      Flower ECE: gRPC server running (30 rounds), SSL is disabled
 [92mINFO [0m:      [INIT]
-[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Requesting initial parameters from one random client
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739609610.444149 1575550 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      Received initial parameters from one random client
 [92mINFO [0m:      Starting evaluation of initial global parameters
 [92mINFO [0m:      Evaluation returned no results (`None`)
 [92mINFO [0m:      
 [92mINFO [0m:      [ROUND 1]
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1739560810.409147 1100804 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
 [92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
 [92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
 [93mWARNING [0m:   No fit_metrics_aggregation_fn provided
@@ -156,72 +157,3 @@ I0000 00:00:1739560810.409147 1100804 fork_posix.cc:75] Other threads are curren
 [92mINFO [0m:      
 [92mINFO [0m:      [ROUND 25]
 [92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [ROUND 26]
-[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [ROUND 27]
-[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [ROUND 28]
-[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [ROUND 29]
-[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [ROUND 30]
-[92mINFO [0m:      configure_fit: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_fit: received 6 results and 0 failures
-[92mINFO [0m:      configure_evaluate: strategy sampled 6 clients (out of 6)
-[92mINFO [0m:      aggregate_evaluate: received 6 results and 0 failures
-[92mINFO [0m:      
-[92mINFO [0m:      [SUMMARY]
-[92mINFO [0m:      Run finished 30 round(s) in 47367.58s
-[92mINFO [0m:      	History (loss, distributed):
-[92mINFO [0m:      		round 1: 2.1928906440734863
-[92mINFO [0m:      		round 2: 2.1445162296295166
-[92mINFO [0m:      		round 3: 2.1010446548461914
-[92mINFO [0m:      		round 4: 2.064389228820801
-[92mINFO [0m:      		round 5: 2.033452033996582
-[92mINFO [0m:      		round 6: 2.008424997329712
-[92mINFO [0m:      		round 7: 1.9845776557922363
-[92mINFO [0m:      		round 8: 1.9615983963012695
-[92mINFO [0m:      		round 9: 1.9406287670135498
-[92mINFO [0m:      		round 10: 1.9219684600830078
-[92mINFO [0m:      		round 11: 1.9069589376449585
-[92mINFO [0m:      		round 12: 1.8907972574234009
-[92mINFO [0m:      		round 13: 1.8763316869735718
-[92mINFO [0m:      		round 14: 1.8632926940917969
-[92mINFO [0m:      		round 15: 1.851167917251587
-[92mINFO [0m:      		round 16: 1.8399083614349365
-[92mINFO [0m:      		round 17: 1.828510046005249
-[92mINFO [0m:      		round 18: 1.8181698322296143
-[92mINFO [0m:      		round 19: 1.8078055381774902
-[92mINFO [0m:      		round 20: 1.7988135814666748
-[92mINFO [0m:      		round 21: 1.7907167673110962
-[92mINFO [0m:      		round 22: 1.7824797630310059
-[92mINFO [0m:      		round 23: 1.774469256401062
-[92mINFO [0m:      		round 24: 1.7668818235397339
-[92mINFO [0m:      		round 25: 1.759200096130371
-[92mINFO [0m:      		round 26: 1.7516655921936035
-[92mINFO [0m:      		round 27: 1.745081901550293
-[92mINFO [0m:      		round 28: 1.7377785444259644
-[92mINFO [0m:      		round 29: 1.7323052883148193
-[92mINFO [0m:      		round 30: 1.7249701023101807
-[92mINFO [0m:      
-I0000 00:00:1739608178.262170 1100804 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
