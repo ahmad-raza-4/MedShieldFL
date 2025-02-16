@@ -1,0 +1,104 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.0 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/rcmod.py:82: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(mpl.__version__) >= "3.0":
+/home/dgxuser16/.local/lib/python3.8/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/cm.py:1582: MatplotlibDeprecationWarning: The register_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps.register(name)`` instead.
+  mpl_cm.register_cmap(_name, _cmap)
+/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/raid/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+01/17/2025 23:58:08:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/17/2025 23:58:08:DEBUG:ChannelConnectivity.IDLE
+01/17/2025 23:58:08:DEBUG:ChannelConnectivity.CONNECTING
+01/17/2025 23:58:08:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/18/2025 00:02:17:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 00:02:17:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message c7761c3b-6f32-4e4b-a6a8-fb39b94760c7
+01/18/2025 00:02:17:INFO:Received: train message c7761c3b-6f32-4e4b-a6a8-fb39b94760c7
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 00:11:25:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 00:21:23:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 00:21:23:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 8ca82086-ba99-4d66-83af-5944d22a822c
+01/18/2025 00:21:23:INFO:Received: evaluate message 8ca82086-ba99-4d66-83af-5944d22a822c
+[92mINFO [0m:      Sent reply
+01/18/2025 00:25:18:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 00:25:37:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 00:25:37:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d0d09986-d51e-4b62-889b-cc109a928c89
+01/18/2025 00:25:37:INFO:Received: train message d0d09986-d51e-4b62-889b-cc109a928c89
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 00:33:40:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 00:44:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 00:44:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 8a0ae3a5-ac4b-48da-b78e-6105d49e2a89
+01/18/2025 00:44:55:INFO:Received: evaluate message 8a0ae3a5-ac4b-48da-b78e-6105d49e2a89
+[92mINFO [0m:      Sent reply
+01/18/2025 00:48:47:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 00:48:52:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 00:48:52:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: reconnect message 0837d75b-b2f0-4d37-8b5f-39906029acd7
+01/18/2025 00:48:52:INFO:Received: reconnect message 0837d75b-b2f0-4d37-8b5f-39906029acd7
+01/18/2025 00:48:52:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+01/18/2025 00:48:52:INFO:Disconnect and shut down
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/.local/lib/python3.8/site-packages', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise']
+BaseNM 0.72113037109375
+noise multiplier 0.5386492405086756
+Noise multiplier before  adjustment: 0.5386492405086756
+Noise multiplier before convergence adjustment: 0.5386492405086756
+Updated noise multiplier after convergence adjustment: 0.5386492405086756
+Epsilon = 10.00
+
+{'loss': [142.03716576099396], 'accuracy': [0.3419250906161901], 'auc': [0.5456035765604774]}
+
+BaseNM 0.72113037109375
+noise multiplier 0.5386492405086756
+Noise multiplier before  adjustment: 0.5386492405086756
+Noise multiplier before convergence adjustment: 0.5386492405086756
+Updated noise multiplier after convergence adjustment: 0.0
+Epsilon = 10.00
+
+{'loss': [142.03716576099396, 135.853098154068], 'accuracy': [0.3419250906161901, 0.3407168747482884], 'auc': [0.5456035765604774, 0.5866271650201672]}
+
+
+
+Final client history:
+{'loss': [142.03716576099396, 135.853098154068], 'accuracy': [0.3419250906161901, 0.3407168747482884], 'auc': [0.5456035765604774, 0.5866271650201672]}
+

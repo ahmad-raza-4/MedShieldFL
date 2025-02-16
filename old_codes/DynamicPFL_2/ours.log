@@ -1,0 +1,38 @@
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.3 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/DynamicPFL_2', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/DynamicPFL_2']
+Device: cuda
+FLAMBY ISIS2019 Client 1 dataset size: 9930
+FLAMBY ISIS2019 Client 2 dataset size: 3163
+FLAMBY ISIS2019 Client 3 dataset size: 2691
+FLAMBY ISIS2019 Client 4 dataset size: 1807
+FLAMBY ISIS2019 Client 5 dataset size: 655
+FLAMBY ISIS2019 Client 6 dataset size: 351
+Base NM: 3.06640625
+  0%|          | 0/30 [00:00<?, ?it/s]                                        0%|          | 0/30 [00:00<?, ?it/s]                                        0%|          | 0/30 [41:00<?, ?it/s]                                        0%|          | 0/30 [50:04<?, ?it/s]                                        0%|          | 0/30 [1:25:13<?, ?it/s]                                          0%|          | 0/30 [1:49:08<?, ?it/s]                                          0%|          | 0/30 [4:58:17<?, ?it/s]  3%|▎         | 1/30 [5:03:32<146:42:56, 18212.99s/it]                                                         3%|▎         | 1/30 [5:03:32<146:42:56, 18212.99s/it]  3%|▎         | 1/30 [5:03:33<146:43:17, 18213.72s/it]
+client:1/6
+client:2/6
+client:3/6
+client:4/6
+client:5/6
+client:6/6
+ACC  [1781.852638244629, 519.7641350030899, 366.2295396924019, 283.6749732494354, 243.01830410957336, 401.980789065361]
+AUC  [0.4875224175724933, 0.5654959137430403, 0.5983543424934102, 0.5707314767687284, 0.6099085886883165, 0.5820709034541827]
+client:1/6
+Traceback (most recent call last):
+  File "ours.py", line 376, in <module>
+    main()
+  File "ours.py", line 280, in main
+    client_update = local_update(client_model, client_trainloader, global_model)
+  File "ours.py", line 80, in local_update
+    fisher_diag = compute_fisher_diag(model, dataloader)
+  File "/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/DynamicPFL_2/utils.py", line 49, in compute_fisher_diag
+    grad1 = autograd.grad(log_prob, model.parameters(), create_graph=True, retain_graph=True,allow_unused=True)
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/autograd/__init__.py", line 436, in grad
+    result = _engine_run_backward(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 28.00 MiB. GPU 0 has a total capacity of 31.73 GiB of which 22.44 MiB is free. Process 3289 has 416.00 MiB memory in use. Including non-PyTorch memory, this process has 10.40 GiB memory in use. Process 4078097 has 20.89 GiB memory in use. Of the allocated memory 9.40 GiB is allocated by PyTorch, and 643.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

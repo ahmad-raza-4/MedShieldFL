@@ -1,0 +1,972 @@
+nohup: ignoring input
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.0 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/rcmod.py:82: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(mpl.__version__) >= "3.0":
+/home/dgxuser16/.local/lib/python3.8/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  other = LooseVersion(other)
+/home/dgxuser16/.local/lib/python3.8/site-packages/seaborn/cm.py:1582: MatplotlibDeprecationWarning: The register_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps.register(name)`` instead.
+  mpl_cm.register_cmap(_name, _cmap)
+/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/raid/home/dgxuser16/.local/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN3c1017RegisterOperatorsD1Ev'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise_1/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/.local/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+01/18/2025 06:33:41:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+01/18/2025 06:33:41:DEBUG:ChannelConnectivity.IDLE
+01/18/2025 06:33:41:DEBUG:ChannelConnectivity.CONNECTING
+01/18/2025 06:33:41:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+01/18/2025 06:34:11:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 06:34:11:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message abc65f8b-53d0-4210-a709-bcc7a5ee32fb
+01/18/2025 06:34:11:INFO:Received: train message abc65f8b-53d0-4210-a709-bcc7a5ee32fb
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 06:52:46:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 06:53:23:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 06:53:23:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 5bc7660a-3554-4223-b026-65d96b38e035
+01/18/2025 06:53:23:INFO:Received: evaluate message 5bc7660a-3554-4223-b026-65d96b38e035
+[92mINFO [0m:      Sent reply
+01/18/2025 06:57:31:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 06:58:01:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 06:58:01:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 7538b637-b28e-4e55-8272-e19d971ffa29
+01/18/2025 06:58:01:INFO:Received: train message 7538b637-b28e-4e55-8272-e19d971ffa29
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 07:16:31:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 07:17:09:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 07:17:09:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 82a2d9ee-2508-4cb7-9455-9f3c973bb84f
+01/18/2025 07:17:09:INFO:Received: evaluate message 82a2d9ee-2508-4cb7-9455-9f3c973bb84f
+[92mINFO [0m:      Sent reply
+01/18/2025 07:21:08:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 07:21:39:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 07:21:39:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d3a10146-f38c-4f87-893d-423e78fd7d19
+01/18/2025 07:21:39:INFO:Received: train message d3a10146-f38c-4f87-893d-423e78fd7d19
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 07:39:51:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 07:40:16:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 07:40:16:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 6a130f5d-13f3-4367-b4dc-3729cf7b9a80
+01/18/2025 07:40:16:INFO:Received: evaluate message 6a130f5d-13f3-4367-b4dc-3729cf7b9a80
+[92mINFO [0m:      Sent reply
+01/18/2025 07:44:16:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 07:44:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 07:44:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message e392e528-d67a-4495-a765-4c16549db021
+01/18/2025 07:44:55:INFO:Received: train message e392e528-d67a-4495-a765-4c16549db021
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 08:03:05:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 08:03:42:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 08:03:42:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 852080a8-a6b2-4090-9f8c-2fa326a05bae
+01/18/2025 08:03:42:INFO:Received: evaluate message 852080a8-a6b2-4090-9f8c-2fa326a05bae
+[92mINFO [0m:      Sent reply
+01/18/2025 08:07:39:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 08:08:20:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 08:08:20:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message fa7738ca-839a-4ee9-b3cf-56d74d5d2f47
+01/18/2025 08:08:20:INFO:Received: train message fa7738ca-839a-4ee9-b3cf-56d74d5d2f47
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 08:30:07:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 08:30:36:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 08:30:36:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 64d34568-90f7-4d07-a2bb-2f444a4e7476
+01/18/2025 08:30:36:INFO:Received: evaluate message 64d34568-90f7-4d07-a2bb-2f444a4e7476
+[92mINFO [0m:      Sent reply
+01/18/2025 08:34:40:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 08:35:41:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 08:35:41:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 642f0ec2-bfbf-4317-82ca-dc98c3eeb4fb
+01/18/2025 08:35:41:INFO:Received: train message 642f0ec2-bfbf-4317-82ca-dc98c3eeb4fb
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 08:58:02:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 08:58:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 08:58:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 7bffd695-d8fa-4fa5-867f-67bd60963432
+01/18/2025 08:58:53:INFO:Received: evaluate message 7bffd695-d8fa-4fa5-867f-67bd60963432
+[92mINFO [0m:      Sent reply
+01/18/2025 09:04:07:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 09:04:56:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 09:04:56:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 48398ba5-e9f2-4d74-849e-b07ede1d2414
+01/18/2025 09:04:56:INFO:Received: train message 48398ba5-e9f2-4d74-849e-b07ede1d2414
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 09:26:50:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 09:27:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 09:27:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 03c4346a-77ba-4761-ae04-bad53f5586bc
+01/18/2025 09:27:35:INFO:Received: evaluate message 03c4346a-77ba-4761-ae04-bad53f5586bc
+[92mINFO [0m:      Sent reply
+01/18/2025 09:32:34:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 09:32:57:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 09:32:57:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message fafd79c7-bd96-416d-a135-f449e84a8886
+01/18/2025 09:32:57:INFO:Received: train message fafd79c7-bd96-416d-a135-f449e84a8886
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 09:54:21:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 09:55:02:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 09:55:02:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 8a41c2d7-7c3e-40c6-a6ae-18229a3cbc84
+01/18/2025 09:55:02:INFO:Received: evaluate message 8a41c2d7-7c3e-40c6-a6ae-18229a3cbc84
+[92mINFO [0m:      Sent reply
+01/18/2025 09:59:57:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 10:01:08:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 10:01:08:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 6f5e8f38-72ea-4362-8adc-a047a4a7af30
+01/18/2025 10:01:08:INFO:Received: train message 6f5e8f38-72ea-4362-8adc-a047a4a7af30
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 10:22:21:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 10:22:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 10:22:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message ac58493f-2808-434d-921a-0f45f5b96c89
+01/18/2025 10:22:46:INFO:Received: evaluate message ac58493f-2808-434d-921a-0f45f5b96c89
+[92mINFO [0m:      Sent reply
+01/18/2025 10:27:00:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 10:28:12:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 10:28:12:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message accd20e0-20fb-44f5-b957-2d5d72b3b9f9
+01/18/2025 10:28:12:INFO:Received: train message accd20e0-20fb-44f5-b957-2d5d72b3b9f9
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 10:49:10:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 10:49:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 10:49:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message f975c0e3-a978-4fbf-a82d-619d8328d58c
+01/18/2025 10:49:46:INFO:Received: evaluate message f975c0e3-a978-4fbf-a82d-619d8328d58c
+[92mINFO [0m:      Sent reply
+01/18/2025 10:54:20:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 10:55:01:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 10:55:01:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 752db86c-2b6b-4c1a-afee-b747a2c19657
+01/18/2025 10:55:01:INFO:Received: train message 752db86c-2b6b-4c1a-afee-b747a2c19657
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 11:15:31:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 11:16:17:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 11:16:17:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message aa4ecfaa-3e94-4824-acfb-c8c90bb786eb
+01/18/2025 11:16:17:INFO:Received: evaluate message aa4ecfaa-3e94-4824-acfb-c8c90bb786eb
+[92mINFO [0m:      Sent reply
+01/18/2025 11:20:51:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 11:21:12:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 11:21:12:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 84deee43-98a2-456b-8a76-b49cc0fde09d
+01/18/2025 11:21:12:INFO:Received: train message 84deee43-98a2-456b-8a76-b49cc0fde09d
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 11:42:19:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 11:42:57:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 11:42:57:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message a910983a-2a71-4d91-961b-9ec71a535143
+01/18/2025 11:42:57:INFO:Received: evaluate message a910983a-2a71-4d91-961b-9ec71a535143
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise_1', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/.local/lib/python3.8/site-packages', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/dyn_noise_1']
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962], 'accuracy': [0.3415223519935562], 'auc': [0.5447577460866678]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633], 'accuracy': [0.3415223519935562, 0.3403141361256545], 'auc': [0.5447577460866678, 0.5869994805277825]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/18/2025 11:47:35:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 11:47:48:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 11:47:48:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 522ecaaa-0b9f-4091-86e7-3801ff2ce529
+01/18/2025 11:47:48:INFO:Received: train message 522ecaaa-0b9f-4091-86e7-3801ff2ce529
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 12:09:33:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 12:10:06:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 12:10:06:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 87dc28f6-5260-4a19-a36c-def685846486
+01/18/2025 12:10:06:INFO:Received: evaluate message 87dc28f6-5260-4a19-a36c-def685846486
+[92mINFO [0m:      Sent reply
+01/18/2025 12:15:04:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 12:16:01:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 12:16:01:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message f638b582-b178-4b84-ac2e-55f82524f3cb
+01/18/2025 12:16:01:INFO:Received: train message f638b582-b178-4b84-ac2e-55f82524f3cb
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 12:36:46:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 12:37:34:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 12:37:34:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message d8152f1e-fe93-4208-95ad-6cc62689b505
+01/18/2025 12:37:34:INFO:Received: evaluate message d8152f1e-fe93-4208-95ad-6cc62689b505
+[92mINFO [0m:      Sent reply
+01/18/2025 12:42:37:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 12:42:53:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 12:42:53:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message d2a40628-0b66-417f-a3e5-5d04a18879dc
+01/18/2025 12:42:53:INFO:Received: train message d2a40628-0b66-417f-a3e5-5d04a18879dc
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 13:04:15:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 13:04:49:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 13:04:49:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 43d6a06c-2a33-4e5e-93ea-8dbf709700a7
+01/18/2025 13:04:49:INFO:Received: evaluate message 43d6a06c-2a33-4e5e-93ea-8dbf709700a7
+[92mINFO [0m:      Sent reply
+01/18/2025 13:09:41:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 13:10:14:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 13:10:14:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 49301d3e-b20b-4bec-842f-b2f5111e1a80
+01/18/2025 13:10:14:INFO:Received: train message 49301d3e-b20b-4bec-842f-b2f5111e1a80
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 13:30:47:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 13:31:22:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 13:31:22:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 30ee57b8-6575-469f-8fbb-d7072d1f9555
+01/18/2025 13:31:22:INFO:Received: evaluate message 30ee57b8-6575-469f-8fbb-d7072d1f9555
+[92mINFO [0m:      Sent reply
+01/18/2025 13:35:59:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 13:36:24:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 13:36:24:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 6041953e-ff5a-4189-b83e-0cb7e129d6f8
+01/18/2025 13:36:24:INFO:Received: train message 6041953e-ff5a-4189-b83e-0cb7e129d6f8
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 13:58:28:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 13:59:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 13:59:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message ad7c1706-8860-4285-a4ea-5d9ba0acea39
+01/18/2025 13:59:05:INFO:Received: evaluate message ad7c1706-8860-4285-a4ea-5d9ba0acea39
+[92mINFO [0m:      Sent reply
+01/18/2025 14:03:34:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 14:04:10:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 14:04:10:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message ee8fbeca-5c84-46f4-aa9b-cb7c845ca2a0
+01/18/2025 14:04:10:INFO:Received: train message ee8fbeca-5c84-46f4-aa9b-cb7c845ca2a0
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 14:25:44:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 14:26:26:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 14:26:26:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message e3580396-65dc-4c2a-b5bb-a889bd6bdca2
+01/18/2025 14:26:26:INFO:Received: evaluate message e3580396-65dc-4c2a-b5bb-a889bd6bdca2
+[92mINFO [0m:      Sent reply
+01/18/2025 14:30:52:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 14:31:27:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 14:31:27:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message c3717501-1e2f-499b-930a-3df0ea498e9d
+01/18/2025 14:31:27:INFO:Received: train message c3717501-1e2f-499b-930a-3df0ea498e9d
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.262689955532551
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 2.1118439584970474
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.960997961461544
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.8101519644260406
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 14:52:56:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 14:53:34:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 14:53:34:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 9d832f47-bfb7-4c10-93a5-d2d9da650b7e
+01/18/2025 14:53:34:INFO:Received: evaluate message 9d832f47-bfb7-4c10-93a5-d2d9da650b7e
+[92mINFO [0m:      Sent reply
+01/18/2025 14:57:49:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 14:58:05:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 14:58:05:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 5767754e-1f78-42f3-b4f0-4e7045445b69
+01/18/2025 14:58:05:INFO:Received: train message 5767754e-1f78-42f3-b4f0-4e7045445b69
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 15:20:26:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 15:21:03:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 15:21:03:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 11732b8e-be28-4abd-b226-0b1f86653f21
+01/18/2025 15:21:03:INFO:Received: evaluate message 11732b8e-be28-4abd-b226-0b1f86653f21
+[92mINFO [0m:      Sent reply
+01/18/2025 15:25:20:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 15:25:54:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 15:25:54:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 7338faa4-5060-42ac-8678-510b363a769a
+01/18/2025 15:25:54:INFO:Received: train message 7338faa4-5060-42ac-8678-510b363a769a
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 15:48:04:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 15:48:22:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 15:48:22:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 56021516-47fb-478d-932b-70e4a3e81457
+01/18/2025 15:48:22:INFO:Received: evaluate message 56021516-47fb-478d-932b-70e4a3e81457
+[92mINFO [0m:      Sent reply
+01/18/2025 15:52:16:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 15:53:56:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 15:53:56:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message e4b8eda5-59ff-4a0f-823f-ea54b247a026
+01/18/2025 15:53:56:INFO:Received: train message e4b8eda5-59ff-4a0f-823f-ea54b247a026
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 16:16:26:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 16:16:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 16:16:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 71da01d6-1b82-4589-a1c8-41b8484af3d9
+01/18/2025 16:16:46:INFO:Received: evaluate message 71da01d6-1b82-4589-a1c8-41b8484af3d9
+[92mINFO [0m:      Sent reply
+01/18/2025 16:21:25:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 16:22:40:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 16:22:40:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 1a674df3-74ec-4c03-ae28-43cd839309f1
+01/18/2025 16:22:40:INFO:Received: train message 1a674df3-74ec-4c03-ae28-43cd839309f1
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 16:46:12:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 16:46:45:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 16:46:45:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message f8f921b2-70ec-49cc-92a1-e66c6e0fce0c
+01/18/2025 16:46:45:INFO:Received: evaluate message f8f921b2-70ec-49cc-92a1-e66c6e0fce0c
+[92mINFO [0m:      Sent reply
+01/18/2025 16:51:56:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 16:52:51:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 16:52:51:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message e2dd8113-bc0d-4215-81e9-3c877d491458
+01/18/2025 16:52:51:INFO:Received: train message e2dd8113-bc0d-4215-81e9-3c877d491458
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 17:17:37:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 17:18:26:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 17:18:26:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message bed4fc03-5f61-4b19-b5d9-f8f8f029af22
+01/18/2025 17:18:26:INFO:Received: evaluate message bed4fc03-5f61-4b19-b5d9-f8f8f029af22
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.6593059673905375
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.508459970355034
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.3576139733195305
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.206767976284027
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 1.0559219792485237
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.9050759822130203
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/18/2025 17:23:19:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 17:24:16:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 17:24:16:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message afcef663-750a-426f-a342-a14c497d0f17
+01/18/2025 17:24:16:INFO:Received: train message afcef663-750a-426f-a342-a14c497d0f17
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 17:52:16:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 17:52:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 17:52:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 885e8cf8-ceb2-4bb7-a93c-d4bed1cdafb3
+01/18/2025 17:52:55:INFO:Received: evaluate message 885e8cf8-ceb2-4bb7-a93c-d4bed1cdafb3
+[92mINFO [0m:      Sent reply
+01/18/2025 17:56:59:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 17:57:32:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 17:57:32:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 51b8821c-4c7a-4083-a10e-44772f01b914
+01/18/2025 17:57:32:INFO:Received: train message 51b8821c-4c7a-4083-a10e-44772f01b914
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 18:24:15:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 18:24:55:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 18:24:55:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message a5f3cd8e-c765-42f8-bff2-08bdcd06524b
+01/18/2025 18:24:55:INFO:Received: evaluate message a5f3cd8e-c765-42f8-bff2-08bdcd06524b
+[92mINFO [0m:      Sent reply
+01/18/2025 18:28:54:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 18:29:19:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 18:29:19:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 0bea9cd7-6ca8-483a-b15b-1cbfe0ac81d5
+01/18/2025 18:29:19:INFO:Received: train message 0bea9cd7-6ca8-483a-b15b-1cbfe0ac81d5
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 18:53:59:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 18:54:38:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 18:54:38:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 613fa193-458a-4196-bea7-fe9dfc381c0c
+01/18/2025 18:54:38:INFO:Received: evaluate message 613fa193-458a-4196-bea7-fe9dfc381c0c
+[92mINFO [0m:      Sent reply
+01/18/2025 18:58:53:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 18:59:35:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 18:59:35:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 4676a8d0-bd83-4f5a-b8d7-369679893fd8
+01/18/2025 18:59:35:INFO:Received: train message 4676a8d0-bd83-4f5a-b8d7-369679893fd8
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 19:21:34:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 19:22:08:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 19:22:08:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 4103d2b7-1d78-4bf9-989a-b854840faaf4
+01/18/2025 19:22:08:INFO:Received: evaluate message 4103d2b7-1d78-4bf9-989a-b854840faaf4
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.754229985177517
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.6033839881420137
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.45253799110651005
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866, 119.1336715221405], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194, 0.527184857027789], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455, 0.7145001845596337]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.3016919940710067
+Epsilon = 1.00
+[92mINFO [0m:      Sent reply
+01/18/2025 19:26:25:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 19:27:00:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 19:27:00:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 36601ff1-50c4-4339-9f05-793c473824f4
+01/18/2025 19:27:00:INFO:Received: train message 36601ff1-50c4-4339-9f05-793c473824f4
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 19:49:16:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 19:49:40:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 19:49:40:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message b3e4727d-bc52-4ccf-a6e5-d2d81ac4df4c
+01/18/2025 19:49:40:INFO:Received: evaluate message b3e4727d-bc52-4ccf-a6e5-d2d81ac4df4c
+[92mINFO [0m:      Sent reply
+01/18/2025 19:54:02:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 19:54:31:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 19:54:31:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: train message 14d34b39-1e8a-409f-8396-dc9ed763f91f
+01/18/2025 19:54:31:INFO:Received: train message 14d34b39-1e8a-409f-8396-dc9ed763f91f
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/.local/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+01/18/2025 20:18:29:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 20:19:07:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 20:19:07:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: evaluate message 845bfdbe-182d-455c-bc5c-bc5f86c8caa1
+01/18/2025 20:19:07:INFO:Received: evaluate message 845bfdbe-182d-455c-bc5c-bc5f86c8caa1
+[92mINFO [0m:      Sent reply
+01/18/2025 20:23:46:INFO:Sent reply
+[92mINFO [0m:      
+01/18/2025 20:23:46:INFO:
+[92mINFO [0m:      [RUN 0, ROUND ]
+01/18/2025 20:23:46:INFO:[RUN 0, ROUND ]
+[92mINFO [0m:      Received: reconnect message ce2b3e5c-c1c0-4e00-b498-f218441bda81
+01/18/2025 20:23:46:INFO:Received: reconnect message ce2b3e5c-c1c0-4e00-b498-f218441bda81
+01/18/2025 20:23:46:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+01/18/2025 20:23:46:INFO:Disconnect and shut down
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866, 119.1336715221405, 118.44663709402084], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194, 0.527184857027789, 0.5283930728956907], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455, 0.7145001845596337, 0.7172991897557845]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.15084599703550336
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866, 119.1336715221405, 118.44663709402084, 118.22421109676361], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194, 0.527184857027789, 0.5283930728956907, 0.5308095046314941], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455, 0.7145001845596337, 0.7172991897557845, 0.7193194506724596]}
+
+BaseNM 3.06640625
+noise multiplier 2.262689955532551
+Noise multiplier before  adjustment: 2.262689955532551
+Noise multiplier before convergence adjustment: 2.262689955532551
+Updated noise multiplier after convergence adjustment: 0.0
+Epsilon = 1.00
+
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866, 119.1336715221405, 118.44663709402084, 118.22421109676361, 118.26175034046173], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194, 0.527184857027789, 0.5283930728956907, 0.5308095046314941, 0.5300040273862263], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455, 0.7145001845596337, 0.7172991897557845, 0.7193194506724596, 0.7209046546349261]}
+
+
+
+Final client history:
+{'loss': [142.10614502429962, 135.5050299167633, 137.47201240062714, 140.40874767303467, 141.34832644462585, 141.1794821023941, 139.22257089614868, 137.55157935619354, 134.25717842578888, 132.35167920589447, 130.7151244878769, 129.98683059215546, 128.34206986427307, 127.50094366073608, 126.48802548646927, 125.56411898136139, 124.3446934223175, 124.26051634550095, 123.44350230693817, 122.49547052383423, 121.92903017997742, 121.34707772731781, 120.57707929611206, 119.99816364049911, 119.52394533157349, 119.47592175006866, 119.1336715221405, 118.44663709402084, 118.22421109676361, 118.26175034046173], 'accuracy': [0.3415223519935562, 0.3403141361256545, 0.3411196133709223, 0.3415223519935562, 0.3459524768425292, 0.35118807893677, 0.3681031010873943, 0.3813934756343133, 0.4027386226339106, 0.4176399516713653, 0.43455497382198954, 0.441401530406766, 0.45388642770841725, 0.4599275070479259, 0.4675795408779702, 0.47321788159484496, 0.48086991542488927, 0.48610551751913006, 0.49295207410390657, 0.500201369311317, 0.5030205396697544, 0.5074506645187273, 0.5138944824808699, 0.5199355618203786, 0.5235602094240838, 0.5251711639146194, 0.527184857027789, 0.5283930728956907, 0.5308095046314941, 0.5300040273862263], 'auc': [0.5447577460866678, 0.5869994805277825, 0.6108693952517427, 0.6233983124795475, 0.6335404197828883, 0.6397362295037701, 0.6467459697108222, 0.6524602597191902, 0.6576649289239014, 0.6610682888712689, 0.6659904126530913, 0.6701545798920383, 0.6736646874963987, 0.677940976600335, 0.6808937111757158, 0.6848946908358893, 0.6881373732627478, 0.6904252009133054, 0.6931431210476737, 0.6967410528246826, 0.6991049824377151, 0.7016687400980424, 0.704518178459855, 0.7072666509607928, 0.7101596625893765, 0.7122401309258455, 0.7145001845596337, 0.7172991897557845, 0.7193194506724596, 0.7209046546349261]}
+
