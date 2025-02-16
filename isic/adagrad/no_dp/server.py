@@ -24,14 +24,14 @@ strategy = fl.server.strategy.FedAdagrad(
     min_evaluate_clients=6,
     min_available_clients=6,
     initial_parameters=initial_parameters,
-    eta  = 1e-3,
+    eta  = 1e-2,
     eta_l  = 1e-3,
-    tau  = 1e-9, 
+    tau  = 1e-8, 
 )
 
 
 fl.server.start_server(
-    server_address="0.0.0.0:8067",
+    server_address="0.0.0.0:8761",
     config=fl.server.ServerConfig(num_rounds=30),
     strategy=strategy,
 )

@@ -9,10 +9,10 @@ import numpy as np
 from plot_graphs import plot_metrics
 import os
 
-torch.manual_seed(3)
-np.random.seed(3)
+torch.manual_seed(1)
+np.random.seed(1)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '5'
 client_name = "client_3"
 
 if not os.path.exists(client_name):
@@ -193,7 +193,7 @@ if __name__ == "__main__":
     save_str_to_file(string, client_name)
 
     fl.client.start_client(
-        server_address="127.0.0.1:8067",
+        server_address="127.0.0.1:8761",
         client=FedViTClient3(
             model=model, 
             trainloader=trainload, 

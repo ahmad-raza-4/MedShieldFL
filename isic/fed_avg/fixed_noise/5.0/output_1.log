@@ -1,0 +1,251 @@
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.4 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/fed_avg/fixed_noise/5.0/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+02/15/2025 12:21:37:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/15/2025 12:21:37:DEBUG:ChannelConnectivity.IDLE
+02/15/2025 12:21:37:DEBUG:ChannelConnectivity.CONNECTING
+02/15/2025 12:21:37:DEBUG:ChannelConnectivity.READY
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739650897.980553 2347722 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      
+02/15/2025 12:22:20:INFO:
+[92mINFO [0m:      Received: train message b7af852f-4d97-44a4-9237-606c4b20d7c8
+02/15/2025 12:22:20:INFO:Received: train message b7af852f-4d97-44a4-9237-606c4b20d7c8
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 13:02:30:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:03:08:INFO:
+[92mINFO [0m:      Received: evaluate message 4634e774-66cc-44f6-8182-d960cc40de43
+02/15/2025 13:03:08:INFO:Received: evaluate message 4634e774-66cc-44f6-8182-d960cc40de43
+[92mINFO [0m:      Sent reply
+02/15/2025 13:08:39:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:09:14:INFO:
+[92mINFO [0m:      Received: train message 3b510f7a-1bba-4f53-b580-cf8227516eac
+02/15/2025 13:09:14:INFO:Received: train message 3b510f7a-1bba-4f53-b580-cf8227516eac
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 13:49:49:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:50:26:INFO:
+[92mINFO [0m:      Received: evaluate message ae6ed7e3-2ed4-48a2-90e8-ba9eb652dd8f
+02/15/2025 13:50:26:INFO:Received: evaluate message ae6ed7e3-2ed4-48a2-90e8-ba9eb652dd8f
+[92mINFO [0m:      Sent reply
+02/15/2025 13:56:26:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:57:01:INFO:
+[92mINFO [0m:      Received: train message 1aaf2eb9-9719-483e-a94d-c5ad59bee634
+02/15/2025 13:57:01:INFO:Received: train message 1aaf2eb9-9719-483e-a94d-c5ad59bee634
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 14:37:04:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 14:37:44:INFO:
+[92mINFO [0m:      Received: evaluate message 7a3b6d70-9153-4758-ae90-d36e913b62c9
+02/15/2025 14:37:44:INFO:Received: evaluate message 7a3b6d70-9153-4758-ae90-d36e913b62c9
+[92mINFO [0m:      Sent reply
+02/15/2025 14:43:55:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 14:44:29:INFO:
+[92mINFO [0m:      Received: train message 7f5a3b95-695a-4fc5-accc-b82fa497e7ff
+02/15/2025 14:44:29:INFO:Received: train message 7f5a3b95-695a-4fc5-accc-b82fa497e7ff
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 15:23:37:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 15:24:01:INFO:
+[92mINFO [0m:      Received: evaluate message 69ad4e63-615d-49ea-a9d0-eca48bd09e79
+02/15/2025 15:24:01:INFO:Received: evaluate message 69ad4e63-615d-49ea-a9d0-eca48bd09e79
+[92mINFO [0m:      Sent reply
+02/15/2025 15:29:21:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 15:30:53:INFO:
+[92mINFO [0m:      Received: train message 5c6be886-b7ad-4d1f-a046-7b5e92bf08e9
+02/15/2025 15:30:53:INFO:Received: train message 5c6be886-b7ad-4d1f-a046-7b5e92bf08e9
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 16:10:09:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:10:50:INFO:
+[92mINFO [0m:      Received: evaluate message 074fc155-8097-40c9-bd0a-53e9c5a38da9
+02/15/2025 16:10:50:INFO:Received: evaluate message 074fc155-8097-40c9-bd0a-53e9c5a38da9
+[92mINFO [0m:      Sent reply
+02/15/2025 16:16:56:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:17:16:INFO:
+[92mINFO [0m:      Received: train message ef6f1502-6f06-4b92-93aa-1e74ffbfee85
+02/15/2025 16:17:16:INFO:Received: train message ef6f1502-6f06-4b92-93aa-1e74ffbfee85
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 16:56:25:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:56:44:INFO:
+[92mINFO [0m:      Received: evaluate message 2585789e-8e63-45e4-9c96-fa781a37ae13
+02/15/2025 16:56:44:INFO:Received: evaluate message 2585789e-8e63-45e4-9c96-fa781a37ae13
+[92mINFO [0m:      Sent reply
+02/15/2025 17:02:04:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:03:11:INFO:
+[92mINFO [0m:      Received: train message b94dd63d-6b46-420a-b699-9283d3cc4e80
+02/15/2025 17:03:11:INFO:Received: train message b94dd63d-6b46-420a-b699-9283d3cc4e80
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 17:42:33:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:43:14:INFO:
+[92mINFO [0m:      Received: evaluate message f9dc97cb-f0cf-40dc-bc04-314fc8aa4493
+02/15/2025 17:43:14:INFO:Received: evaluate message f9dc97cb-f0cf-40dc-bc04-314fc8aa4493
+[92mINFO [0m:      Sent reply
+02/15/2025 17:49:17:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:49:48:INFO:
+[92mINFO [0m:      Received: train message 08a58737-2066-4ded-b1c1-32950cfafde8
+02/15/2025 17:49:48:INFO:Received: train message 08a58737-2066-4ded-b1c1-32950cfafde8
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 18:30:04:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 18:30:42:INFO:
+[92mINFO [0m:      Received: evaluate message 521c3c70-d81f-475c-941a-2e2e012baa74
+02/15/2025 18:30:42:INFO:Received: evaluate message 521c3c70-d81f-475c-941a-2e2e012baa74
+[92mINFO [0m:      Sent reply
+02/15/2025 18:36:41:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 18:37:03:INFO:
+[92mINFO [0m:      Received: train message 0173ff6f-a526-48cb-b4c9-65eb8292c392
+02/15/2025 18:37:03:INFO:Received: train message 0173ff6f-a526-48cb-b4c9-65eb8292c392
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 19:16:14:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 19:16:43:INFO:
+[92mINFO [0m:      Received: evaluate message 8ef0d599-3a83-4db8-b175-957e68221d90
+02/15/2025 19:16:43:INFO:Received: evaluate message 8ef0d599-3a83-4db8-b175-957e68221d90
+[92mINFO [0m:      Sent reply
+02/15/2025 19:22:44:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 19:23:32:INFO:
+[92mINFO [0m:      Received: train message ec2dd088-b01c-476f-9cb4-000d157ea14e
+02/15/2025 19:23:32:INFO:Received: train message ec2dd088-b01c-476f-9cb4-000d157ea14e
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 20:03:24:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:03:54:INFO:
+[92mINFO [0m:      Received: evaluate message 29189700-133d-4651-9c71-fbd3a2fdc542
+02/15/2025 20:03:54:INFO:Received: evaluate message 29189700-133d-4651-9c71-fbd3a2fdc542
+[92mINFO [0m:      Sent reply
+02/15/2025 20:09:59:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:10:31:INFO:
+[92mINFO [0m:      Received: train message 02d7ab7a-b8cd-4388-b642-2684ec2d099e
+02/15/2025 20:10:31:INFO:Received: train message 02d7ab7a-b8cd-4388-b642-2684ec2d099e
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 20:49:45:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:50:20:INFO:
+[92mINFO [0m:      Received: evaluate message 6b1389b5-4c56-4573-90cf-ed13f4b499d6
+02/15/2025 20:50:20:INFO:Received: evaluate message 6b1389b5-4c56-4573-90cf-ed13f4b499d6
+[92mINFO [0m:      Sent reply
+02/15/2025 20:56:34:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:57:11:INFO:
+[92mINFO [0m:      Received: train message a40cb13c-d78d-4add-bdbe-6ac29657544c
+02/15/2025 20:57:11:INFO:Received: train message a40cb13c-d78d-4add-bdbe-6ac29657544c
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 21:38:40:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 21:39:12:INFO:
+[92mINFO [0m:      Received: evaluate message 846610bc-ac12-43ce-a0ec-4785e546c2dd
+02/15/2025 21:39:12:INFO:Received: evaluate message 846610bc-ac12-43ce-a0ec-4785e546c2dd
+[92mINFO [0m:      Sent reply
+02/15/2025 21:45:17:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 21:45:35:INFO:
+[92mINFO [0m:      Received: train message 8bdcedc9-2293-48bd-9c33-997199bc542a
+02/15/2025 21:45:35:INFO:Received: train message 8bdcedc9-2293-48bd-9c33-997199bc542a
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 22:24:52:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 22:25:28:INFO:
+[92mINFO [0m:      Received: evaluate message 7c096d39-8e81-435b-ba0f-eaf78c03b431
+02/15/2025 22:25:28:INFO:Received: evaluate message 7c096d39-8e81-435b-ba0f-eaf78c03b431
+[92mINFO [0m:      Sent reply
+02/15/2025 22:31:39:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 22:31:51:INFO:
+[92mINFO [0m:      Received: train message 99b2e6d9-460d-48b7-a5bb-8b41904e87fc
+02/15/2025 22:31:51:INFO:Received: train message 99b2e6d9-460d-48b7-a5bb-8b41904e87fc
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[92mINFO [0m:      Sent reply
+02/15/2025 23:11:48:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 23:12:08:INFO:
+[92mINFO [0m:      Received: evaluate message e17ef1ca-d008-4efd-b56e-277d9131b18f
+02/15/2025 23:12:08:INFO:Received: evaluate message e17ef1ca-d008-4efd-b56e-277d9131b18f
+[92mINFO [0m:      Sent reply
+02/15/2025 23:17:08:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 23:18:59:INFO:
+[92mINFO [0m:      Received: train message 7965d539-b29e-4adb-a345-1f8069483f04
+02/15/2025 23:18:59:INFO:Received: train message 7965d539-b29e-4adb-a345-1f8069483f04

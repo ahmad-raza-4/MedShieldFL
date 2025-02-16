@@ -1,0 +1,226 @@
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.4 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/fed_avg/fixed_noise/1.0/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+02/15/2025 12:25:29:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/15/2025 12:25:29:DEBUG:ChannelConnectivity.IDLE
+02/15/2025 12:25:29:DEBUG:ChannelConnectivity.READY
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739651129.980476 2352765 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      
+02/15/2025 12:26:14:INFO:
+[92mINFO [0m:      Received: train message 49413650-6b6f-4dc2-9ebe-8d56c4d601d6
+02/15/2025 12:26:14:INFO:Received: train message 49413650-6b6f-4dc2-9ebe-8d56c4d601d6
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 12:44:07:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:05:43:INFO:
+[92mINFO [0m:      Received: evaluate message f47adb46-4384-45a5-a2f9-1b161fab321b
+02/15/2025 13:05:43:INFO:Received: evaluate message f47adb46-4384-45a5-a2f9-1b161fab321b
+[92mINFO [0m:      Sent reply
+02/15/2025 13:11:20:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:12:00:INFO:
+[92mINFO [0m:      Received: train message 27f0618a-306c-4e5a-9177-86b49bb65e5b
+02/15/2025 13:12:00:INFO:Received: train message 27f0618a-306c-4e5a-9177-86b49bb65e5b
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 13:31:15:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:50:37:INFO:
+[92mINFO [0m:      Received: evaluate message 87db10f4-3c7c-482d-bb6b-ae10f6a86a5f
+02/15/2025 13:50:37:INFO:Received: evaluate message 87db10f4-3c7c-482d-bb6b-ae10f6a86a5f
+[92mINFO [0m:      Sent reply
+02/15/2025 13:56:36:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 13:57:34:INFO:
+[92mINFO [0m:      Received: train message b517e349-c43f-49e7-b210-d2925072fc62
+02/15/2025 13:57:34:INFO:Received: train message b517e349-c43f-49e7-b210-d2925072fc62
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 14:17:39:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 14:37:59:INFO:
+[92mINFO [0m:      Received: evaluate message 1ce40466-a535-48c5-9c6a-484c1fc4b5c0
+02/15/2025 14:37:59:INFO:Received: evaluate message 1ce40466-a535-48c5-9c6a-484c1fc4b5c0
+[92mINFO [0m:      Sent reply
+02/15/2025 14:43:59:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 14:44:23:INFO:
+[92mINFO [0m:      Received: train message ff7fb1fd-4452-4666-83ed-fedbb9da5398
+02/15/2025 14:44:23:INFO:Received: train message ff7fb1fd-4452-4666-83ed-fedbb9da5398
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 15:04:54:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 15:24:26:INFO:
+[92mINFO [0m:      Received: evaluate message 60ab104b-e3f7-4471-a1ab-67dc8cd87e9d
+02/15/2025 15:24:26:INFO:Received: evaluate message 60ab104b-e3f7-4471-a1ab-67dc8cd87e9d
+[92mINFO [0m:      Sent reply
+02/15/2025 15:30:22:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 15:30:41:INFO:
+[92mINFO [0m:      Received: train message 17092f0d-14ff-474d-a11e-3ab44a78d5ad
+02/15/2025 15:30:41:INFO:Received: train message 17092f0d-14ff-474d-a11e-3ab44a78d5ad
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 15:51:02:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:10:47:INFO:
+[92mINFO [0m:      Received: evaluate message 0679b3cf-a01e-4fa8-b8dd-e082d63b52a9
+02/15/2025 16:10:47:INFO:Received: evaluate message 0679b3cf-a01e-4fa8-b8dd-e082d63b52a9
+[92mINFO [0m:      Sent reply
+02/15/2025 16:16:54:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:17:21:INFO:
+[92mINFO [0m:      Received: train message 09dcdd93-74d1-43f9-a22e-71111f9cbdc0
+02/15/2025 16:17:21:INFO:Received: train message 09dcdd93-74d1-43f9-a22e-71111f9cbdc0
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 16:37:39:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 16:57:13:INFO:
+[92mINFO [0m:      Received: evaluate message 2a409e5d-5d0c-4018-af66-823076f7e261
+02/15/2025 16:57:13:INFO:Received: evaluate message 2a409e5d-5d0c-4018-af66-823076f7e261
+[92mINFO [0m:      Sent reply
+02/15/2025 17:03:05:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:03:40:INFO:
+[92mINFO [0m:      Received: train message 421b7156-4b4a-46b9-9bd7-b070db85fa25
+02/15/2025 17:03:40:INFO:Received: train message 421b7156-4b4a-46b9-9bd7-b070db85fa25
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 17:24:23:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:43:42:INFO:
+[92mINFO [0m:      Received: evaluate message bb2ee07f-e2c2-4b36-a7ec-9ba04ca20600
+02/15/2025 17:43:42:INFO:Received: evaluate message bb2ee07f-e2c2-4b36-a7ec-9ba04ca20600
+[92mINFO [0m:      Sent reply
+02/15/2025 17:49:28:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 17:49:51:INFO:
+[92mINFO [0m:      Received: train message 4a8e207b-fd7a-4aeb-8bfd-3b55b36b7ee6
+02/15/2025 17:49:51:INFO:Received: train message 4a8e207b-fd7a-4aeb-8bfd-3b55b36b7ee6
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 18:09:58:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 18:30:36:INFO:
+[92mINFO [0m:      Received: evaluate message 868e5a45-fa34-4e9b-bdda-e90cc6267608
+02/15/2025 18:30:36:INFO:Received: evaluate message 868e5a45-fa34-4e9b-bdda-e90cc6267608
+[92mINFO [0m:      Sent reply
+02/15/2025 18:36:35:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 18:37:15:INFO:
+[92mINFO [0m:      Received: train message fcff23ce-42c0-4cce-904e-215afee639ff
+02/15/2025 18:37:15:INFO:Received: train message fcff23ce-42c0-4cce-904e-215afee639ff
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 18:57:38:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 19:16:53:INFO:
+[92mINFO [0m:      Received: evaluate message 9be26246-6745-4dc5-9970-c3143d1f540a
+02/15/2025 19:16:53:INFO:Received: evaluate message 9be26246-6745-4dc5-9970-c3143d1f540a
+[92mINFO [0m:      Sent reply
+02/15/2025 19:22:59:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 19:23:34:INFO:
+[92mINFO [0m:      Received: train message b023e55a-65ba-4680-b070-59501453207f
+02/15/2025 19:23:34:INFO:Received: train message b023e55a-65ba-4680-b070-59501453207f
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 19:44:13:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:03:52:INFO:
+[92mINFO [0m:      Received: evaluate message e1ec6435-3ca3-4714-b861-442814ab5549
+02/15/2025 20:03:52:INFO:Received: evaluate message e1ec6435-3ca3-4714-b861-442814ab5549
+[92mINFO [0m:      Sent reply
+02/15/2025 20:09:54:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:10:35:INFO:
+[92mINFO [0m:      Received: train message 88c4cadc-d71c-43c4-8fdf-7e3458a6ae3b
+02/15/2025 20:10:35:INFO:Received: train message 88c4cadc-d71c-43c4-8fdf-7e3458a6ae3b
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 20:30:57:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:50:17:INFO:
+[92mINFO [0m:      Received: evaluate message 4b073d6a-15e3-4f6c-80c2-5dfd7434f4e8
+02/15/2025 20:50:17:INFO:Received: evaluate message 4b073d6a-15e3-4f6c-80c2-5dfd7434f4e8
+[92mINFO [0m:      Sent reply
+02/15/2025 20:56:25:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 20:57:09:INFO:
+[92mINFO [0m:      Received: train message 90a25412-4217-4fa6-a4d7-ed3dde433d47
+02/15/2025 20:57:09:INFO:Received: train message 90a25412-4217-4fa6-a4d7-ed3dde433d47
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 21:17:27:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 21:39:11:INFO:
+[92mINFO [0m:      Received: evaluate message 9b7040c6-a8cb-43e2-ab1f-1962caa1ecda
+02/15/2025 21:39:11:INFO:Received: evaluate message 9b7040c6-a8cb-43e2-ab1f-1962caa1ecda
+[92mINFO [0m:      Sent reply
+02/15/2025 21:45:15:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 21:45:47:INFO:
+[92mINFO [0m:      Received: train message 1932d948-bc09-4c2b-a7cb-e7b888ad0bd3
+02/15/2025 21:45:47:INFO:Received: train message 1932d948-bc09-4c2b-a7cb-e7b888ad0bd3
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 22:06:08:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 22:25:36:INFO:
+[92mINFO [0m:      Received: evaluate message 1897c3ad-3099-4b47-984f-89afa895dd5c
+02/15/2025 22:25:36:INFO:Received: evaluate message 1897c3ad-3099-4b47-984f-89afa895dd5c
+[92mINFO [0m:      Sent reply
+02/15/2025 22:31:41:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 22:32:18:INFO:
+[92mINFO [0m:      Received: train message 9f8cd878-97bc-4968-aa13-2e6a15c70168
+02/15/2025 22:32:18:INFO:Received: train message 9f8cd878-97bc-4968-aa13-2e6a15c70168
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 22:52:32:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 23:12:41:INFO:
+[92mINFO [0m:      Received: evaluate message b36d340e-2c88-4204-94be-a1499b1eaae2
+02/15/2025 23:12:41:INFO:Received: evaluate message b36d340e-2c88-4204-94be-a1499b1eaae2
+[92mINFO [0m:      Sent reply
+02/15/2025 23:18:32:INFO:Sent reply
+[92mINFO [0m:      
+02/15/2025 23:18:46:INFO:
+[92mINFO [0m:      Received: train message cbca1226-061e-48a7-9012-d7d9e09970b8
+02/15/2025 23:18:46:INFO:Received: train message cbca1226-061e-48a7-9012-d7d9e09970b8
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/15/2025 23:39:01:INFO:Sent reply
