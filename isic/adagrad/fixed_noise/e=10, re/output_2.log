@@ -1,0 +1,558 @@
+nohup: ignoring input
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.4 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/e=10, re/flamby/datasets/fed_isic2019/dataset.py:222: DeprecationWarning: Flip is deprecated. Consider using HorizontalFlip, VerticalFlip, RandomRotate90 or D4.
+  albumentations.Flip(p=0.5),
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_holes` is deprecated. Use num_holes_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_height` is deprecated. Use hole_height_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/pydantic/main.py:214: DeprecationWarning: `max_width` is deprecated. Use hole_width_range instead.
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/albumentations/core/validation.py:45: DeprecationWarning: always_apply is deprecated. Use `p=1` if you want to always apply the transform. self.p will be set to 1.
+  original_init(self, **validated_kwargs)
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+02/16/2025 11:53:24:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/16/2025 11:53:24:DEBUG:ChannelConnectivity.IDLE
+02/16/2025 11:53:24:DEBUG:ChannelConnectivity.READY
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1739735604.853807 3103684 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+[92mINFO [0m:      
+02/16/2025 11:53:51:INFO:
+[92mINFO [0m:      Received: train message 189be657-23fb-48b6-931d-a45be259e962
+02/16/2025 11:53:51:INFO:Received: train message 189be657-23fb-48b6-931d-a45be259e962
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 12:08:02:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 12:22:02:INFO:
+[92mINFO [0m:      Received: evaluate message 5cc64afc-71f8-4956-be33-8c5d76024be1
+02/16/2025 12:22:02:INFO:Received: evaluate message 5cc64afc-71f8-4956-be33-8c5d76024be1
+[92mINFO [0m:      Sent reply
+02/16/2025 12:25:49:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 12:26:53:INFO:
+[92mINFO [0m:      Received: train message 1e8c1461-3bd8-4e1c-9a2b-e05a1874f829
+02/16/2025 12:26:53:INFO:Received: train message 1e8c1461-3bd8-4e1c-9a2b-e05a1874f829
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 12:39:52:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 12:50:30:INFO:
+[92mINFO [0m:      Received: evaluate message 8e506d97-6c74-44c1-b868-42cc4b6462d8
+02/16/2025 12:50:30:INFO:Received: evaluate message 8e506d97-6c74-44c1-b868-42cc4b6462d8
+[92mINFO [0m:      Sent reply
+02/16/2025 12:54:24:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 12:54:49:INFO:
+[92mINFO [0m:      Received: train message e6547f8e-0e39-4a9e-86ec-e4605e9abf61
+02/16/2025 12:54:49:INFO:Received: train message e6547f8e-0e39-4a9e-86ec-e4605e9abf61
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 13:07:32:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 13:18:43:INFO:
+[92mINFO [0m:      Received: evaluate message 62654c62-aeec-4649-9931-c04fd91f9335
+02/16/2025 13:18:43:INFO:Received: evaluate message 62654c62-aeec-4649-9931-c04fd91f9335
+[92mINFO [0m:      Sent reply
+02/16/2025 13:22:35:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 13:23:05:INFO:
+[92mINFO [0m:      Received: train message ea98f487-d136-443c-96cc-1c4a9d0a1654
+02/16/2025 13:23:06:INFO:Received: train message ea98f487-d136-443c-96cc-1c4a9d0a1654
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 13:36:17:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 13:47:01:INFO:
+[92mINFO [0m:      Received: evaluate message 47c67240-4aee-4b79-8edd-ef9d77fb7c53
+02/16/2025 13:47:01:INFO:Received: evaluate message 47c67240-4aee-4b79-8edd-ef9d77fb7c53
+[92mINFO [0m:      Sent reply
+02/16/2025 13:50:56:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 13:51:26:INFO:
+[92mINFO [0m:      Received: train message 6b4d26ff-701b-43c1-b04a-3aa72f557ed0
+02/16/2025 13:51:26:INFO:Received: train message 6b4d26ff-701b-43c1-b04a-3aa72f557ed0
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 14:04:14:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 14:14:47:INFO:
+[92mINFO [0m:      Received: evaluate message 99d2cc1a-5885-4f33-a212-ec485e5aeb54
+02/16/2025 14:14:47:INFO:Received: evaluate message 99d2cc1a-5885-4f33-a212-ec485e5aeb54
+[92mINFO [0m:      Sent reply
+02/16/2025 14:18:49:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 14:19:17:INFO:
+[92mINFO [0m:      Received: train message bfd0179b-467c-4f0b-afc5-139ca7a2a02e
+02/16/2025 14:19:17:INFO:Received: train message bfd0179b-467c-4f0b-afc5-139ca7a2a02e
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 14:32:23:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 14:43:05:INFO:
+[92mINFO [0m:      Received: evaluate message 0efcaabb-ab97-48c8-84b0-1bc376c3a3cb
+02/16/2025 14:43:05:INFO:Received: evaluate message 0efcaabb-ab97-48c8-84b0-1bc376c3a3cb
+[92mINFO [0m:      Sent reply
+02/16/2025 14:47:00:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 14:47:53:INFO:
+[92mINFO [0m:      Received: train message 1176c509-edb6-4ff7-85fd-1ca9c1854579
+02/16/2025 14:47:53:INFO:Received: train message 1176c509-edb6-4ff7-85fd-1ca9c1854579
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 15:00:52:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 15:11:44:INFO:
+[92mINFO [0m:      Received: evaluate message da943aab-74d0-4162-826c-9cd0f58f4189
+02/16/2025 15:11:44:INFO:Received: evaluate message da943aab-74d0-4162-826c-9cd0f58f4189
+[92mINFO [0m:      Sent reply
+02/16/2025 15:15:45:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 15:16:06:INFO:
+[92mINFO [0m:      Received: train message 67cde968-b06e-48ae-8dd3-b866b4a97991
+02/16/2025 15:16:06:INFO:Received: train message 67cde968-b06e-48ae-8dd3-b866b4a97991
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 15:29:13:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 15:38:05:INFO:
+[92mINFO [0m:      Received: evaluate message 0a445a04-ff01-432b-aa13-8486b1713e81
+02/16/2025 15:38:05:INFO:Received: evaluate message 0a445a04-ff01-432b-aa13-8486b1713e81
+[92mINFO [0m:      Sent reply
+02/16/2025 15:42:10:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 15:42:25:INFO:
+[92mINFO [0m:      Received: train message f8abb867-a575-4f24-be6a-686b155def1a
+02/16/2025 15:42:25:INFO:Received: train message f8abb867-a575-4f24-be6a-686b155def1a
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 15:54:53:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:03:39:INFO:
+[92mINFO [0m:      Received: evaluate message 344e00be-e162-4d50-a170-61d9d3463314
+02/16/2025 16:03:39:INFO:Received: evaluate message 344e00be-e162-4d50-a170-61d9d3463314
+[92mINFO [0m:      Sent reply
+02/16/2025 16:07:40:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:08:12:INFO:
+[92mINFO [0m:      Received: train message 16268983-9507-4a7f-829c-376cec85804a
+02/16/2025 16:08:12:INFO:Received: train message 16268983-9507-4a7f-829c-376cec85804a
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 16:20:43:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:29:11:INFO:
+[92mINFO [0m:      Received: evaluate message 1ce930cb-3d69-48b9-88c1-dcdf0d759c2b
+02/16/2025 16:29:11:INFO:Received: evaluate message 1ce930cb-3d69-48b9-88c1-dcdf0d759c2b
+[92mINFO [0m:      Sent reply
+02/16/2025 16:33:05:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:33:34:INFO:
+[92mINFO [0m:      Received: train message 723061c6-dfb5-4165-aef8-fcfa6497027d
+02/16/2025 16:33:34:INFO:Received: train message 723061c6-dfb5-4165-aef8-fcfa6497027d
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 16:45:58:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:54:48:INFO:
+[92mINFO [0m:      Received: evaluate message ab45f6a4-88a5-42b3-9166-86a6c6a03c3f
+02/16/2025 16:54:48:INFO:Received: evaluate message ab45f6a4-88a5-42b3-9166-86a6c6a03c3f
+[92mINFO [0m:      Sent reply
+02/16/2025 16:58:45:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 16:59:10:INFO:
+[92mINFO [0m:      Received: train message 07facc8d-a267-4c94-aa3b-c1481a3ae2e7
+02/16/2025 16:59:10:INFO:Received: train message 07facc8d-a267-4c94-aa3b-c1481a3ae2e7
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 17:11:36:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 17:20:05:INFO:
+[92mINFO [0m:      Received: evaluate message 3c726495-3282-4300-a409-b8d79d910164
+02/16/2025 17:20:05:INFO:Received: evaluate message 3c726495-3282-4300-a409-b8d79d910164
+[92mINFO [0m:      Sent reply
+02/16/2025 17:23:56:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 17:24:29:INFO:
+[92mINFO [0m:      Received: train message 0d50de8c-37f0-468a-9880-b9b4e0013daa
+02/16/2025 17:24:29:INFO:Received: train message 0d50de8c-37f0-468a-9880-b9b4e0013daa
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 17:36:53:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 17:45:31:INFO:
+[92mINFO [0m:      Received: evaluate message 0ada5d93-3178-4ab2-ace3-87dedec6ae63
+02/16/2025 17:45:31:INFO:Received: evaluate message 0ada5d93-3178-4ab2-ace3-87dedec6ae63
+[92mINFO [0m:      Sent reply
+02/16/2025 17:49:02:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 17:49:58:INFO:
+[92mINFO [0m:      Received: train message 86177db6-820d-4200-9595-4ca488a6b9fa
+02/16/2025 17:49:58:INFO:Received: train message 86177db6-820d-4200-9595-4ca488a6b9fa
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 18:02:35:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 18:11:19:INFO:
+[92mINFO [0m:      Received: evaluate message a95dc5f9-b9d5-4545-bb45-3df285b018fd
+02/16/2025 18:11:19:INFO:Received: evaluate message a95dc5f9-b9d5-4545-bb45-3df285b018fd
+[92mINFO [0m:      Sent reply
+02/16/2025 18:15:16:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 18:15:34:INFO:
+[92mINFO [0m:      Received: train message 801f16d6-821f-4622-b622-8ee88c041c66
+02/16/2025 18:15:34:INFO:Received: train message 801f16d6-821f-4622-b622-8ee88c041c66
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 18:27:52:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 18:36:16:INFO:
+[92mINFO [0m:      Received: evaluate message 40ccba92-ceca-46e4-883a-fa5fc69e6061
+02/16/2025 18:36:16:INFO:Received: evaluate message 40ccba92-ceca-46e4-883a-fa5fc69e6061
+['/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/e=10, re', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python38.zip', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/lib-dynload', '/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages', '/raid/home/dgxuser16/NTL/mccarthy/ahmad/github/adaptive_privacy_fl/isic/adagrad/fixed_noise/e=10, re']
+Device: cuda:0
+Params: {'batch_size': 32, 'local_epochs': 3, 'full_dataset_size': 18597, 'number_of_classes': 8}
+Privacy Params: {'target_delta': 1e-05, 'noise_multiplier': 0.84, 'max_grad_norm': 1.0}
+Epsilon = 1.77
+
+{'loss': [1.997768931171849], 'accuracy': [0.2049939589206605], 'auc': [0.4985561652595664]}
+
+Epsilon = 2.27
+
+{'loss': [1.997768931171849, 1.9499465507506557], 'accuracy': [0.2049939589206605, 0.24244865082561418], 'auc': [0.4985561652595664, 0.5167211276668203]}
+
+Epsilon = 2.67
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812]}
+
+Epsilon = 3.03
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179]}
+
+Epsilon = 3.36
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675]}
+
+Epsilon = 3.66
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615]}
+
+Epsilon = 3.95
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351]}
+
+Epsilon = 4.21
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941]}
+
+Epsilon = 4.47
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142]}
+
+Epsilon = 4.72
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693]}
+
+Epsilon = 4.95
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347]}
+
+Epsilon = 5.18
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741]}
+
+Epsilon = 5.40
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473]}
+
+Epsilon = 5.62
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047]}
+
+Epsilon = 5.83
+[92mINFO [0m:      Sent reply
+02/16/2025 18:39:48:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 18:40:55:INFO:
+[92mINFO [0m:      Received: train message 810a2d4c-5d5b-4faf-aeb5-600537d27521
+02/16/2025 18:40:55:INFO:Received: train message 810a2d4c-5d5b-4faf-aeb5-600537d27521
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 18:53:14:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:02:00:INFO:
+[92mINFO [0m:      Received: evaluate message db3cb343-4127-4367-8506-ac0722caf2a8
+02/16/2025 19:02:00:INFO:Received: evaluate message db3cb343-4127-4367-8506-ac0722caf2a8
+[92mINFO [0m:      Sent reply
+02/16/2025 19:05:57:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:06:24:INFO:
+[92mINFO [0m:      Received: train message b9f14b40-7c63-4a7e-9499-81e5c0d0272b
+02/16/2025 19:06:24:INFO:Received: train message b9f14b40-7c63-4a7e-9499-81e5c0d0272b
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 19:18:42:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:27:18:INFO:
+[92mINFO [0m:      Received: evaluate message c89da978-4cc7-4c67-8230-b276dbfff5e7
+02/16/2025 19:27:18:INFO:Received: evaluate message c89da978-4cc7-4c67-8230-b276dbfff5e7
+[92mINFO [0m:      Sent reply
+02/16/2025 19:31:19:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:31:51:INFO:
+[92mINFO [0m:      Received: train message 8cbb86c9-d1c2-4cc2-98ff-6c6486adb2ad
+02/16/2025 19:31:51:INFO:Received: train message 8cbb86c9-d1c2-4cc2-98ff-6c6486adb2ad
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 19:44:31:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:53:05:INFO:
+[92mINFO [0m:      Received: evaluate message 5a2da7ee-efe3-4bb6-ae3f-407cb4b9b025
+02/16/2025 19:53:05:INFO:Received: evaluate message 5a2da7ee-efe3-4bb6-ae3f-407cb4b9b025
+[92mINFO [0m:      Sent reply
+02/16/2025 19:57:07:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 19:57:37:INFO:
+[92mINFO [0m:      Received: train message cb674b85-6c12-4735-8f0b-d8f6df0d4899
+02/16/2025 19:57:37:INFO:Received: train message cb674b85-6c12-4735-8f0b-d8f6df0d4899
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 20:10:06:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 20:19:01:INFO:
+[92mINFO [0m:      Received: evaluate message 932069e0-96bc-4b0c-879e-c509d57e13e8
+02/16/2025 20:19:01:INFO:Received: evaluate message 932069e0-96bc-4b0c-879e-c509d57e13e8
+[92mINFO [0m:      Sent reply
+02/16/2025 20:23:06:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 20:23:35:INFO:
+[92mINFO [0m:      Received: train message 57036544-64e1-4e3c-b231-277df8b2ea99
+02/16/2025 20:23:35:INFO:Received: train message 57036544-64e1-4e3c-b231-277df8b2ea99
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 20:36:06:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 20:44:42:INFO:
+[92mINFO [0m:      Received: evaluate message d770b4d7-9f61-4dcc-b1b2-838babc3cddb
+02/16/2025 20:44:42:INFO:Received: evaluate message d770b4d7-9f61-4dcc-b1b2-838babc3cddb
+[92mINFO [0m:      Sent reply
+02/16/2025 20:48:33:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 20:48:52:INFO:
+[92mINFO [0m:      Received: train message 03d6096a-9e6e-4559-ac58-d2a5c94e23ae
+02/16/2025 20:48:52:INFO:Received: train message 03d6096a-9e6e-4559-ac58-d2a5c94e23ae
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 21:01:28:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 21:09:59:INFO:
+[92mINFO [0m:      Received: evaluate message 1be6e4a6-75d9-4396-a6c8-9eb06ead448a
+02/16/2025 21:09:59:INFO:Received: evaluate message 1be6e4a6-75d9-4396-a6c8-9eb06ead448a
+[92mINFO [0m:      Sent reply
+02/16/2025 21:13:02:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 21:14:41:INFO:
+[92mINFO [0m:      Received: train message 7f5bcc64-5238-4caa-b875-b4a1da88fae7
+02/16/2025 21:14:41:INFO:Received: train message 7f5bcc64-5238-4caa-b875-b4a1da88fae7
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 21:27:17:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 21:35:43:INFO:
+[92mINFO [0m:      Received: evaluate message 93328d5b-a3e8-4941-8b64-217368ddc288
+02/16/2025 21:35:43:INFO:Received: evaluate message 93328d5b-a3e8-4941-8b64-217368ddc288
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156]}
+
+Epsilon = 6.03
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896]}
+
+Epsilon = 6.23
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487]}
+
+Epsilon = 6.43
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518]}
+
+Epsilon = 6.62
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569]}
+
+Epsilon = 6.81
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404]}
+
+Epsilon = 6.99
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841]}
+
+Epsilon = 7.18
+[92mINFO [0m:      Sent reply
+02/16/2025 21:39:42:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 21:40:14:INFO:
+[92mINFO [0m:      Received: train message 03145fda-ce2c-4e26-af9a-9a46afe39c3a
+02/16/2025 21:40:14:INFO:Received: train message 03145fda-ce2c-4e26-af9a-9a46afe39c3a
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 21:52:44:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:01:33:INFO:
+[92mINFO [0m:      Received: evaluate message 83288600-a8f3-4370-8dc6-c021d02829b3
+02/16/2025 22:01:33:INFO:Received: evaluate message 83288600-a8f3-4370-8dc6-c021d02829b3
+[92mINFO [0m:      Sent reply
+02/16/2025 22:05:26:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:05:59:INFO:
+[92mINFO [0m:      Received: train message 2a84a6d4-868b-4f5b-b2f5-7e0209ebf336
+02/16/2025 22:05:59:INFO:Received: train message 2a84a6d4-868b-4f5b-b2f5-7e0209ebf336
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 22:18:36:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:27:13:INFO:
+[92mINFO [0m:      Received: evaluate message 7aa906b5-d9d0-4d11-8aec-00cedc940a51
+02/16/2025 22:27:13:INFO:Received: evaluate message 7aa906b5-d9d0-4d11-8aec-00cedc940a51
+[92mINFO [0m:      Sent reply
+02/16/2025 22:31:15:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:31:50:INFO:
+[92mINFO [0m:      Received: train message a17b89e5-6d39-461a-9142-acc8c6a81ad8
+02/16/2025 22:31:50:INFO:Received: train message a17b89e5-6d39-461a-9142-acc8c6a81ad8
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 22:44:26:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:52:53:INFO:
+[92mINFO [0m:      Received: evaluate message c72a487f-a2c6-4afe-aea2-310d8b045b92
+02/16/2025 22:52:53:INFO:Received: evaluate message c72a487f-a2c6-4afe-aea2-310d8b045b92
+[92mINFO [0m:      Sent reply
+02/16/2025 22:56:42:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 22:57:27:INFO:
+[92mINFO [0m:      Received: train message c639a4ed-34ce-4724-967c-ab8497f18f46
+02/16/2025 22:57:27:INFO:Received: train message c639a4ed-34ce-4724-967c-ab8497f18f46
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 23:09:41:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 23:18:23:INFO:
+[92mINFO [0m:      Received: evaluate message cfa377a4-2bb8-406d-b543-f23e9e22402f
+02/16/2025 23:18:23:INFO:Received: evaluate message cfa377a4-2bb8-406d-b543-f23e9e22402f
+[92mINFO [0m:      Sent reply
+02/16/2025 23:22:11:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 23:22:30:INFO:
+[92mINFO [0m:      Received: train message c4ae7e1e-c642-45ac-a989-026466b4e40e
+02/16/2025 23:22:30:INFO:Received: train message c4ae7e1e-c642-45ac-a989-026466b4e40e
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/16/2025 23:35:04:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 23:43:37:INFO:
+[92mINFO [0m:      Received: evaluate message 86ee205f-afa1-477c-8675-556bd9009515
+02/16/2025 23:43:37:INFO:Received: evaluate message 86ee205f-afa1-477c-8675-556bd9009515
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846, 1.6176838312617627], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913, 0.4309303262182843], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841, 0.6510080539324296]}
+
+Epsilon = 7.35
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846, 1.6176838312617627, 1.609607068223911], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913, 0.4309303262182843, 0.4321385420861861], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841, 0.6510080539324296, 0.654459647251915]}
+
+Epsilon = 7.53
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846, 1.6176838312617627, 1.609607068223911, 1.6014762051010438], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913, 0.4309303262182843, 0.4321385420861861, 0.43616592831252515], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841, 0.6510080539324296, 0.654459647251915, 0.6576672778839445]}
+
+Epsilon = 7.70
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846, 1.6176838312617627, 1.609607068223911, 1.6014762051010438, 1.5937826473579453], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913, 0.4309303262182843, 0.4321385420861861, 0.43616592831252515, 0.4385823600483286], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841, 0.6510080539324296, 0.654459647251915, 0.6576672778839445, 0.6608823558696446]}
+
+Epsilon = 7.87
+
+{'loss': [1.997768931171849, 1.9499465507506557, 1.9106715519102744, 1.8765305369504268, 1.8507679548659153, 1.8255336410904237, 1.804059225419237, 1.7833138092170067, 1.764778432085588, 1.7484578410320306, 1.7341872364870732, 1.7194334487976493, 1.7074495499238727, 1.6957609700522882, 1.6840285098797556, 1.6736064591909001, 1.6632166480134678, 1.654056514168861, 1.6445317674537747, 1.635105992294923, 1.6263456124717846, 1.6176838312617627, 1.609607068223911, 1.6014762051010438, 1.5937826473579453, 1.585911835387403], 'accuracy': [0.2049939589206605, 0.24244865082561418, 0.2726540475231575, 0.2992347966169956, 0.31534434152235197, 0.33387031816351187, 0.346757954087797, 0.3608538058799839, 0.37374144180426905, 0.3769633507853403, 0.38461538461538464, 0.39387837293596456, 0.4019331453886428, 0.4091824405960532, 0.41240434957712446, 0.41361256544502617, 0.41643173580346354, 0.4184454289166331, 0.4216673378977044, 0.42529198550140956, 0.42730567861457913, 0.4309303262182843, 0.4321385420861861, 0.43616592831252515, 0.4385823600483286, 0.4418042690293999], 'auc': [0.4985561652595664, 0.5167211276668203, 0.5299672406491812, 0.542810096887179, 0.553442023176675, 0.5629693479765615, 0.5718529355096351, 0.5805318946136941, 0.5879105739168142, 0.595062799013693, 0.6011938977349347, 0.6072266336353741, 0.611883600946473, 0.617073496914047, 0.6219466796118156, 0.6266243321271896, 0.631232628947487, 0.634925868119518, 0.6397480137707569, 0.6435131733311404, 0.6472022982268841, 0.6510080539324296, 0.654459647251915, 0.6576672778839445, 0.6608823558696446, 0.6637517170292717]}
+
+Epsilon = 8.04
+[92mINFO [0m:      Sent reply
+02/16/2025 23:47:30:INFO:Sent reply
+[92mINFO [0m:      
+02/16/2025 23:47:49:INFO:
+[92mINFO [0m:      Received: train message f6d50c7b-8710-475e-9492-046449905eab
+02/16/2025 23:47:49:INFO:Received: train message f6d50c7b-8710-475e-9492-046449905eab
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 00:00:28:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 00:09:09:INFO:
+[92mINFO [0m:      Received: evaluate message cbde65c2-472a-4fb6-857b-14e2ce08ee1c
+02/17/2025 00:09:09:INFO:Received: evaluate message cbde65c2-472a-4fb6-857b-14e2ce08ee1c
+[92mINFO [0m:      Sent reply
+02/17/2025 00:13:14:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 00:13:29:INFO:
+[92mINFO [0m:      Received: train message e61bc975-a9dd-4d8d-b36d-ee11a5680acd
+02/17/2025 00:13:29:INFO:Received: train message e61bc975-a9dd-4d8d-b36d-ee11a5680acd
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 00:26:08:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 00:34:43:INFO:
+[92mINFO [0m:      Received: evaluate message f4d42868-bd4b-4abb-8e36-8d932e04a886
+02/17/2025 00:34:43:INFO:Received: evaluate message f4d42868-bd4b-4abb-8e36-8d932e04a886
+[92mINFO [0m:      Sent reply
+02/17/2025 00:38:40:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 00:38:58:INFO:
+[92mINFO [0m:      Received: train message 210a0932-288b-4d72-8253-7471b33de2c3
+02/17/2025 00:38:58:INFO:Received: train message 210a0932-288b-4d72-8253-7471b33de2c3
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 00:51:30:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 01:00:17:INFO:
+[92mINFO [0m:      Received: evaluate message ffebf082-2a98-4f7a-b33f-c4b5abe61723
+02/17/2025 01:00:17:INFO:Received: evaluate message ffebf082-2a98-4f7a-b33f-c4b5abe61723
+[92mINFO [0m:      Sent reply
+02/17/2025 01:04:09:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 01:04:10:INFO:
+[92mINFO [0m:      Received: reconnect message 7c8da949-ea1c-4b4f-8ed8-bf4a3c298914
+02/17/2025 01:04:10:INFO:Received: reconnect message 7c8da949-ea1c-4b4f-8ed8-bf4a3c298914
+02/17/2025 01:04:10:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+02/17/2025 01:04:10:INFO:Disconnect and shut down
