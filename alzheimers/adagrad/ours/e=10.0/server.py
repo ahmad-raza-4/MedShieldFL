@@ -30,7 +30,7 @@ strategy = fl.server.strategy.FedAdagrad(
 
 
 fl.server.start_server(
-    server_address="0.0.0.0:8051",
+    server_address="0.0.0.0:8721",
     config=fl.server.ServerConfig(num_rounds=30),
     strategy=strategy,
 )
