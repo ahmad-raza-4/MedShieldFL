@@ -23,9 +23,9 @@ strategy = fl.server.strategy.FedAdagrad(
     min_evaluate_clients=6,
     min_available_clients=6,
     initial_parameters=initial_parameters,
-    eta  = 1e-3,
+    eta  = 1e-2,
     eta_l  = 1e-3,
-    tau  = 1e-9, 
+    tau  = 1e-8, 
 )
 
 

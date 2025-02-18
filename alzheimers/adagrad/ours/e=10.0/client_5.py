@@ -18,7 +18,7 @@ from torchvision import datasets, transforms
 torch.manual_seed(0)
 np.random.seed(0)
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '7'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 client_name = "client_5"
 if not os.path.exists(client_name):
     os.makedirs(client_name)

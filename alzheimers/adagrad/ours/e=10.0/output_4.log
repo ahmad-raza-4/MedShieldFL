@@ -1,14 +1,13 @@
 nohup: ignoring input
-02/14/2025 23:58:36:DEBUG:Opened insecure gRPC connection (no certificates were passed)
-02/14/2025 23:58:36:DEBUG:ChannelConnectivity.IDLE
-02/14/2025 23:58:36:DEBUG:ChannelConnectivity.CONNECTING
-02/14/2025 23:58:36:DEBUG:ChannelConnectivity.READY
+02/17/2025 15:47:59:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+02/17/2025 15:47:59:DEBUG:ChannelConnectivity.IDLE
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+I0000 00:00:1739836079.531788  746373 fork_posix.cc:75] Other threads are currently calling into gRPC, skipping fork() handlers
+02/17/2025 15:47:59:DEBUG:ChannelConnectivity.READY
 [92mINFO [0m:      
-02/14/2025 23:59:12:INFO:
-[92mINFO [0m:      Received: train message 0171a437-a53f-42e3-bb0e-beb228240191
-02/14/2025 23:59:12:INFO:Received: train message 0171a437-a53f-42e3-bb0e-beb228240191
+02/17/2025 15:48:20:INFO:
+[92mINFO [0m:      Received: train message 5cba33b2-527a-445e-9d2c-9d6dcd812c4c
+02/17/2025 15:48:20:INFO:Received: train message 5cba33b2-527a-445e-9d2c-9d6dcd812c4c
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -16,37 +15,19 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:00:06:INFO:Sent reply
+02/17/2025 15:49:06:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:00:39:INFO:
-[92mINFO [0m:      Received: evaluate message 264d0390-d0ac-46b8-9834-dd7d0cef35ba
-02/15/2025 00:00:39:INFO:Received: evaluate message 264d0390-d0ac-46b8-9834-dd7d0cef35ba
-[92mINFO [0m:      Sent reply
-02/15/2025 00:00:44:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:01:31:INFO:
-[92mINFO [0m:      Received: train message a89f4d27-efdc-4d40-827a-e2a8c9cd5d81
-02/15/2025 00:01:31:INFO:Received: train message a89f4d27-efdc-4d40-827a-e2a8c9cd5d81
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:02:24:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:03:13:INFO:
-[92mINFO [0m:      Received: evaluate message f217a386-0ff3-45a6-a892-e71a41a230fd
-02/15/2025 00:03:13:INFO:Received: evaluate message f217a386-0ff3-45a6-a892-e71a41a230fd
+02/17/2025 15:50:18:INFO:
+[92mINFO [0m:      Received: evaluate message 65579bcc-df9b-45a3-8157-39fe733212fc
+02/17/2025 15:50:18:INFO:Received: evaluate message 65579bcc-df9b-45a3-8157-39fe733212fc
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:03:18:INFO:Sent reply
+02/17/2025 15:50:22:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:03:45:INFO:
-[92mINFO [0m:      Received: train message caab62d9-a83a-43a8-bc11-354bc9263ad8
-02/15/2025 00:03:45:INFO:Received: train message caab62d9-a83a-43a8-bc11-354bc9263ad8
+02/17/2025 15:51:18:INFO:
+[92mINFO [0m:      Received: train message abbc5ec7-f78e-46cb-b529-07fa45301c74
+02/17/2025 15:51:19:INFO:Received: train message abbc5ec7-f78e-46cb-b529-07fa45301c74
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -54,19 +35,19 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:04:40:INFO:Sent reply
+02/17/2025 15:52:05:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:05:32:INFO:
-[92mINFO [0m:      Received: evaluate message cc665f26-1264-461b-a55f-e5fb5005032a
-02/15/2025 00:05:32:INFO:Received: evaluate message cc665f26-1264-461b-a55f-e5fb5005032a
+02/17/2025 15:52:55:INFO:
+[92mINFO [0m:      Received: evaluate message dc3c2b51-d13e-4f9f-b7fc-585626f00830
+02/17/2025 15:52:55:INFO:Received: evaluate message dc3c2b51-d13e-4f9f-b7fc-585626f00830
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:05:38:INFO:Sent reply
+02/17/2025 15:52:59:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:06:13:INFO:
-[92mINFO [0m:      Received: train message 7f57182f-b07f-4c5b-aaed-d0547463efea
-02/15/2025 00:06:13:INFO:Received: train message 7f57182f-b07f-4c5b-aaed-d0547463efea
+02/17/2025 15:53:37:INFO:
+[92mINFO [0m:      Received: train message 26a53b69-48f6-4adf-8d83-adfca39c5d67
+02/17/2025 15:53:37:INFO:Received: train message 26a53b69-48f6-4adf-8d83-adfca39c5d67
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -74,19 +55,19 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:07:08:INFO:Sent reply
+02/17/2025 15:54:27:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:07:29:INFO:
-[92mINFO [0m:      Received: evaluate message 267dc23d-107a-4f3f-8fbc-f38ae4bdf440
-02/15/2025 00:07:29:INFO:Received: evaluate message 267dc23d-107a-4f3f-8fbc-f38ae4bdf440
+02/17/2025 15:55:19:INFO:
+[92mINFO [0m:      Received: evaluate message d7a317f3-56f6-49b2-9808-bda67c193c2e
+02/17/2025 15:55:19:INFO:Received: evaluate message d7a317f3-56f6-49b2-9808-bda67c193c2e
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:07:33:INFO:Sent reply
+02/17/2025 15:55:22:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:08:26:INFO:
-[92mINFO [0m:      Received: train message cd45a66c-c557-46be-8e1c-9e08ef87d009
-02/15/2025 00:08:26:INFO:Received: train message cd45a66c-c557-46be-8e1c-9e08ef87d009
+02/17/2025 15:56:03:INFO:
+[92mINFO [0m:      Received: train message 8330454e-010b-445f-aee2-0f712d47c549
+02/17/2025 15:56:03:INFO:Received: train message 8330454e-010b-445f-aee2-0f712d47c549
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -94,19 +75,19 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:09:26:INFO:Sent reply
+02/17/2025 15:56:53:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:10:00:INFO:
-[92mINFO [0m:      Received: evaluate message 78254da9-1983-4078-b471-26719793b4f9
-02/15/2025 00:10:00:INFO:Received: evaluate message 78254da9-1983-4078-b471-26719793b4f9
+02/17/2025 15:57:44:INFO:
+[92mINFO [0m:      Received: evaluate message ab4d893b-ffbb-419e-a026-0c5796dcb87a
+02/17/2025 15:57:44:INFO:Received: evaluate message ab4d893b-ffbb-419e-a026-0c5796dcb87a
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:10:05:INFO:Sent reply
+02/17/2025 15:57:49:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:10:41:INFO:
-[92mINFO [0m:      Received: train message 2c9019ce-d216-4661-b744-adbea348cc46
-02/15/2025 00:10:41:INFO:Received: train message 2c9019ce-d216-4661-b744-adbea348cc46
+02/17/2025 15:58:18:INFO:
+[92mINFO [0m:      Received: train message 174a1ef4-7fe6-4c8d-b39a-43cb90fe3673
+02/17/2025 15:58:18:INFO:Received: train message 174a1ef4-7fe6-4c8d-b39a-43cb90fe3673
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -114,19 +95,19 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:11:35:INFO:Sent reply
+02/17/2025 15:59:09:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:12:30:INFO:
-[92mINFO [0m:      Received: evaluate message 1fe499bd-c4ab-43d6-b322-19a135d208d0
-02/15/2025 00:12:30:INFO:Received: evaluate message 1fe499bd-c4ab-43d6-b322-19a135d208d0
+02/17/2025 16:00:00:INFO:
+[92mINFO [0m:      Received: evaluate message a3441c42-42a6-40bd-9ab6-d683b90ecbcd
+02/17/2025 16:00:00:INFO:Received: evaluate message a3441c42-42a6-40bd-9ab6-d683b90ecbcd
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:12:34:INFO:Sent reply
+02/17/2025 16:00:04:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:13:03:INFO:
-[92mINFO [0m:      Received: train message 8d53691d-d089-4950-a7f6-4861afbf02dc
-02/15/2025 00:13:03:INFO:Received: train message 8d53691d-d089-4950-a7f6-4861afbf02dc
+02/17/2025 16:00:41:INFO:
+[92mINFO [0m:      Received: train message 3cdd8d12-1bc4-4ac5-861f-1739000794be
+02/17/2025 16:00:41:INFO:Received: train message 3cdd8d12-1bc4-4ac5-861f-1739000794be
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -134,11 +115,31 @@ I0000 00:00:1739606317.015308 1515684 fork_posix.cc:75] Other threads are curren
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:13:54:INFO:Sent reply
+02/17/2025 16:01:31:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:14:52:INFO:
-[92mINFO [0m:      Received: evaluate message a985c2a8-2757-4ec3-a447-48962e67f5ee
-02/15/2025 00:14:52:INFO:Received: evaluate message a985c2a8-2757-4ec3-a447-48962e67f5ee
+02/17/2025 16:02:31:INFO:
+[92mINFO [0m:      Received: evaluate message 64979277-95db-4bcd-be7c-ca46575dd515
+02/17/2025 16:02:31:INFO:Received: evaluate message 64979277-95db-4bcd-be7c-ca46575dd515
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:02:35:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:03:06:INFO:
+[92mINFO [0m:      Received: train message 7008f450-1ee0-4de7-847d-a82127ac2900
+02/17/2025 16:03:06:INFO:Received: train message 7008f450-1ee0-4de7-847d-a82127ac2900
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:03:54:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:04:42:INFO:
+[92mINFO [0m:      Received: evaluate message a6ca7472-9fb2-44d4-bbe4-656166c969c0
+02/17/2025 16:04:42:INFO:Received: evaluate message a6ca7472-9fb2-44d4-bbe4-656166c969c0
 Params:
  batch_size: 32, local_epochs: 3, full_dataset_size: 6400, num_classes: 4
 
@@ -172,7 +173,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904], 'accuracy': [0.5105551211884285], 'auc': [0.5353700758405713], 'precision': [0.4273732942807158], 'recall': [0.5105551211884285], 'f1': [0.46264894441049187]}
+{'loss': [1.0687566571537641], 'accuracy': [0.5019546520719312], 'auc': [0.6986701753423364], 'precision': [0.38037888704227396], 'recall': [0.5019546520719312], 'f1': [0.3517787415301462]}
 
 Step 1b: Recomputing FIM for epoch 2
 Step 2a: Compute base noise multiplier
@@ -198,7 +199,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877], 'accuracy': [0.5105551211884285, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766], 'precision': [0.4273732942807158, 0.41654227475272265], 'recall': [0.5105551211884285, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086]}
+{'loss': [1.0687566571537641, 0.9893743414912399], 'accuracy': [0.5019546520719312, 0.5238467552775606], 'auc': [0.6986701753423364, 0.7120963034009588], 'precision': [0.38037888704227396, 0.42062340750475286], 'recall': [0.5019546520719312, 0.5238467552775606], 'f1': [0.3517787415301462, 0.44438737167431464]}
 
 Step 1b: Recomputing FIM for epoch 3
 Step 2a: Compute base noise multiplier
@@ -224,7 +225,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765]}
 
 Step 1b: Recomputing FIM for epoch 4
 Step 2a: Compute base noise multiplier
@@ -250,7 +251,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216]}
 
 Step 1b: Recomputing FIM for epoch 5
 Step 2a: Compute base noise multiplier
@@ -276,7 +277,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113]}
 
 Step 1b: Recomputing FIM for epoch 6
 Step 2a: Compute base noise multiplier
@@ -302,7 +303,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525]}
 
 Step 1b: Recomputing FIM for epoch 7
 Step 2a: Compute base noise multiplier
@@ -330,11 +331,11 @@ Step 3: Evaluate the model locally
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:14:57:INFO:Sent reply
+02/17/2025 16:04:44:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:15:25:INFO:
-[92mINFO [0m:      Received: train message f6c91e9f-279f-4307-8f60-d2b61474f78b
-02/15/2025 00:15:25:INFO:Received: train message f6c91e9f-279f-4307-8f60-d2b61474f78b
+02/17/2025 16:05:25:INFO:
+[92mINFO [0m:      Received: train message 6a54ec7c-d395-451d-8fce-575236a7ab4a
+02/17/2025 16:05:25:INFO:Received: train message 6a54ec7c-d395-451d-8fce-575236a7ab4a
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -342,19 +343,19 @@ Step 3: Evaluate the model locally
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:16:14:INFO:Sent reply
+02/17/2025 16:06:14:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:16:52:INFO:
-[92mINFO [0m:      Received: evaluate message 137d2790-6cd2-4249-8db1-6d4eac9f0a36
-02/15/2025 00:16:52:INFO:Received: evaluate message 137d2790-6cd2-4249-8db1-6d4eac9f0a36
+02/17/2025 16:06:35:INFO:
+[92mINFO [0m:      Received: evaluate message f119f0c0-ddcf-46b6-a58f-09994fae84cc
+02/17/2025 16:06:35:INFO:Received: evaluate message f119f0c0-ddcf-46b6-a58f-09994fae84cc
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:16:56:INFO:Sent reply
+02/17/2025 16:06:41:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:17:53:INFO:
-[92mINFO [0m:      Received: train message 4a77b58f-aac5-4841-a2e6-bc1117c40b67
-02/15/2025 00:17:53:INFO:Received: train message 4a77b58f-aac5-4841-a2e6-bc1117c40b67
+02/17/2025 16:07:40:INFO:
+[92mINFO [0m:      Received: train message fbe9a98d-09c3-4dac-853d-4c7a0bf24158
+02/17/2025 16:07:40:INFO:Received: train message fbe9a98d-09c3-4dac-853d-4c7a0bf24158
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -362,19 +363,19 @@ Step 3: Evaluate the model locally
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:18:47:INFO:Sent reply
+02/17/2025 16:08:29:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:19:30:INFO:
-[92mINFO [0m:      Received: evaluate message 5b602a40-1966-4a61-a18b-e5dd493aa4ab
-02/15/2025 00:19:30:INFO:Received: evaluate message 5b602a40-1966-4a61-a18b-e5dd493aa4ab
+02/17/2025 16:09:17:INFO:
+[92mINFO [0m:      Received: evaluate message bf30fa1d-6b9c-441c-91bd-8656d3ea3185
+02/17/2025 16:09:17:INFO:Received: evaluate message bf30fa1d-6b9c-441c-91bd-8656d3ea3185
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:19:36:INFO:Sent reply
+02/17/2025 16:09:20:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:20:02:INFO:
-[92mINFO [0m:      Received: train message 2e8a7a91-e396-47f7-916a-e0a1fc3f0672
-02/15/2025 00:20:02:INFO:Received: train message 2e8a7a91-e396-47f7-916a-e0a1fc3f0672
+02/17/2025 16:09:54:INFO:
+[92mINFO [0m:      Received: train message 88cee991-c9bd-4780-b495-3a0cdd5e4471
+02/17/2025 16:09:54:INFO:Received: train message 88cee991-c9bd-4780-b495-3a0cdd5e4471
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -382,19 +383,19 @@ Step 3: Evaluate the model locally
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:20:57:INFO:Sent reply
+02/17/2025 16:11:01:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:21:53:INFO:
-[92mINFO [0m:      Received: evaluate message 25c033fc-7449-42b4-af0c-ce53bed76993
-02/15/2025 00:21:53:INFO:Received: evaluate message 25c033fc-7449-42b4-af0c-ce53bed76993
+02/17/2025 16:11:22:INFO:
+[92mINFO [0m:      Received: evaluate message eb822206-7353-4997-8ff1-780aca21e7e7
+02/17/2025 16:11:22:INFO:Received: evaluate message eb822206-7353-4997-8ff1-780aca21e7e7
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
 [92mINFO [0m:      Sent reply
-02/15/2025 00:21:58:INFO:Sent reply
+02/17/2025 16:11:26:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:22:26:INFO:
-[92mINFO [0m:      Received: train message 531972d6-0b59-4339-8a0f-9cad27dc308a
-02/15/2025 00:22:26:INFO:Received: train message 531972d6-0b59-4339-8a0f-9cad27dc308a
+02/17/2025 16:12:31:INFO:
+[92mINFO [0m:      Received: train message 47081912-c9a1-46b5-91b4-7306c22486fe
+02/17/2025 16:12:31:INFO:Received: train message 47081912-c9a1-46b5-91b4-7306c22486fe
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
@@ -402,21 +403,13 @@ Step 3: Evaluate the model locally
 /home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
   self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
 [92mINFO [0m:      Sent reply
-02/15/2025 00:23:17:INFO:Sent reply
+02/17/2025 16:13:13:INFO:Sent reply
 [92mINFO [0m:      
-02/15/2025 00:24:04:INFO:
-[92mINFO [0m:      Received: evaluate message 3a6c5eb2-c312-4b3c-9baa-03a2a52a2e8b
-02/15/2025 00:24:04:INFO:Received: evaluate message 3a6c5eb2-c312-4b3c-9baa-03a2a52a2e8b
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:24:09:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:24:36:INFO:
-[92mINFO [0m:      Received: train message 5579cccb-01db-441b-a685-b7d7bf2360e7
-02/15/2025 00:24:36:INFO:Received: train message 5579cccb-01db-441b-a685-b7d7bf2360e7
+02/17/2025 16:13:49:INFO:
+[92mINFO [0m:      Received: evaluate message 0b06d555-89c7-48f2-ae7c-60ee169d8e6d
+02/17/2025 16:13:49:INFO:Received: evaluate message 0b06d555-89c7-48f2-ae7c-60ee169d8e6d
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284]}
 
 Step 1b: Recomputing FIM for epoch 8
 Step 2a: Compute base noise multiplier
@@ -442,7 +435,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656]}
 
 Step 1b: Recomputing FIM for epoch 9
 Step 2a: Compute base noise multiplier
@@ -468,7 +461,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876]}
 
 Step 1b: Recomputing FIM for epoch 10
 Step 2a: Compute base noise multiplier
@@ -494,7 +487,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897]}
 
 Step 1b: Recomputing FIM for epoch 11
 Step 2a: Compute base noise multiplier
@@ -519,81 +512,77 @@ Parameter Group 0
 
 Step 2f: Log training details
 Step 3: Evaluate the model locally
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:13:53:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:14:51:INFO:
+[92mINFO [0m:      Received: train message 0f72dfdf-0746-4294-a2a5-043664710913
+02/17/2025 16:14:51:INFO:Received: train message 0f72dfdf-0746-4294-a2a5-043664710913
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:15:42:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:16:00:INFO:
+[92mINFO [0m:      Received: evaluate message e25e312c-f729-4f33-a559-e28dfc4fd292
+02/17/2025 16:16:00:INFO:Received: evaluate message e25e312c-f729-4f33-a559-e28dfc4fd292
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:16:02:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:17:15:INFO:
+[92mINFO [0m:      Received: train message 5017c6fc-0e9d-4c18-a1da-5ac85f36a665
+02/17/2025 16:17:15:INFO:Received: train message 5017c6fc-0e9d-4c18-a1da-5ac85f36a665
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:18:04:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:18:40:INFO:
+[92mINFO [0m:      Received: evaluate message 5aaa78b9-0c5d-48f8-aba1-981b1090d7db
+02/17/2025 16:18:40:INFO:Received: evaluate message 5aaa78b9-0c5d-48f8-aba1-981b1090d7db
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:18:45:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:19:32:INFO:
+[92mINFO [0m:      Received: train message aebff74d-1588-4146-a5a4-b62cf0ab1f56
+02/17/2025 16:19:32:INFO:Received: train message aebff74d-1588-4146-a5a4-b62cf0ab1f56
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:20:25:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:21:05:INFO:
+[92mINFO [0m:      Received: evaluate message 700934ca-fbb3-442d-9065-a80bea6130d7
+02/17/2025 16:21:05:INFO:Received: evaluate message 700934ca-fbb3-442d-9065-a80bea6130d7
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:21:09:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:21:56:INFO:
+[92mINFO [0m:      Received: train message cb81ab68-7659-401b-bc67-2d49f43b1436
+02/17/2025 16:21:56:INFO:Received: train message cb81ab68-7659-401b-bc67-2d49f43b1436
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232]}
 
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:25:25:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:26:30:INFO:
-[92mINFO [0m:      Received: evaluate message d1d9e4b2-053e-404e-8d82-eb25d451941d
-02/15/2025 00:26:30:INFO:Received: evaluate message d1d9e4b2-053e-404e-8d82-eb25d451941d
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:26:35:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:26:57:INFO:
-[92mINFO [0m:      Received: train message fa79f622-9144-4a35-8975-b88da84d6eea
-02/15/2025 00:26:57:INFO:Received: train message fa79f622-9144-4a35-8975-b88da84d6eea
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:27:50:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:29:00:INFO:
-[92mINFO [0m:      Received: evaluate message 60f2db46-928b-4dec-a582-012477bc85fb
-02/15/2025 00:29:00:INFO:Received: evaluate message 60f2db46-928b-4dec-a582-012477bc85fb
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:29:06:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:29:35:INFO:
-[92mINFO [0m:      Received: train message 7b796b83-de6c-494a-9321-9363feaef92d
-02/15/2025 00:29:35:INFO:Received: train message 7b796b83-de6c-494a-9321-9363feaef92d
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:30:27:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:31:20:INFO:
-[92mINFO [0m:      Received: evaluate message ecbed99b-529c-4d54-95b4-b6a3eddeac24
-02/15/2025 00:31:20:INFO:Received: evaluate message ecbed99b-529c-4d54-95b4-b6a3eddeac24
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:31:24:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:31:56:INFO:
-[92mINFO [0m:      Received: train message ae8c7c6d-7205-4347-81da-37b40565c1a7
-02/15/2025 00:31:56:INFO:Received: train message ae8c7c6d-7205-4347-81da-37b40565c1a7
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:32:49:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:33:26:INFO:
-[92mINFO [0m:      Received: evaluate message 3ff7e2f2-38e8-4bab-beb4-32b577f953d3
-02/15/2025 00:33:26:INFO:Received: evaluate message 3ff7e2f2-38e8-4bab-beb4-32b577f953d3
 Step 1b: Recomputing FIM for epoch 12
 Step 2a: Compute base noise multiplier
 Step 2b: Update noise multiplier dynamically
@@ -618,7 +607,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792]}
 
 Step 1b: Recomputing FIM for epoch 13
 Step 2a: Compute base noise multiplier
@@ -644,7 +633,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909]}
 
 Step 1b: Recomputing FIM for epoch 14
 Step 2a: Compute base noise multiplier
@@ -670,10 +659,70 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706]}
 
 Step 1b: Recomputing FIM for epoch 15
 Step 2a: Compute base noise multiplier
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:22:45:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:23:17:INFO:
+[92mINFO [0m:      Received: evaluate message d4c38c13-7c7e-43af-9603-1fedcb82472a
+02/17/2025 16:23:17:INFO:Received: evaluate message d4c38c13-7c7e-43af-9603-1fedcb82472a
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:23:19:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:24:15:INFO:
+[92mINFO [0m:      Received: train message d491fec9-b18c-434e-aa55-73728963264c
+02/17/2025 16:24:15:INFO:Received: train message d491fec9-b18c-434e-aa55-73728963264c
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:25:09:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:25:47:INFO:
+[92mINFO [0m:      Received: evaluate message 4340cff1-0a1a-4318-921d-2d213bbdc029
+02/17/2025 16:25:47:INFO:Received: evaluate message 4340cff1-0a1a-4318-921d-2d213bbdc029
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:25:50:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:26:26:INFO:
+[92mINFO [0m:      Received: train message fc555445-2ab8-4732-b897-51952a892e85
+02/17/2025 16:26:26:INFO:Received: train message fc555445-2ab8-4732-b897-51952a892e85
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:27:20:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:28:22:INFO:
+[92mINFO [0m:      Received: evaluate message 948f8d85-67bd-440d-a5d2-66e826b8952b
+02/17/2025 16:28:22:INFO:Received: evaluate message 948f8d85-67bd-440d-a5d2-66e826b8952b
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:28:26:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:29:17:INFO:
+[92mINFO [0m:      Received: train message a46c4bce-acc1-4389-9059-78e90de791a7
+02/17/2025 16:29:17:INFO:Received: train message a46c4bce-acc1-4389-9059-78e90de791a7
 Step 2b: Update noise multiplier dynamically
 Step 2c: Re-initialize PrivacyEngine
 Step 2d: Make model private
@@ -695,68 +744,8 @@ Parameter Group 0
 
 Step 2f: Log training details
 Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:33:30:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:34:08:INFO:
-[92mINFO [0m:      Received: train message 87b76898-b5ca-48ae-9c8f-4c5a4272cf88
-02/15/2025 00:34:08:INFO:Received: train message 87b76898-b5ca-48ae-9c8f-4c5a4272cf88
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:35:02:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:35:43:INFO:
-[92mINFO [0m:      Received: evaluate message e516867f-8623-40ca-b3e2-9b1f7cfd4e92
-02/15/2025 00:35:43:INFO:Received: evaluate message e516867f-8623-40ca-b3e2-9b1f7cfd4e92
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:35:47:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:36:25:INFO:
-[92mINFO [0m:      Received: train message bca5cf91-64dd-4c1b-b7b7-3671da3fea98
-02/15/2025 00:36:25:INFO:Received: train message bca5cf91-64dd-4c1b-b7b7-3671da3fea98
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:37:15:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:37:56:INFO:
-[92mINFO [0m:      Received: evaluate message 4081ac11-1454-4f3e-a881-3b41b9b2e5e5
-02/15/2025 00:37:56:INFO:Received: evaluate message 4081ac11-1454-4f3e-a881-3b41b9b2e5e5
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:38:01:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:38:31:INFO:
-[92mINFO [0m:      Received: train message a28aec85-2e81-4c20-b4fd-39e9a459a775
-02/15/2025 00:38:31:INFO:Received: train message a28aec85-2e81-4c20-b4fd-39e9a459a775
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:39:22:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:40:00:INFO:
-[92mINFO [0m:      Received: evaluate message 237788bc-c298-4abb-8af2-9ab91120500c
-02/15/2025 00:40:00:INFO:Received: evaluate message 237788bc-c298-4abb-8af2-9ab91120500c
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478, 1.113371002478372], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052, 0.7493805413017149], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267, 0.44004714519250787], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706, 0.4746967279247008]}
 
 Step 1b: Recomputing FIM for epoch 16
 Step 2a: Compute base noise multiplier
@@ -782,7 +771,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478, 1.113371002478372, 1.1138475563863557], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052, 0.7493805413017149, 0.7521894586893918], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267, 0.44004714519250787, 0.43394587174169086], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706, 0.4746967279247008, 0.4697585691606056]}
 
 Step 1b: Recomputing FIM for epoch 17
 Step 2a: Compute base noise multiplier
@@ -808,7 +797,7 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478, 1.113371002478372, 1.1138475563863557, 1.1226433132475853], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052, 0.7493805413017149, 0.7521894586893918, 0.7507368544773882], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267, 0.44004714519250787, 0.43394587174169086, 0.429559262315887], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706, 0.4746967279247008, 0.4697585691606056, 0.4596558563591495]}
 
 Step 1b: Recomputing FIM for epoch 18
 Step 2a: Compute base noise multiplier
@@ -817,6 +806,43 @@ Step 2c: Re-initialize PrivacyEngine
 Step 2d: Make model private
 Step 2e: Perform local DP training
 Training the model with the following parameters:
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:30:05:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:30:45:INFO:
+[92mINFO [0m:      Received: evaluate message 1d5c632b-520b-4e2e-9b33-1aa2f83d5b60
+02/17/2025 16:30:45:INFO:Received: evaluate message 1d5c632b-520b-4e2e-9b33-1aa2f83d5b60
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:30:49:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:31:42:INFO:
+[92mINFO [0m:      Received: train message 9852359e-e29d-4482-ac74-7318bcfbe038
+02/17/2025 16:31:42:INFO:Received: train message 9852359e-e29d-4482-ac74-7318bcfbe038
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
+  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
+[92mINFO [0m:      Sent reply
+02/17/2025 16:32:24:INFO:Sent reply
+[92mINFO [0m:      
+02/17/2025 16:33:13:INFO:
+[92mINFO [0m:      Received: evaluate message 845cd2fc-6d6e-4697-832b-1a26608e5c17
+02/17/2025 16:33:13:INFO:Received: evaluate message 845cd2fc-6d6e-4697-832b-1a26608e5c17
+/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[92mINFO [0m:      Sent reply
+02/17/2025 16:33:16:INFO:Sent reply
+02/17/2025 16:33:34:DEBUG:gRPC channel closed
 Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
 Parameter Group 0
     amsgrad: False
@@ -833,48 +859,8 @@ Parameter Group 0
 
 Step 2f: Log training details
 Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:40:06:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:40:38:INFO:
-[92mINFO [0m:      Received: train message a1ae3ae9-1961-4972-a3a6-4e5921b797ae
-02/15/2025 00:40:38:INFO:Received: train message a1ae3ae9-1961-4972-a3a6-4e5921b797ae
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:41:31:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:42:01:INFO:
-[92mINFO [0m:      Received: evaluate message d28051b7-5c94-4307-bd10-b8be43c6a9eb
-02/15/2025 00:42:01:INFO:Received: evaluate message d28051b7-5c94-4307-bd10-b8be43c6a9eb
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:42:05:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:42:47:INFO:
-[92mINFO [0m:      Received: train message 82e20b6d-6c75-4e89-9a19-b973cf6ddd54
-02/15/2025 00:42:47:INFO:Received: train message 82e20b6d-6c75-4e89-9a19-b973cf6ddd54
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:43:38:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:44:15:INFO:
-[92mINFO [0m:      Received: evaluate message 98b578b3-f8f6-474b-aa9f-0617c59cfd2c
-02/15/2025 00:44:15:INFO:Received: evaluate message 98b578b3-f8f6-474b-aa9f-0617c59cfd2c
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478, 1.113371002478372, 1.1138475563863557, 1.1226433132475853, 1.086032087491582], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854, 0.5379202501954652], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052, 0.7493805413017149, 0.7521894586893918, 0.7507368544773882, 0.7467708839908073], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267, 0.44004714519250787, 0.43394587174169086, 0.429559262315887, 0.4402773722353763], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854, 0.5379202501954652], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706, 0.4746967279247008, 0.4697585691606056, 0.4596558563591495, 0.4781322491847913]}
 
 Step 1b: Recomputing FIM for epoch 19
 Step 2a: Compute base noise multiplier
@@ -900,507 +886,23 @@ Parameter Group 0
 Step 2f: Log training details
 Step 3: Evaluate the model locally
 
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164]}
+{'loss': [1.0687566571537641, 0.9893743414912399, 1.1004252182123155, 1.0818013890447609, 1.094060481107263, 1.056026972253589, 1.0679835235820887, 1.0759543025745275, 1.111851721000075, 1.0751895219483723, 1.117507877155987, 1.139596953999726, 1.1623184890650138, 1.0981207749543478, 1.113371002478372, 1.1138475563863557, 1.1226433132475853, 1.086032087491582, 1.0717603355017], 'accuracy': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854, 0.5379202501954652, 0.5387021110242377], 'auc': [0.6986701753423364, 0.7120963034009588, 0.7186323312711538, 0.7216920114931341, 0.7275424710012472, 0.7176201793158019, 0.7208481283081412, 0.7193091042910686, 0.7279210743159527, 0.7289812126455901, 0.735326314649987, 0.739154417117866, 0.7426858858402463, 0.7448234732108052, 0.7493805413017149, 0.7521894586893918, 0.7507368544773882, 0.7467708839908073, 0.7452567729742525], 'precision': [0.38037888704227396, 0.42062340750475286, 0.4097598380065668, 0.42690403985590775, 0.42397322319169584, 0.43734341102358015, 0.43331721016183977, 0.4335265855686629, 0.43048859736707434, 0.431118124809729, 0.42873601314610466, 0.4270757753689202, 0.42238257332349205, 0.44761302648855267, 0.44004714519250787, 0.43394587174169086, 0.429559262315887, 0.4402773722353763, 0.4427869113473], 'recall': [0.5019546520719312, 0.5238467552775606, 0.5121188428459734, 0.5285379202501954, 0.524628616106333, 0.5371383893666928, 0.5340109460516028, 0.5347928068803753, 0.5332290852228303, 0.5301016419077405, 0.5308835027365129, 0.5301016419077405, 0.5261923377638781, 0.5449569976544175, 0.5394839718530101, 0.5355746677091477, 0.5316653635652854, 0.5379202501954652, 0.5387021110242377], 'f1': [0.3517787415301462, 0.44438737167431464, 0.39715407745242765, 0.44232164693526216, 0.43460286688886113, 0.469538955668525, 0.4648170078711284, 0.4645651994622656, 0.454721226243876, 0.46636271353041897, 0.4581111843010232, 0.4541538607167792, 0.4478063924723909, 0.48504276130070706, 0.4746967279247008, 0.4697585691606056, 0.4596558563591495, 0.4781322491847913, 0.4815428274910568]}
 
-Step 1b: Recomputing FIM for epoch 20
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:44:19:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:44:31:INFO:
-[92mINFO [0m:      Received: train message 25e3e1fb-735f-4941-9744-684ec7260393
-02/15/2025 00:44:31:INFO:Received: train message 25e3e1fb-735f-4941-9744-684ec7260393
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:45:23:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:46:33:INFO:
-[92mINFO [0m:      Received: evaluate message b5e69ead-62f7-4171-81c2-614767bb314f
-02/15/2025 00:46:33:INFO:Received: evaluate message b5e69ead-62f7-4171-81c2-614767bb314f
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:46:38:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:47:00:INFO:
-[92mINFO [0m:      Received: train message dcf2a83b-671f-4b0b-b82b-d57bbb6b2a55
-02/15/2025 00:47:00:INFO:Received: train message dcf2a83b-671f-4b0b-b82b-d57bbb6b2a55
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:47:51:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:48:44:INFO:
-[92mINFO [0m:      Received: evaluate message c9f8f3e6-a1c6-4f7d-bb2b-496bdeaf1b68
-02/15/2025 00:48:44:INFO:Received: evaluate message c9f8f3e6-a1c6-4f7d-bb2b-496bdeaf1b68
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164]}
-
-Step 1b: Recomputing FIM for epoch 21
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991]}
-
-Step 1b: Recomputing FIM for epoch 22
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:48:49:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:49:19:INFO:
-[92mINFO [0m:      Received: train message 5253ab18-2c2a-44f0-982e-a2839fa8239c
-02/15/2025 00:49:19:INFO:Received: train message 5253ab18-2c2a-44f0-982e-a2839fa8239c
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:50:06:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:51:07:INFO:
-[92mINFO [0m:      Received: evaluate message 36d154d8-c500-4900-ae62-23790adca76d
-02/15/2025 00:51:07:INFO:Received: evaluate message 36d154d8-c500-4900-ae62-23790adca76d
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:51:12:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:51:41:INFO:
-[92mINFO [0m:      Received: train message 75bb87d2-fa71-4587-aad0-59095872f045
-02/15/2025 00:51:41:INFO:Received: train message 75bb87d2-fa71-4587-aad0-59095872f045
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:52:32:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:53:03:INFO:
-[92mINFO [0m:      Received: evaluate message 74f133f9-cc9b-4922-9d19-9d603bba1444
-02/15/2025 00:53:03:INFO:Received: evaluate message 74f133f9-cc9b-4922-9d19-9d603bba1444
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539]}
-
-Step 1b: Recomputing FIM for epoch 23
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873]}
-
-Step 1b: Recomputing FIM for epoch 24
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:53:07:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:53:48:INFO:
-[92mINFO [0m:      Received: train message ccf03c58-481a-437f-8ad0-d48b9ff16a43
-02/15/2025 00:53:48:INFO:Received: train message ccf03c58-481a-437f-8ad0-d48b9ff16a43
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:54:43:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:55:29:INFO:
-[92mINFO [0m:      Received: evaluate message ac7c2ce7-f504-45ad-b745-254e24da68cb
-02/15/2025 00:55:29:INFO:Received: evaluate message ac7c2ce7-f504-45ad-b745-254e24da68cb
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:55:34:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:55:57:INFO:
-[92mINFO [0m:      Received: train message c2b31bed-f79f-47fa-bc0c-fb9a37f0bb0f
-02/15/2025 00:55:57:INFO:Received: train message c2b31bed-f79f-47fa-bc0c-fb9a37f0bb0f
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:56:52:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:57:53:INFO:
-[92mINFO [0m:      Received: evaluate message 684d882f-5c2c-4526-87e8-500cc404236b
-02/15/2025 00:57:53:INFO:Received: evaluate message 684d882f-5c2c-4526-87e8-500cc404236b
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417]}
-
-Step 1b: Recomputing FIM for epoch 25
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635]}
-
-Step 1b: Recomputing FIM for epoch 26
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 00:57:58:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:58:10:INFO:
-[92mINFO [0m:      Received: train message 463715d6-2e18-4282-989d-8621ca1e7030
-02/15/2025 00:58:10:INFO:Received: train message 463715d6-2e18-4282-989d-8621ca1e7030
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 00:59:02:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 00:59:58:INFO:
-[92mINFO [0m:      Received: evaluate message dd2beecb-d211-43df-9939-6ce0ae6c0b5e
-02/15/2025 00:59:58:INFO:Received: evaluate message dd2beecb-d211-43df-9939-6ce0ae6c0b5e
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 01:00:02:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:00:38:INFO:
-[92mINFO [0m:      Received: train message 2efc54a7-eb36-4556-a2d4-205c615e8ba3
-02/15/2025 01:00:38:INFO:Received: train message 2efc54a7-eb36-4556-a2d4-205c615e8ba3
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 01:01:35:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:02:19:INFO:
-[92mINFO [0m:      Received: evaluate message 10c294e0-129d-4864-9b22-a7f2d989a09c
-02/15/2025 01:02:19:INFO:Received: evaluate message 10c294e0-129d-4864-9b22-a7f2d989a09c
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347]}
-
-Step 1b: Recomputing FIM for epoch 27
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755, 1.0047544517770608], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042, 0.7100797902688201], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706, 0.433040227748703], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347, 0.3884349150761539]}
-
-Step 1b: Recomputing FIM for epoch 28
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 01:02:24:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:03:02:INFO:
-[92mINFO [0m:      Received: train message df1eee34-e907-43e6-97a1-c9245a62244d
-02/15/2025 01:03:02:INFO:Received: train message df1eee34-e907-43e6-97a1-c9245a62244d
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 01:03:56:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:04:30:INFO:
-[92mINFO [0m:      Received: evaluate message 3e0357e3-908c-46dc-8327-22a9a70ee602
-02/15/2025 01:04:30:INFO:Received: evaluate message 3e0357e3-908c-46dc-8327-22a9a70ee602
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 01:04:35:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:05:02:INFO:
-[92mINFO [0m:      Received: train message df487114-6ba8-423f-af18-360ce7584bc9
-02/15/2025 01:05:02:INFO:Received: train message df487114-6ba8-423f-af18-360ce7584bc9
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/opacus/privacy_engine.py:95: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
-  warnings.warn(
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/torch/nn/modules/module.py:1640: FutureWarning: Using a non-full backward hook when the forward contains multiple autograd Nodes is deprecated and will be removed in future versions. This hook will be missing some grad_input. Please use register_full_backward_hook to get the documented behavior.
-  self._maybe_warn_non_full_backward_hook(args, result, grad_fn)
-[92mINFO [0m:      Sent reply
-02/15/2025 01:05:54:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:06:53:INFO:
-[92mINFO [0m:      Received: evaluate message 58f3342c-b2f1-449a-953a-48fcee581485
-02/15/2025 01:06:53:INFO:Received: evaluate message 58f3342c-b2f1-449a-953a-48fcee581485
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755, 1.0047544517770608, 1.002834329668482], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042, 0.7100797902688201, 0.7099185930685544], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706, 0.433040227748703, 0.4191264227840638], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347, 0.3884349150761539, 0.3887214313908112]}
-
-Step 1b: Recomputing FIM for epoch 29
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755, 1.0047544517770608, 1.002834329668482, 1.0018638614754456], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042, 0.7100797902688201, 0.7099185930685544, 0.7117895986470172], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706, 0.433040227748703, 0.4191264227840638, 0.42144223183894236], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347, 0.3884349150761539, 0.3887214313908112, 0.3901074344358704]}
-
-Step 1b: Recomputing FIM for epoch 30
-Step 2a: Compute base noise multiplier
-Step 2b: Update noise multiplier dynamically
-Step 2c: Re-initialize PrivacyEngine
-Step 2d: Make model private
-Step 2e: Perform local DP training
-Training the model with the following parameters:
-Epochs: 3, Trainloader Size: 1547, Optimizer: Adam (
-Parameter Group 0
-    amsgrad: False
-    betas: (0.9, 0.999)
-    capturable: False
-    differentiable: False
-    eps: 1e-08
-    foreach: None
-    fused: None
-    lr: 0.001
-    maximize: False
-    weight_decay: 0
-)
-
-Step 2f: Log training details
-/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-[92mINFO [0m:      Sent reply
-02/15/2025 01:06:58:INFO:Sent reply
-[92mINFO [0m:      
-02/15/2025 01:07:00:INFO:
-[92mINFO [0m:      Received: reconnect message c03e6a52-9879-4016-af61-af83c4e8939a
-02/15/2025 01:07:00:INFO:Received: reconnect message c03e6a52-9879-4016-af61-af83c4e8939a
-02/15/2025 01:07:00:DEBUG:gRPC channel closed
-[92mINFO [0m:      Disconnect and shut down
-02/15/2025 01:07:00:INFO:Disconnect and shut down
-Step 3: Evaluate the model locally
-
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755, 1.0047544517770608, 1.002834329668482, 1.0018638614754456, 1.0000020092217785], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734, 0.509773260359656], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042, 0.7100797902688201, 0.7099185930685544, 0.7117895986470172, 0.7112468503315255], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706, 0.433040227748703, 0.4191264227840638, 0.42144223183894236, 0.41428740286963217], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734, 0.509773260359656], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347, 0.3884349150761539, 0.3887214313908112, 0.3901074344358704, 0.39244624060601346]}
-
-
-
-Final client history:
-{'loss': [1.2801453032653904, 1.217973143910877, 1.170207204718064, 1.135790583116175, 1.1106440614591453, 1.0902098179609165, 1.0758761755650261, 1.0631974960696986, 1.0533220912442718, 1.0453464993282255, 1.0381587676651503, 1.0328380013928924, 1.0283386081899861, 1.0249555944184758, 1.020520821225373, 1.0167003916612913, 1.014935942065259, 1.0126074164802903, 1.010201390503532, 1.0085955203930972, 1.0073504066728258, 1.005863340130255, 1.0058758409811799, 1.005364303014724, 1.006562125505741, 1.0067206634218755, 1.0047544517770608, 1.002834329668482, 1.0018638614754456, 1.0000020092217785], 'accuracy': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734, 0.509773260359656], 'auc': [0.5353700758405713, 0.5567528693752766, 0.5715496904263248, 0.5836443508074672, 0.5971389800948795, 0.6113165914027084, 0.6231008951816877, 0.6349996000509412, 0.6455107337629921, 0.6514594550946208, 0.6601608354634753, 0.666459563956981, 0.6732249263091874, 0.6777195607059904, 0.6824471864116053, 0.6854281682925932, 0.6875413274047038, 0.6899976540325783, 0.6941288362472724, 0.6967074601289561, 0.7006321446885323, 0.7034832407696976, 0.705346482792835, 0.707517796553561, 0.7087238520724715, 0.7104546651007042, 0.7100797902688201, 0.7099185930685544, 0.7117895986470172, 0.7112468503315255], 'precision': [0.4273732942807158, 0.41654227475272265, 0.4240389568372002, 0.42622037659623, 0.429696000551097, 0.4288964079122722, 0.417930256339405, 0.4200125609130963, 0.4231496209800698, 0.42312563278230453, 0.4224574588925216, 0.4245598377323367, 0.4284084490114479, 0.4284084490114479, 0.4313138807046674, 0.43175818929582643, 0.4344267011489584, 0.43437011109407747, 0.43437011109407747, 0.43437011109407747, 0.43006245362301143, 0.433040227748703, 0.4330530850245938, 0.43068850243347917, 0.43958329814258007, 0.43259937905326706, 0.433040227748703, 0.4191264227840638, 0.42144223183894236, 0.41428740286963217], 'recall': [0.5105551211884285, 0.5129007036747459, 0.5230648944487881, 0.5238467552775606, 0.5230648944487881, 0.5222830336200156, 0.5168100078186083, 0.5160281469898358, 0.5136825645035183, 0.5152462861610634, 0.5129007036747459, 0.5113369820172009, 0.5105551211884285, 0.5105551211884285, 0.5113369820172009, 0.5121188428459734, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5129007036747459, 0.5144644253322909, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5136825645035183, 0.5144644253322909, 0.5113369820172009, 0.5121188428459734, 0.509773260359656], 'f1': [0.46264894441049187, 0.449317578856086, 0.4381507539933754, 0.42660099672835594, 0.4163533647884961, 0.4142670689521651, 0.40269721059612984, 0.3993853287831024, 0.38831710930972174, 0.39229613178049333, 0.38682079570675704, 0.3816534203442328, 0.37891219881493166, 0.37891219881493166, 0.38037101712319726, 0.3838995216845655, 0.3843530245930965, 0.38533274330372164, 0.38533274330372164, 0.38533274330372164, 0.3855064626316991, 0.3884349150761539, 0.38938671368421873, 0.3889248727115417, 0.3872194991986635, 0.385961751289347, 0.3884349150761539, 0.3887214313908112, 0.3901074344358704, 0.39244624060601346]}
-
+Traceback (most recent call last):
+  File "client_4.py", line 439, in <module>
+    fl.client.start_client(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/app.py", line 175, in start_client
+    start_client_internal(
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/app.py", line 405, in start_client_internal
+    message = receive()
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/flwr/client/grpc_client/connection.py", line 150, in receive
+    proto = next(server_message_iterator)
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/grpc/_channel.py", line 543, in __next__
+    return self._next()
+  File "/home/dgxuser16/anaconda3/envs/ihpc/lib/python3.8/site-packages/grpc/_channel.py", line 969, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:127.0.0.1:8051 {created_time:"2025-02-17T16:33:34.328136676-08:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
