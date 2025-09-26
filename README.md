@@ -20,3 +20,15 @@ By dynamically calibrating noise based on these factors, MedShieldFL enforces ri
 ### Why This Matters
 For beginners: Imagine training an AI to detect diseases across hospitals without ever sending patient files—MedShieldFL makes it safer by adding "smart noise" that hides secrets but keeps the AI sharp.
 For experts: This repo provides a robust, implementable solution to gradient leakage in non-IID FL, leveraging FIM for parameter-specific DP and convergence-aware scaling for optimized utility-privacy trade-offs.
+
+### Results
+#### 1. No Privacy vs Fixed Noise vs Our Method  
+![Alt text](src/AUC.png)
+
+#### 2. Fixed Noise  
+![Alt text](src/alz_fixed_noise.png)
+
+#### 3. Our Method  
+![Alt text](src/alz_aud_fed_avg_wc.png)
+
+
